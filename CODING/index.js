@@ -1,7 +1,7 @@
 const heading = React.createElement("h2", {
         id: "title"
     },
-    "Hellow World !"
+    "Hello World !"
 )
 
 
@@ -15,7 +15,7 @@ const heading1 = React.createElement("h1", {
 const heading2 = React.createElement("h2", {
         id: "title"
     },
-    "From @Akshay"
+    "From Akshay"
 )
 
 const container = React.createElement("div", {
