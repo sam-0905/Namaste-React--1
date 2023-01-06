@@ -1,18 +1,18 @@
-const heading = React.createElement("h2", {
+const heading = React.createElement("h1", {
         id: "title"
     },
     "Hello World !"
 )
 
 
-const heading1 = React.createElement("h1", {
+const heading1 = React.createElement("h2", {
         id: "title",
         //style: { color: "red" },
     },
     "Learing React from zero to Hero!"
 )
 
-const heading2 = React.createElement("h2", {
+const heading2 = React.createElement("h3", {
         id: "title"
     },
     "From Akshay"
