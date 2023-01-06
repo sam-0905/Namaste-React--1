@@ -9,13 +9,13 @@ const heading1 = React.createElement("h1", {
         id: "title",
         //style: { color: "red" },
     },
-    "heading1"
+    "learing React from zero to Hero!"
 )
 
 const heading2 = React.createElement("h2", {
         id: "title"
     },
-    "heading2"
+    "From @Akshay"
 )
 
 const container = React.createElement("div", {
