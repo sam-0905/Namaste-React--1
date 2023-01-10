@@ -24,10 +24,10 @@ const container = React.createElement("div", {
 }, [heading, heading1, heading2])
 
 
-console.log(heading1)
+console.log(heading1);
 
 
-const root = ReactDOM.createRoot(document.getElementById("root"))
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
 
-root.render(container)
+root.render(container);
