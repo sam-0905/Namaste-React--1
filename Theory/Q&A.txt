@@ -27,8 +27,9 @@
 
 -What is diference between React and ReactDOM?
 
-         React library is responsible for creating UI (User Interface) 
-        ReactDOM library is responsible to actually render UI in the browser.Followinf are the both CDN links React and ReactDOM as we used in our classes.
+        React library is responsible for creating UI (User Interface) 
+        ReactDOM library is responsible to actually render UI in the browser.
+        Following are the both CDN links React and ReactDOM as we used in our classes.
          <script 
          crossorigin 
          src="https://unpkg.com/react@18/umd/react.development.js">

@@ -7,7 +7,7 @@ const heading = React.createElement("h1", {
 
 const heading1 = React.createElement("h2", {
         id: "title",
-        //style: { color: "red" },
+        //{style: { color: "red" }},
     },
     "Learing React from zero to Hero!"
 )
