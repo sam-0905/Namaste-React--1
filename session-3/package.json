@@ -3,9 +3,10 @@
     "version": "1.0.0",
     "description": "This is a live course",
     "scripts": {
-        "test": "jest",
         "start": "parcel coding/index.html",
-        "build": "parcel build coding/index.html"
+        "build": "parcel build coding/index.html",
+        "test": "jest"
+
     },
     "repository": {
         "type": "git",
