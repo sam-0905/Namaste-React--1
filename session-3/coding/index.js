@@ -1,17 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const heading = React.createElement("h1", {
-        id: "title",
-        key: "h1",
-    },
-    "Hello World !"
-)
+const heading = React.createElement(
+  "h1",
+  {
+    id: "title",
+    key: "h1",
+  },
+  "Hello World !"
+);
 
 // Functional Component
 const headerComponent = () => {
-    return <h1 > Namamste react Functional Component < /h1>
-}
+  return <h1> Namamste react Functional Component </h1>;
+};
 
 //const heading = React.createElement("h1", {
 //        id: "title",
@@ -21,13 +23,8 @@ const headerComponent = () => {
 //)
 
 // JSX?
-//const head5 = (
-//<h1 id = "title" key="h1">
-// Namamste React 
-// </h1>) 
-
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-
-root.render(heading)
+const head5 = (
+  <h1 id="title" key="h1">
+    Namamste React{" "}
+  </h1>
+);
