@@ -10,8 +10,10 @@ const heading = React.createElement("h1", {
 
 
 // JSX?
-
-const head5 = < h1 id = "title" > Namamste React < /h1>
+//const head5 = (
+//<h1 id = "title" key="h1">
+// Namamste React 
+// </h1>) 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
