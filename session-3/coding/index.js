@@ -2,35 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 const heading = React.createElement("h1", {
-        id: "title"
+        id: "title",
+        key: "h1",
     },
     "Hello World !"
 )
 
 
-const heading1 = React.createElement("h2", {
-        id: "title",
-        //style: { color: "red" },
-    },
-    "Learing React from zero to Hero!"
-)
+// JSX?
 
-const heading2 = React.createElement("h3", {
-        id: "title"
-    },
-    "From Akshay"
-)
-
-const container = React.createElement("div", {
-    id: "container",
-    className: "class"
-}, [heading, heading1, heading2])
-
-
-console.log(heading1);
-
+const head5 = < h1 id = "title" > Namamste React < /h1>
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 
-root.render(container);
+root.render(heading)
