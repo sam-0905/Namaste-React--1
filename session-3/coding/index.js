@@ -2,17 +2,19 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 // JSX? React.createElement => Object =>Html(DOM) //** react element */
-const head5 = (
+const Title = () => (
   <h1 id="title" key="h1">
     Namamste React{" "}
   </h1>
 );
 
+var xyz = 100;
+
 const HeaderComponent1 = () => {
   // Arrow function
   return (
     <div>
-      {head5}
+      <Title />
       <h2> Namamste react Functional Component </h2>
       <h3>This is a h2 tag</h3>
     </div>
@@ -50,7 +52,7 @@ const HeaderComponent1 = () => {
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 // async defer
-root.render(head5);
+//root.render(head5);
 
 // passing  a Functional component inside root
 root.render(<HeaderComponent1 />);
