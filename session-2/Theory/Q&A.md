@@ -12,30 +12,31 @@
      npx -  A tool for executing Node pacakges.npx will check whether <command> exists in `$PATH`, or in the local project binaries, and execute it.
 
 - What is difference between `dependencies` vs `devDependencies`
-     dependencies - it contains an the library, which our project requires for production.
-     
-     devDependencies- it is a packagein the package.json file that we need only for project development purpose.
 
-- What is Tree Shaking?
+     `dependencies` - it contains an the library, which our project requires for production.
+     
+     `devDependencies`- it is a packagein the package.json file that we need only for project development purpose.
+
+- What is `Tree Shaking`?
      In production builds, Parcel statically analyzes the imports and exports of each module, and removes everything that isn't used this is called "tree shaking" or "dead code elimination". Tree shaking is supported for both static and dynamic import(), CommonJS and ES modules, and even across languages with CSS modules.
 
-- What is Hot Module Replacement?
+- What is `Hot Module Replacement`?
      As we make changes in our code, Parcel automatically rebuilds the changed files and updates your app in the browser. By default, Parcel fully reloads the page, but in some cases it may perform Hot Module Replacement (HMR).
 
 - List down your favourite 5 superpowers of Parcel and describe any 3 of them in your
 own words.
 
-     a.Cache optimization - If we use `npx parcel build index.html` only the first we use to build it takes some time to load. for instance, it may take 515ms or takes some time based on your laptop config or internet, post that build it takes just 3ms , 7ms etc.
+     a.`Cache optimization` - If we use `npx parcel build index.html` only the first we use to build it takes some time to load. for instance, it may take 515ms or takes some time based on your laptop config or internet, post that build it takes just 3ms , 7ms etc.
 
-     b.File Watcher Algorithnm - Parcel utilizes a very fast watcher written in C++ and its keep track of all files which are changing real time & it tells the server to relod very fastet in c++ .
+     b.`File Watcher Algorithnm` - Parcel utilizes a very fast watcher written in C++ and its keep track of all files which are changing real time & it tells the server to relod very fastet in c++ .
 
-     c.Minification -Parcel includes minifiers for JavaScript, CSS, HTML, and SVG out of the box.  Minification reduces the file size of your output bundles by removing whitespace, renaming variables to shorter names, and many other optimizations.
+     c.`Minification` -Parcel includes minifiers for JavaScript, CSS, HTML, and SVG out of the box.  Minification reduces the file size of your output bundles by removing whitespace, renaming variables to shorter names, and many other optimizations.
     
-     d.Compression - Parcel supports compressing bundles using Gzip and Brotli. While many servers compress data on the fly, others require you to upload pre-compressed payloads ahead of time. This may also allow for better compression, which would be too slow to do on every network request.
+     d.`Compression`- Parcel supports compressing bundles using Gzip and Brotli. While many servers compress data on the fly, others require you to upload pre-compressed payloads ahead of time. This may also allow for better compression, which would be too slow to do on every network request.
        
-     e. Code Cleanup - Unnecessary console.log messages are removed through this process.
+     e.`Code Cleanup` - Unnecessary console.log messages are removed through this process.
 
-     f.Port Number - Check if the port number already used by any other apps & assign new port number.
+     f.`Port Numbe`r - Check if the port number already used by any other apps & assign new port number.
 
 - What is `.gitignore`? What should we add and not add into it?
      gitignore is a file which keeps track of the files & folders that are not meant to be pushed to the code repository.
