@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Logo from "./icons/flipkart-plus.png";
+import Logo from "./icons/flipkart_icon.png";
+import user from "./icons/user.png";
 
 // Nested header Element using React.createElement
 
@@ -66,20 +67,33 @@ import Logo from "./icons/flipkart-plus.png";
 //};
 
 //
+//**Assignment2 */
 //
 //Create a Header Component from scratch using Functional Components with JSX
 
 const HeaderComponent3 = function () {
   return (
-    <header className="container">
-      <h1 id="logo1">
-        <img src={Logo} alt="logo" />
-      </h1>
-      <input
-        type="text"
-        id="search-bar"
-        placeholder="search for products 🔍"
-      ></input>
+    <header className="container header">
+      <div>
+        <h1 id="logo1">
+          <img src={Logo} alt="logo" />
+        </h1>
+      </div>
+
+      <div>
+        <input
+          type="text"
+          id="search-bar"
+          placeholder="search for products..."
+        ></input>
+        <button type="submit" id="search-btn">
+          🔍
+        </button>
+      </div>
+
+      <div className="user-id">
+        <img src={user}></img>
+      </div>
     </header>
   );
 };
