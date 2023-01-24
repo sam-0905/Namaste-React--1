@@ -6,18 +6,25 @@ import user from "./icons/user.png";
 // Nested header Element using React.createElement
 
 //const header = React.createElement("div", { className: "title" }, [
-//  React.createElement("h1", { id: "head1" }, "Namaste React"),
-//  React.createElement("h2", { id: "head2" }, "Learn from Akshay saini"),
-//  React.createElement("h3", { id: "head3" }, "make us zero to hero"),
+//  React.createElement("h1", { id: "head1", key: "h1" }, "Namaste React"),
+//  React.createElement(
+//    "h2",
+//    { id: "head2", key: "h2" },
+//    "Learn from Akshay saini"
+//  ),
+//  React.createElement("h3", { id: "head3", key: "h3" }, "make us zero to hero"),
 //]);
 
 // Nested header Element using JSX
 
 //const header2 = (
-//  <div id="title2">
-//    <h1> Jsx is a Html like syntax ,but it is not Html inside JavaScript.</h1>
-//    <h2> JSX makes it easier to write</h2>
-//    <h3>
+//  <div id="title2" key="title2">
+//    <h1 key="h1">
+//      {" "}
+//      Jsx is a Html like syntax ,but it is not Html inside JavaScript.
+//    </h1>
+//    <h2 key="h2"> JSX makes it easier to write</h2>
+//    <h3 key="h3">
 //      javascript expressions in JSX : JSX supports all js expressions bywrapping
 //      them in {}
 //    </h3>
@@ -29,9 +36,9 @@ import user from "./icons/user.png";
 //const HeaderComponent = function () {
 //  return (
 //    <div>
-//      <h1> Namamste react Functional Component </h1>
-//      <h2>Functional component is nothing but function</h2>
-//      <h3>This is a h2 tag</h3>
+//      <h1 key="h1"> Namamste react Functional Component </h1>
+//      <h2 key="h2">Functional component is nothing but function</h2>
+//      <h3 key="h3">This is a h2 tag</h3>
 //    </div>
 //  );
 //};
@@ -42,13 +49,13 @@ import user from "./icons/user.png";
 //  return (
 //    <div className="Title" key="title3">
 //      <h1 style={{ color: "darkblue" }} key="h1">
-//        This is h1 tag passin style attribute in it
+//        This is h1 tag passing style attribute in it
 //      </h1>
 //      <h2 style={{ color: "darkgoldenrod" }} key="h2">
-//        This is h2 tag passin style attribute in it
+//        This is h2 tag passing style attribute in it
 //      </h2>
 //      <h3 style={{ color: "darkmagenta" }} key="h3">
-//        This is h3 tag passin style attribute in it
+//        This is h3 tag passing style attribute in it
 //      </h3>
 //    </div>
 //  );
