@@ -6,6 +6,6 @@
 
 ### and also react and react-dom.
 
-### In package.json also we add "browserlists init "
+### In package.json also we add "browserlists init"
 
 
