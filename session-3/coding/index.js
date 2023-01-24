@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import ReactDOM from "react-dom/client";
 import Logo from "./icons/flipkart_icon.png";
 import user from "./icons/user.png";
@@ -77,6 +77,8 @@ import user from "./icons/user.png";
 //};
 
 //
+
+//
 //**Assignment2 */
 //
 //Create a Header Component from scratch using Functional Components with JSX
@@ -137,6 +139,7 @@ root.render(<HeaderComponent3 />);
 //var xyz = 100;
 
 // Functional Component
+
 //const HeaderComponent = function () {   // Normal function
 //  return (
 //    <div>
@@ -146,13 +149,15 @@ root.render(<HeaderComponent3 />);
 //  );
 //};
 
-//const HeaderComponent1 = () => ( //   Arrow function
-//  <div>
-//    <Title />
-//    <h2> Namamste react Functional Component </h2>
-//    <h3>This is a h2 tag</h3>
-//  </div>
-//);
+//const HeaderComponent1 = () => {       // Arrow function
+//  return (
+//    <div>
+//      <Title />
+//      <h2> Namamste react Functional Component </h2>
+//      <h3>This is a h2 tag</h3>
+//    </div>
+//  );
+//};
 
 // these both are one and the same. This is a arrow function thing.In advanced
 
@@ -163,5 +168,34 @@ root.render(<HeaderComponent3 />);
 //  </div>
 //);
 
+/*//*
+//
+**/
+
+// Component Composition
+
+//const Title7 = () => (
+//  <h1 id="tile7" key="h1">
+//    Namamste react
+//  </h1>
+//);
+
+//const HeaderComponent = function () { // Normal function
+//  return (
+//    <div>
+//      <Title7 />
+//      <h1> Namamste react Functional Component </h1>
+//      <h2>This is a h2 tag</h2>
+//    </div>
+//  );
+//};
+
+/*/
+  //
+
+
+  /*/
+/***/
+/** */
 // async defer
 //root.render(head5);
