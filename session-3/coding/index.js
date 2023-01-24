@@ -6,7 +6,10 @@ import user from "./icons/user.png";
 // Nested header Element using React.createElement
 
 //const header = React.createElement("div", { className: "title" }, [
-//  React.createElement("h1", { id: "head1", key: "h1" }, "Namaste React"),
+//  React.createElement(
+//"h1",
+//{ id: "head1", key: "h1" },
+// "Namaste React"),
 //  React.createElement(
 //    "h2",
 //    { id: "head2", key: "h2" },
