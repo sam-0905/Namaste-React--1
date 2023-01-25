@@ -99,12 +99,12 @@ const HeaderComponent3 = function () {
           placeholder="search for products..."
         ></input>
         <button type="submit" id="search-btn">
-          {" "}
           🔍
         </button>
       </div>
+
       <div className="user-id">
-        <img src={user}> </img>
+        <img src={user} />
       </div>
     </header>
   );

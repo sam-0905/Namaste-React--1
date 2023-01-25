@@ -1,22 +1,28 @@
-import React, { Component } from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
 
 //React.createElement => Object =>Html(DOM)
 
-const heading = React.createElement(
-  "h1",
-  {
-    id: "title",
-    key: "h1",
-  },
-  "Hello World !"
-);
+//const heading = React.createElement(
+//  "h1",
+//  {
+//    id: "title",
+//    key: "h1",
+//  },
+//  "Hello World !"
+//);
 
 //JSX? React.createElement => Object =>Html(DOM) //** react element */
 
-const Title2 = (
+//const Title2 = (
+//  <h1 id="title2" key="h1">
+//    Namamste Reac
+//  </h1>
+//);
+
+const Title2 = () => (
   <h1 id="title2" key="h1">
-    Namamste React{" "}
+    Namamste React
   </h1>
 );
 
@@ -28,6 +34,7 @@ const HeaderComponent = function () {
   // Normal function
   return (
     <div>
+      {xyz}
       <h1> Namamste react Functional Component </h1>
       <h2>This is a h2 tag</h2>
     </div>
@@ -40,7 +47,7 @@ const HeaderComponent1 = () => {
     <div>
       <Title2 />
       <h2> Namamste react Functional Component </h2>
-      <h3>This is a h2 tag</h3>
+      <h3>function inside a function</h3>
     </div>
   );
 };
@@ -80,16 +87,21 @@ const HeaderComponent4 = function () {
 // passing a ReactElement inside root
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+const PrintElements = () => {
+  return (
+    <div>
+      <HeaderComponent />
+      <HeaderComponent1 />
+      <HeaderComponent2 />
+      <HeaderComponent4 />
+    </div>
+  );
+};
+
 //passing  a Functional component inside root
-//root.render(<PrintElements />);
-//root.render(<HeaderComponent/>);
+root.render(<PrintElements />);
 
 /*/
-  //
-
-
-  /*/
-/***/
 /** */
 // async defer
 //root.render(head5);
