@@ -1,25 +1,26 @@
 {
-    "name": "namaste-react-02",
+    "name": "session-2",
     "version": "1.0.0",
     "description": "This is a live course",
     "scripts": {
-        "test": "jest",
         "start": "parcel coding/index.html",
-        "build": "parcel build coding/index.html"
+        "build": "parcel build coding/index.html",
+        "test": "jest"
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/sam-0905/Namaste-react-02.git"
     },
+
     "author": "Allan sam",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/sam-0905/Namaste-react-02/issues"
     },
     "homepage": "https://github.com/sam-0905/Namaste-react-02#readme",
+
     "devDependencies": {
-        "parcel": "^2.8.2",
-        "process": "^0.11.10"
+        "parcel": "^2.8.3"
     },
     "dependencies": {
         "react": "^18.2.0",
@@ -28,4 +29,5 @@
     "browserslist": [
         "> 0.5%, last 2 versions, not dead"
     ]
+
 }
