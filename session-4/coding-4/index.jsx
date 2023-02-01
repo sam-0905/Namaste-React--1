@@ -5,9 +5,11 @@ import Logo from "./icons/logo-chef-restaurant.svg";
 // JSX? React.createElement => Object =>Html(DOM) //** react element */
 
 const Title = () => (
-  <div id="title2" key="h1" className="brand">
-    <img className="logo" src={Logo} alt="logo" />
-    <h3 className="brandName"> The Chef in the Hat</h3>
+  <div className="brand">
+    <a href="/">
+      <img className="logo" src={Logo} alt="logo" />
+    </a>
+    <h3 className="brand"> The Chef in the Hat</h3>
   </div>
 );
 
@@ -18,7 +20,6 @@ const HeaderComponent = function () {
   return (
     <div className="header">
       <Title />
-
       <div className="Nav-container">
         <ul>
           <li>Home</li>
