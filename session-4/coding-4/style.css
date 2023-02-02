@@ -17,7 +17,7 @@ body {
     border: 1px solid black;
     /*background-color: #2874f0;*/
     background-color: #597aff;
-    color: orangered;
+    color: ghostwhite;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
@@ -28,7 +28,7 @@ body {
 }
 
 .logo {
-    width: 75px;
+    width: 70px;
     margin-left: 20px;
     height: auto;
 }
@@ -41,6 +41,19 @@ body {
 .Nav-container>ul>li {
     padding: 10px;
     margin-right: 20px;
+}
+
+.card {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid bisque;
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+}
+
+.card>img {
+    width: 100%;
 }
 
 
@@ -56,10 +69,11 @@ body {
 
 /*}*/
 
-#search-btn {
+
+/*#search-btn {
     height: 50px;
     width: 50px;
     cursor: pointer;
     border-radius: 1rem;
     font-size: large;
-}
+}*/
