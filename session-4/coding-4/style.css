@@ -47,13 +47,18 @@ body {
     margin: 0.5rem;
     padding: 0.5rem;
     border: 1px solid bisque;
-    width: 200px;
+    width: 250px;
     height: auto;
     cursor: pointer;
 }
 
 .card>img {
     width: 100%;
+}
+
+.rest-list {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 
