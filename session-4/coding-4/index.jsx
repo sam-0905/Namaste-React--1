@@ -20,7 +20,7 @@ import Logo from "./icons/Chef in theHat (3).png";
        
 */
 
-// JSX? React.createElement => Object =>Html(DOM) //** react element */
+// JSX? React.createElement => Object =>Html(DOM) //react element /
 
 const Title = () => (
   <div className="brand">
@@ -51,6 +51,246 @@ const HeaderComponent = function () {
 // config Driven Ui
 
 const restaurantList = [
+  {
+    type: "restaurant",
+    data: {
+      type: "F",
+      id: "11479",
+      name: "Burger King",
+      uuid: "9db0490b-c551-496a-a354-bce98bf246e9",
+      city: "8",
+      area: "Thousand Lights",
+      totalRatingsString: "1000+ ratings",
+      cloudinaryImageId: "zggqzcw1muhht6tkwuba",
+      cuisines: ["Burgers", "American"],
+      tags: [],
+      costForTwo: 35000,
+      costForTwoString: "₹350 FOR TWO",
+      deliveryTime: 56,
+      minDeliveryTime: 55,
+      maxDeliveryTime: 65,
+      slaString: "55-65 MINS",
+      lastMileTravel: 4,
+      slugs: {
+        restaurant: "burger-king-express-avenue-royapettah",
+        city: "chennai",
+      },
+      cityState: "8",
+      address:
+        "Express Avenue, Gate 2 (or) 6, 3rd floor - food court, Club House Road, Royapettah, Chennai",
+      locality: "Express Avenue",
+      parentId: 166,
+      unserviceable: false,
+      veg: false,
+      select: false,
+      favorite: false,
+      tradeCampaignHeaders: [],
+      aggregatedDiscountInfo: {
+        header: "40% off",
+        shortDescriptionList: [
+          {
+            meta: "40% off | Use SWIGGYIT",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        descriptionList: [
+          {
+            meta: "40% off up to ₹80 | Use code SWIGGYIT",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        subHeader: "",
+        headerType: 0,
+        superFreedel: "",
+      },
+      aggregatedDiscountInfoV2: {
+        header: "40% OFF",
+        shortDescriptionList: [
+          {
+            meta: "Use SWIGGYIT",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        descriptionList: [
+          {
+            meta: "40% off up to ₹80 | Use code SWIGGYIT",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        subHeader: "",
+        headerType: 0,
+        superFreedel: "",
+      },
+      chain: [],
+      feeDetails: {
+        fees: [],
+        totalFees: 0,
+        message: "",
+        title: "",
+        amount: "",
+        icon: "",
+      },
+      availability: {
+        opened: true,
+        nextOpenMessage: "",
+        nextCloseMessage: "",
+      },
+      longDistanceEnabled: 0,
+      rainMode: "NONE",
+      thirdPartyAddress: false,
+      thirdPartyVendor: "",
+      adTrackingID: "",
+      badges: {
+        imageBased: [],
+        textBased: [],
+        textExtendedBadges: [],
+      },
+      lastMileTravelString: "4 kms",
+      hasSurge: false,
+      sla: {
+        restaurantId: "11479",
+        deliveryTime: 56,
+        minDeliveryTime: 55,
+        maxDeliveryTime: 65,
+        lastMileTravel: 4,
+        lastMileDistance: 0,
+        serviceability: "SERVICEABLE",
+        rainMode: "NONE",
+        longDistance: "NOT_LONG_DISTANCE",
+        preferentialService: false,
+        iconType: "EMPTY",
+      },
+      promoted: false,
+      avgRating: "4.1",
+      totalRatings: 1000,
+      new: false,
+    },
+    subtype: "basic",
+  },
+  {
+    type: "restaurant",
+    data: {
+      type: "F",
+      id: "23742",
+      name: "McDonald's",
+      uuid: "8cc604e4-1838-4911-b16e-186d52c7281f",
+      city: "8",
+      area: "Kilpauk",
+      totalRatingsString: "1000+ ratings",
+      cloudinaryImageId: "0e8f93a56b93e43d7627c2c21bc1106c",
+      cuisines: ["Burgers", "Beverages", "Cafe", "Desserts"],
+      tags: [],
+      costForTwo: 40000,
+      costForTwoString: "₹400 FOR TWO",
+      deliveryTime: 39,
+      minDeliveryTime: 39,
+      maxDeliveryTime: 39,
+      slaString: "39 MINS",
+      lastMileTravel: 4.400000095367432,
+      slugs: {
+        restaurant: "mc-donalds-kilpauk-kilpauk",
+        city: "chennai",
+      },
+      cityState: "8",
+      address:
+        "Hard castle Restaurants Pvt Ltd., Kilpauk-Chennai, Om Sakthi plaza, 226, Kilpauk Garden Road, Kilpauk, Chennai- 600 010.",
+      locality: "Chennai Kilpauk",
+      parentId: 630,
+      unserviceable: false,
+      veg: false,
+      select: false,
+      favorite: false,
+      tradeCampaignHeaders: [],
+      aggregatedDiscountInfo: {
+        header: "50% off",
+        shortDescriptionList: [
+          {
+            meta: "50% off | Use WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        descriptionList: [
+          {
+            meta: "50% off up to ₹100 | Use code WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        subHeader: "",
+        headerType: 0,
+        superFreedel: "",
+      },
+      aggregatedDiscountInfoV2: {
+        header: "50% OFF",
+        shortDescriptionList: [
+          {
+            meta: "Use WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        descriptionList: [
+          {
+            meta: "50% off up to ₹100 | Use code WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        subHeader: "",
+        headerType: 0,
+        superFreedel: "",
+      },
+      chain: [],
+      feeDetails: {
+        fees: [],
+        totalFees: 0,
+        message: "",
+        title: "",
+        amount: "",
+        icon: "",
+      },
+      availability: {
+        opened: true,
+        nextOpenMessage: "",
+        nextCloseMessage: "",
+      },
+      longDistanceEnabled: 0,
+      rainMode: "NONE",
+      thirdPartyAddress: false,
+      thirdPartyVendor: "",
+      adTrackingID: "",
+      badges: {
+        imageBased: [],
+        textBased: [],
+        textExtendedBadges: [],
+      },
+      lastMileTravelString: "4.4 kms",
+      hasSurge: false,
+      sla: {
+        restaurantId: "23742",
+        deliveryTime: 39,
+        minDeliveryTime: 39,
+        maxDeliveryTime: 39,
+        lastMileTravel: 4.400000095367432,
+        lastMileDistance: 0,
+        serviceability: "SERVICEABLE",
+        rainMode: "NONE",
+        longDistance: "NOT_LONG_DISTANCE",
+        preferentialService: false,
+        iconType: "EMPTY",
+      },
+      promoted: false,
+      avgRating: "4.3",
+      totalRatings: 1000,
+      new: false,
+    },
+    subtype: "basic",
+  },
   {
     type: "restaurant",
     data: {
@@ -179,48 +419,48 @@ const restaurantList = [
     type: "restaurant",
     data: {
       type: "F",
-      id: "11479",
-      name: "Burger King",
-      uuid: "9db0490b-c551-496a-a354-bce98bf246e9",
+      id: "240435",
+      name: "Hungsters",
+      uuid: "1012176c-d29e-4931-8d78-c292c229b0d0",
       city: "8",
-      area: "Thousand Lights",
-      totalRatingsString: "1000+ ratings",
-      cloudinaryImageId: "zggqzcw1muhht6tkwuba",
-      cuisines: ["Burgers", "American"],
+      area: "Kilpauk",
+      totalRatingsString: "500+ ratings",
+      cloudinaryImageId: "umbclg5lqcgosy3uxkew",
+      cuisines: ["Jain", "North Indian"],
       tags: [],
-      costForTwo: 35000,
-      costForTwoString: "₹350 FOR TWO",
-      deliveryTime: 56,
-      minDeliveryTime: 55,
-      maxDeliveryTime: 65,
-      slaString: "55-65 MINS",
+      costForTwo: 30000,
+      costForTwoString: "₹300 FOR TWO",
+      deliveryTime: 38,
+      minDeliveryTime: 38,
+      maxDeliveryTime: 38,
+      slaString: "38 MINS",
       lastMileTravel: 4,
       slugs: {
-        restaurant: "burger-king-express-avenue-royapettah",
+        restaurant: "hungsters-annanagar-annanagar",
         city: "chennai",
       },
       cityState: "8",
       address:
-        "Express Avenue, Gate 2 (or) 6, 3rd floor - food court, Club House Road, Royapettah, Chennai",
-      locality: "Express Avenue",
-      parentId: 166,
+        "Old no- 11, Landons road, Kilpauk, Opposite to Landon's tower appartment, Kilpauk Chennai",
+      locality: "Landons road",
+      parentId: 17154,
       unserviceable: false,
       veg: false,
       select: false,
       favorite: false,
       tradeCampaignHeaders: [],
       aggregatedDiscountInfo: {
-        header: "40% off",
+        header: "50% off",
         shortDescriptionList: [
           {
-            meta: "40% off | Use SWIGGYIT",
+            meta: "50% off | Use WELCOME50",
             discountType: "Percentage",
             operationType: "RESTAURANT",
           },
         ],
         descriptionList: [
           {
-            meta: "40% off up to ₹80 | Use code SWIGGYIT",
+            meta: "50% off up to ₹100 | Use code WELCOME50",
             discountType: "Percentage",
             operationType: "RESTAURANT",
           },
@@ -230,17 +470,17 @@ const restaurantList = [
         superFreedel: "",
       },
       aggregatedDiscountInfoV2: {
-        header: "40% OFF",
+        header: "50% OFF",
         shortDescriptionList: [
           {
-            meta: "Use SWIGGYIT",
+            meta: "Use WELCOME50",
             discountType: "Percentage",
             operationType: "RESTAURANT",
           },
         ],
         descriptionList: [
           {
-            meta: "40% off up to ₹80 | Use code SWIGGYIT",
+            meta: "50% off up to ₹100 | Use code WELCOME50",
             discountType: "Percentage",
             operationType: "RESTAURANT",
           },
@@ -276,10 +516,10 @@ const restaurantList = [
       lastMileTravelString: "4 kms",
       hasSurge: false,
       sla: {
-        restaurantId: "11479",
-        deliveryTime: 56,
-        minDeliveryTime: 55,
-        maxDeliveryTime: 65,
+        restaurantId: "240435",
+        deliveryTime: 38,
+        minDeliveryTime: 38,
+        maxDeliveryTime: 38,
         lastMileTravel: 4,
         lastMileDistance: 0,
         serviceability: "SERVICEABLE",
@@ -289,7 +529,247 @@ const restaurantList = [
         iconType: "EMPTY",
       },
       promoted: false,
-      avgRating: "4.1",
+      avgRating: "4.2",
+      totalRatings: 500,
+      new: false,
+    },
+    subtype: "basic",
+  },
+  {
+    type: "restaurant",
+    data: {
+      type: "F",
+      id: "594211",
+      name: "KFC",
+      uuid: "a1405f33-e92f-4fb4-af3e-ac73535b2a05",
+      city: "8",
+      area: "Chennai Central",
+      totalRatingsString: "100+ ratings",
+      cloudinaryImageId: "bdcd233971b7c81bf77e1fa4471280eb",
+      cuisines: ["Burgers", "Biryani", "American", "Snacks", "Fast Food"],
+      tags: [],
+      costForTwo: 40000,
+      costForTwoString: "₹400 FOR TWO",
+      deliveryTime: 30,
+      minDeliveryTime: 30,
+      maxDeliveryTime: 30,
+      slaString: "30 MINS",
+      lastMileTravel: 0.699999988079071,
+      slugs: {
+        restaurant: "kfc-chennai-central-purasawalkam",
+        city: "chennai",
+      },
+      cityState: "8",
+      address:
+        "Sapphire Foods India Ltd. , Chennai Central Railway Station, EVR Periyar Salai, Park Town, Chennai 600003 Tamil Nadu",
+      locality: "EVR Periyar Salai",
+      parentId: 547,
+      unserviceable: false,
+      veg: false,
+      select: false,
+      favorite: false,
+      tradeCampaignHeaders: [],
+      aggregatedDiscountInfo: {
+        header: "50% off",
+        shortDescriptionList: [
+          {
+            meta: "50% off | Use WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        descriptionList: [
+          {
+            meta: "50% off up to ₹100 | Use code WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        subHeader: "",
+        headerType: 0,
+        superFreedel: "",
+      },
+      aggregatedDiscountInfoV2: {
+        header: "50% OFF",
+        shortDescriptionList: [
+          {
+            meta: "Use WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        descriptionList: [
+          {
+            meta: "50% off up to ₹100 | Use code WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        subHeader: "",
+        headerType: 0,
+        superFreedel: "",
+      },
+      chain: [],
+      feeDetails: {
+        fees: [],
+        totalFees: 0,
+        message: "",
+        title: "",
+        amount: "",
+        icon: "",
+      },
+      availability: {
+        opened: true,
+        nextOpenMessage: "",
+        nextCloseMessage: "",
+      },
+      longDistanceEnabled: 0,
+      rainMode: "NONE",
+      thirdPartyAddress: false,
+      thirdPartyVendor: "",
+      adTrackingID: "",
+      badges: {
+        imageBased: [],
+        textBased: [],
+        textExtendedBadges: [],
+      },
+      lastMileTravelString: "0.6 kms",
+      hasSurge: false,
+      sla: {
+        restaurantId: "594211",
+        deliveryTime: 30,
+        minDeliveryTime: 30,
+        maxDeliveryTime: 30,
+        lastMileTravel: 0.699999988079071,
+        lastMileDistance: 0,
+        serviceability: "SERVICEABLE",
+        rainMode: "NONE",
+        longDistance: "NOT_LONG_DISTANCE",
+        preferentialService: false,
+        iconType: "EMPTY",
+      },
+      promoted: false,
+      avgRating: "4.0",
+      totalRatings: 100,
+      new: false,
+    },
+    subtype: "basic",
+  },
+  {
+    type: "restaurant",
+    data: {
+      type: "F",
+      id: "14096",
+      name: "Sangeetha Veg Restaurant",
+      uuid: "b4007e33-4927-4ec6-b6dd-6ddb76a14df4",
+      city: "8",
+      area: "Egmore",
+      totalRatingsString: "1000+ ratings",
+      cloudinaryImageId: "oodghmivnc6bxnbrvzzw",
+      cuisines: ["North Indian", "Chinese", "South Indian"],
+      tags: [],
+      costForTwo: 15000,
+      costForTwoString: "₹150 FOR TWO",
+      deliveryTime: 21,
+      minDeliveryTime: 21,
+      maxDeliveryTime: 21,
+      slaString: "21 MINS",
+      lastMileTravel: 2,
+      slugs: {
+        restaurant: "sangeetha-veg-restaurant-egmore-egmore",
+        city: "chennai",
+      },
+      cityState: "8",
+      address:
+        "Shop No: 21, Gandhi Irwin Road, Egmore, Chennai, Tamil Nadu 600008",
+      locality: "Gandhi Irwin Rd",
+      parentId: 1260,
+      unserviceable: false,
+      veg: true,
+      select: false,
+      favorite: false,
+      tradeCampaignHeaders: [],
+      aggregatedDiscountInfo: {
+        header: "50% off",
+        shortDescriptionList: [
+          {
+            meta: "50% off | Use WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        descriptionList: [
+          {
+            meta: "50% off up to ₹100 | Use code WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        subHeader: "",
+        headerType: 0,
+        superFreedel: "",
+      },
+      aggregatedDiscountInfoV2: {
+        header: "50% OFF",
+        shortDescriptionList: [
+          {
+            meta: "Use WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        descriptionList: [
+          {
+            meta: "50% off up to ₹100 | Use code WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        subHeader: "",
+        headerType: 0,
+        superFreedel: "",
+      },
+      chain: [],
+      feeDetails: {
+        fees: [],
+        totalFees: 0,
+        message: "",
+        title: "",
+        amount: "",
+        icon: "",
+      },
+      availability: {
+        opened: true,
+        nextOpenMessage: "",
+        nextCloseMessage: "",
+      },
+      longDistanceEnabled: 0,
+      rainMode: "NONE",
+      thirdPartyAddress: false,
+      thirdPartyVendor: "",
+      adTrackingID: "",
+      badges: {
+        imageBased: [],
+        textBased: [],
+        textExtendedBadges: [],
+      },
+      lastMileTravelString: "2 kms",
+      hasSurge: false,
+      sla: {
+        restaurantId: "14096",
+        deliveryTime: 21,
+        minDeliveryTime: 21,
+        maxDeliveryTime: 21,
+        lastMileTravel: 2,
+        lastMileDistance: 0,
+        serviceability: "SERVICEABLE",
+        rainMode: "NONE",
+        longDistance: "NOT_LONG_DISTANCE",
+        preferentialService: false,
+        iconType: "EMPTY",
+      },
+      promoted: false,
+      avgRating: "4.5",
       totalRatings: 1000,
       new: false,
     },
@@ -412,6 +892,7 @@ const restaurantList = [
       totalRatings: 1000,
       new: false,
     },
+
     subtype: "basic",
   },
   {
@@ -543,48 +1024,48 @@ const restaurantList = [
     type: "restaurant",
     data: {
       type: "F",
-      id: "594211",
-      name: "KFC",
-      uuid: "a1405f33-e92f-4fb4-af3e-ac73535b2a05",
+      id: "34335",
+      name: "Pizza Hut",
+      uuid: "b79cf619-684e-44fd-a177-b7eda35ca178",
       city: "8",
-      area: "Chennai Central",
-      totalRatingsString: "100+ ratings",
-      cloudinaryImageId: "bdcd233971b7c81bf77e1fa4471280eb",
-      cuisines: ["Burgers", "Biryani", "American", "Snacks", "Fast Food"],
+      area: "Thousand Lights",
+      totalRatingsString: "500+ ratings",
+      cloudinaryImageId: "fl9oeg5vuhjyb0jcxq8o",
+      cuisines: ["Pizzas"],
       tags: [],
       costForTwo: 40000,
       costForTwoString: "₹400 FOR TWO",
-      deliveryTime: 30,
-      minDeliveryTime: 30,
-      maxDeliveryTime: 30,
-      slaString: "30 MINS",
-      lastMileTravel: 0.699999988079071,
+      deliveryTime: 50,
+      minDeliveryTime: 45,
+      maxDeliveryTime: 55,
+      slaString: "45-55 MINS",
+      lastMileTravel: 3.9000000953674316,
       slugs: {
-        restaurant: "kfc-chennai-central-purasawalkam",
+        restaurant: "pizza-hut-royapettah-royapettah",
         city: "chennai",
       },
       cityState: "8",
       address:
-        "Sapphire Foods India Ltd. , Chennai Central Railway Station, EVR Periyar Salai, Park Town, Chennai 600003 Tamil Nadu",
-      locality: "EVR Periyar Salai",
-      parentId: 547,
+        "49 & 50L, 3rd Flr, Express Avenue, Whites Rd, Royapettah, Chennai, Tamil Nadu 600014",
+      locality: "Royapettah",
+      parentId: 721,
       unserviceable: false,
       veg: false,
       select: false,
       favorite: false,
       tradeCampaignHeaders: [],
       aggregatedDiscountInfo: {
-        header: "50% off",
+        header: "40% off",
         shortDescriptionList: [
           {
-            meta: "50% off | Use WELCOME50",
+            meta: "40% off | Use TRYNEW",
             discountType: "Percentage",
             operationType: "RESTAURANT",
           },
         ],
         descriptionList: [
           {
-            meta: "50% off up to ₹100 | Use code WELCOME50",
+            meta: "40% off up to ₹80 | Use code TRYNEW",
             discountType: "Percentage",
             operationType: "RESTAURANT",
           },
@@ -594,17 +1075,17 @@ const restaurantList = [
         superFreedel: "",
       },
       aggregatedDiscountInfoV2: {
-        header: "50% OFF",
+        header: "40% OFF",
         shortDescriptionList: [
           {
-            meta: "Use WELCOME50",
+            meta: "Use TRYNEW",
             discountType: "Percentage",
             operationType: "RESTAURANT",
           },
         ],
         descriptionList: [
           {
-            meta: "50% off up to ₹100 | Use code WELCOME50",
+            meta: "40% off up to ₹80 | Use code TRYNEW",
             discountType: "Percentage",
             operationType: "RESTAURANT",
           },
@@ -637,14 +1118,14 @@ const restaurantList = [
         textBased: [],
         textExtendedBadges: [],
       },
-      lastMileTravelString: "0.6 kms",
+      lastMileTravelString: "3.9 kms",
       hasSurge: false,
       sla: {
-        restaurantId: "594211",
-        deliveryTime: 30,
-        minDeliveryTime: 30,
-        maxDeliveryTime: 30,
-        lastMileTravel: 0.699999988079071,
+        restaurantId: "34335",
+        deliveryTime: 50,
+        minDeliveryTime: 45,
+        maxDeliveryTime: 55,
+        lastMileTravel: 3.9000000953674316,
         lastMileDistance: 0,
         serviceability: "SERVICEABLE",
         rainMode: "NONE",
@@ -653,12 +1134,137 @@ const restaurantList = [
         iconType: "EMPTY",
       },
       promoted: false,
-      avgRating: "4.0",
-      totalRatings: 100,
+      avgRating: "3.8",
+      totalRatings: 500,
       new: false,
     },
     subtype: "basic",
   },
+  {
+    type: "restaurant",
+    data: {
+      type: "F",
+      id: "49823",
+      name: "Hot Breads",
+      uuid: "c0e7a85c-0c7d-4ddd-872f-d7f36e90bc92",
+      city: "8",
+      area: "Garden Road",
+      totalRatingsString: "500+ ratings",
+      cloudinaryImageId: "vvhlzqi99mo6otsldim4",
+      cuisines: ["Bakery"],
+      tags: [],
+      costForTwo: 15000,
+      costForTwoString: "₹150 FOR TWO",
+      deliveryTime: 34,
+      minDeliveryTime: 34,
+      maxDeliveryTime: 34,
+      slaString: "34 MINS",
+      lastMileTravel: 4.300000190734863,
+      slugs: {
+        restaurant: "hot-breads-kilpauk-kilpauk",
+        city: "chennai",
+      },
+      cityState: "8",
+      address: "475, Kilpauk Garden Road, Kilpauk, Chennai",
+      locality: "Garden Road",
+      parentId: 470,
+      unserviceable: false,
+      veg: false,
+      select: false,
+      favorite: false,
+      tradeCampaignHeaders: [],
+      aggregatedDiscountInfo: {
+        header: "40% off",
+        shortDescriptionList: [
+          {
+            meta: "40% off | Use GUILTFREE",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        descriptionList: [
+          {
+            meta: "40% off up to ₹100 | Use code GUILTFREE",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        subHeader: "",
+        headerType: 0,
+        superFreedel: "",
+      },
+      aggregatedDiscountInfoV2: {
+        header: "40% OFF",
+        shortDescriptionList: [
+          {
+            meta: "Use GUILTFREE",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        descriptionList: [
+          {
+            meta: "40% off up to ₹100 | Use code GUILTFREE",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        subHeader: "",
+        headerType: 0,
+        superFreedel: "",
+      },
+      ribbon: [
+        {
+          type: "PROMOTED",
+        },
+      ],
+      chain: [],
+      feeDetails: {
+        fees: [],
+        totalFees: 0,
+        message: "",
+        title: "",
+        amount: "",
+        icon: "",
+      },
+      availability: {
+        opened: true,
+        nextOpenMessage: "",
+        nextCloseMessage: "",
+      },
+      longDistanceEnabled: 0,
+      rainMode: "NONE",
+      thirdPartyAddress: false,
+      thirdPartyVendor: "",
+      adTrackingID: "cid=5891911~p=16~eid=00000186-176f-b807-031d-8d03004e1013",
+      badges: {
+        imageBased: [],
+        textBased: [],
+        textExtendedBadges: [],
+      },
+      lastMileTravelString: "4.3 kms",
+      hasSurge: false,
+      sla: {
+        restaurantId: "49823",
+        deliveryTime: 34,
+        minDeliveryTime: 34,
+        maxDeliveryTime: 34,
+        lastMileTravel: 4.300000190734863,
+        lastMileDistance: 0,
+        serviceability: "SERVICEABLE",
+        rainMode: "NONE",
+        longDistance: "NOT_LONG_DISTANCE",
+        preferentialService: false,
+        iconType: "EMPTY",
+      },
+      promoted: true,
+      avgRating: "4.6",
+      totalRatings: 500,
+      new: false,
+    },
+    subtype: "basic",
+  },
+
   {
     type: "restaurant",
     data: {
@@ -912,490 +1518,7 @@ const restaurantList = [
     },
     subtype: "basic",
   },
-  {
-    type: "restaurant",
-    data: {
-      type: "F",
-      id: "34335",
-      name: "Pizza Hut",
-      uuid: "b79cf619-684e-44fd-a177-b7eda35ca178",
-      city: "8",
-      area: "Thousand Lights",
-      totalRatingsString: "500+ ratings",
-      cloudinaryImageId: "fl9oeg5vuhjyb0jcxq8o",
-      cuisines: ["Pizzas"],
-      tags: [],
-      costForTwo: 40000,
-      costForTwoString: "₹400 FOR TWO",
-      deliveryTime: 50,
-      minDeliveryTime: 45,
-      maxDeliveryTime: 55,
-      slaString: "45-55 MINS",
-      lastMileTravel: 3.9000000953674316,
-      slugs: {
-        restaurant: "pizza-hut-royapettah-royapettah",
-        city: "chennai",
-      },
-      cityState: "8",
-      address:
-        "49 & 50L, 3rd Flr, Express Avenue, Whites Rd, Royapettah, Chennai, Tamil Nadu 600014",
-      locality: "Royapettah",
-      parentId: 721,
-      unserviceable: false,
-      veg: false,
-      select: false,
-      favorite: false,
-      tradeCampaignHeaders: [],
-      aggregatedDiscountInfo: {
-        header: "40% off",
-        shortDescriptionList: [
-          {
-            meta: "40% off | Use TRYNEW",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
-        ],
-        descriptionList: [
-          {
-            meta: "40% off up to ₹80 | Use code TRYNEW",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
-        ],
-        subHeader: "",
-        headerType: 0,
-        superFreedel: "",
-      },
-      aggregatedDiscountInfoV2: {
-        header: "40% OFF",
-        shortDescriptionList: [
-          {
-            meta: "Use TRYNEW",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
-        ],
-        descriptionList: [
-          {
-            meta: "40% off up to ₹80 | Use code TRYNEW",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
-        ],
-        subHeader: "",
-        headerType: 0,
-        superFreedel: "",
-      },
-      chain: [],
-      feeDetails: {
-        fees: [],
-        totalFees: 0,
-        message: "",
-        title: "",
-        amount: "",
-        icon: "",
-      },
-      availability: {
-        opened: true,
-        nextOpenMessage: "",
-        nextCloseMessage: "",
-      },
-      longDistanceEnabled: 0,
-      rainMode: "NONE",
-      thirdPartyAddress: false,
-      thirdPartyVendor: "",
-      adTrackingID: "",
-      badges: {
-        imageBased: [],
-        textBased: [],
-        textExtendedBadges: [],
-      },
-      lastMileTravelString: "3.9 kms",
-      hasSurge: false,
-      sla: {
-        restaurantId: "34335",
-        deliveryTime: 50,
-        minDeliveryTime: 45,
-        maxDeliveryTime: 55,
-        lastMileTravel: 3.9000000953674316,
-        lastMileDistance: 0,
-        serviceability: "SERVICEABLE",
-        rainMode: "NONE",
-        longDistance: "NOT_LONG_DISTANCE",
-        preferentialService: false,
-        iconType: "EMPTY",
-      },
-      promoted: false,
-      avgRating: "3.8",
-      totalRatings: 500,
-      new: false,
-    },
-    subtype: "basic",
-  },
-  {
-    type: "restaurant",
-    data: {
-      type: "F",
-      id: "49823",
-      name: "Hot Breads",
-      uuid: "c0e7a85c-0c7d-4ddd-872f-d7f36e90bc92",
-      city: "8",
-      area: "Garden Road",
-      totalRatingsString: "500+ ratings",
-      cloudinaryImageId: "vvhlzqi99mo6otsldim4",
-      cuisines: ["Bakery"],
-      tags: [],
-      costForTwo: 15000,
-      costForTwoString: "₹150 FOR TWO",
-      deliveryTime: 34,
-      minDeliveryTime: 34,
-      maxDeliveryTime: 34,
-      slaString: "34 MINS",
-      lastMileTravel: 4.300000190734863,
-      slugs: {
-        restaurant: "hot-breads-kilpauk-kilpauk",
-        city: "chennai",
-      },
-      cityState: "8",
-      address: "475, Kilpauk Garden Road, Kilpauk, Chennai",
-      locality: "Garden Road",
-      parentId: 470,
-      unserviceable: false,
-      veg: false,
-      select: false,
-      favorite: false,
-      tradeCampaignHeaders: [],
-      aggregatedDiscountInfo: {
-        header: "40% off",
-        shortDescriptionList: [
-          {
-            meta: "40% off | Use GUILTFREE",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
-        ],
-        descriptionList: [
-          {
-            meta: "40% off up to ₹100 | Use code GUILTFREE",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
-        ],
-        subHeader: "",
-        headerType: 0,
-        superFreedel: "",
-      },
-      aggregatedDiscountInfoV2: {
-        header: "40% OFF",
-        shortDescriptionList: [
-          {
-            meta: "Use GUILTFREE",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
-        ],
-        descriptionList: [
-          {
-            meta: "40% off up to ₹100 | Use code GUILTFREE",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
-        ],
-        subHeader: "",
-        headerType: 0,
-        superFreedel: "",
-      },
-      ribbon: [
-        {
-          type: "PROMOTED",
-        },
-      ],
-      chain: [],
-      feeDetails: {
-        fees: [],
-        totalFees: 0,
-        message: "",
-        title: "",
-        amount: "",
-        icon: "",
-      },
-      availability: {
-        opened: true,
-        nextOpenMessage: "",
-        nextCloseMessage: "",
-      },
-      longDistanceEnabled: 0,
-      rainMode: "NONE",
-      thirdPartyAddress: false,
-      thirdPartyVendor: "",
-      adTrackingID: "cid=5891911~p=16~eid=00000186-176f-b807-031d-8d03004e1013",
-      badges: {
-        imageBased: [],
-        textBased: [],
-        textExtendedBadges: [],
-      },
-      lastMileTravelString: "4.3 kms",
-      hasSurge: false,
-      sla: {
-        restaurantId: "49823",
-        deliveryTime: 34,
-        minDeliveryTime: 34,
-        maxDeliveryTime: 34,
-        lastMileTravel: 4.300000190734863,
-        lastMileDistance: 0,
-        serviceability: "SERVICEABLE",
-        rainMode: "NONE",
-        longDistance: "NOT_LONG_DISTANCE",
-        preferentialService: false,
-        iconType: "EMPTY",
-      },
-      promoted: true,
-      avgRating: "4.6",
-      totalRatings: 500,
-      new: false,
-    },
-    subtype: "basic",
-  },
-  {
-    type: "restaurant",
-    data: {
-      type: "F",
-      id: "240435",
-      name: "Hungsters",
-      uuid: "1012176c-d29e-4931-8d78-c292c229b0d0",
-      city: "8",
-      area: "Kilpauk",
-      totalRatingsString: "500+ ratings",
-      cloudinaryImageId: "umbclg5lqcgosy3uxkew",
-      cuisines: ["Jain", "North Indian"],
-      tags: [],
-      costForTwo: 30000,
-      costForTwoString: "₹300 FOR TWO",
-      deliveryTime: 38,
-      minDeliveryTime: 38,
-      maxDeliveryTime: 38,
-      slaString: "38 MINS",
-      lastMileTravel: 4,
-      slugs: {
-        restaurant: "hungsters-annanagar-annanagar",
-        city: "chennai",
-      },
-      cityState: "8",
-      address:
-        "Old no- 11, Landons road, Kilpauk, Opposite to Landon's tower appartment, Kilpauk Chennai",
-      locality: "Landons road",
-      parentId: 17154,
-      unserviceable: false,
-      veg: false,
-      select: false,
-      favorite: false,
-      tradeCampaignHeaders: [],
-      aggregatedDiscountInfo: {
-        header: "50% off",
-        shortDescriptionList: [
-          {
-            meta: "50% off | Use WELCOME50",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
-        ],
-        descriptionList: [
-          {
-            meta: "50% off up to ₹100 | Use code WELCOME50",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
-        ],
-        subHeader: "",
-        headerType: 0,
-        superFreedel: "",
-      },
-      aggregatedDiscountInfoV2: {
-        header: "50% OFF",
-        shortDescriptionList: [
-          {
-            meta: "Use WELCOME50",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
-        ],
-        descriptionList: [
-          {
-            meta: "50% off up to ₹100 | Use code WELCOME50",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
-        ],
-        subHeader: "",
-        headerType: 0,
-        superFreedel: "",
-      },
-      chain: [],
-      feeDetails: {
-        fees: [],
-        totalFees: 0,
-        message: "",
-        title: "",
-        amount: "",
-        icon: "",
-      },
-      availability: {
-        opened: true,
-        nextOpenMessage: "",
-        nextCloseMessage: "",
-      },
-      longDistanceEnabled: 0,
-      rainMode: "NONE",
-      thirdPartyAddress: false,
-      thirdPartyVendor: "",
-      adTrackingID: "",
-      badges: {
-        imageBased: [],
-        textBased: [],
-        textExtendedBadges: [],
-      },
-      lastMileTravelString: "4 kms",
-      hasSurge: false,
-      sla: {
-        restaurantId: "240435",
-        deliveryTime: 38,
-        minDeliveryTime: 38,
-        maxDeliveryTime: 38,
-        lastMileTravel: 4,
-        lastMileDistance: 0,
-        serviceability: "SERVICEABLE",
-        rainMode: "NONE",
-        longDistance: "NOT_LONG_DISTANCE",
-        preferentialService: false,
-        iconType: "EMPTY",
-      },
-      promoted: false,
-      avgRating: "4.2",
-      totalRatings: 500,
-      new: false,
-    },
-    subtype: "basic",
-  },
-  {
-    type: "restaurant",
-    data: {
-      type: "F",
-      id: "23742",
-      name: "McDonald's",
-      uuid: "8cc604e4-1838-4911-b16e-186d52c7281f",
-      city: "8",
-      area: "Kilpauk",
-      totalRatingsString: "1000+ ratings",
-      cloudinaryImageId: "0e8f93a56b93e43d7627c2c21bc1106c",
-      cuisines: ["Burgers", "Beverages", "Cafe", "Desserts"],
-      tags: [],
-      costForTwo: 40000,
-      costForTwoString: "₹400 FOR TWO",
-      deliveryTime: 39,
-      minDeliveryTime: 39,
-      maxDeliveryTime: 39,
-      slaString: "39 MINS",
-      lastMileTravel: 4.400000095367432,
-      slugs: {
-        restaurant: "mc-donalds-kilpauk-kilpauk",
-        city: "chennai",
-      },
-      cityState: "8",
-      address:
-        "Hard castle Restaurants Pvt Ltd., Kilpauk-Chennai, Om Sakthi plaza, 226, Kilpauk Garden Road, Kilpauk, Chennai- 600 010.",
-      locality: "Chennai Kilpauk",
-      parentId: 630,
-      unserviceable: false,
-      veg: false,
-      select: false,
-      favorite: false,
-      tradeCampaignHeaders: [],
-      aggregatedDiscountInfo: {
-        header: "50% off",
-        shortDescriptionList: [
-          {
-            meta: "50% off | Use WELCOME50",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
-        ],
-        descriptionList: [
-          {
-            meta: "50% off up to ₹100 | Use code WELCOME50",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
-        ],
-        subHeader: "",
-        headerType: 0,
-        superFreedel: "",
-      },
-      aggregatedDiscountInfoV2: {
-        header: "50% OFF",
-        shortDescriptionList: [
-          {
-            meta: "Use WELCOME50",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
-        ],
-        descriptionList: [
-          {
-            meta: "50% off up to ₹100 | Use code WELCOME50",
-            discountType: "Percentage",
-            operationType: "RESTAURANT",
-          },
-        ],
-        subHeader: "",
-        headerType: 0,
-        superFreedel: "",
-      },
-      chain: [],
-      feeDetails: {
-        fees: [],
-        totalFees: 0,
-        message: "",
-        title: "",
-        amount: "",
-        icon: "",
-      },
-      availability: {
-        opened: true,
-        nextOpenMessage: "",
-        nextCloseMessage: "",
-      },
-      longDistanceEnabled: 0,
-      rainMode: "NONE",
-      thirdPartyAddress: false,
-      thirdPartyVendor: "",
-      adTrackingID: "",
-      badges: {
-        imageBased: [],
-        textBased: [],
-        textExtendedBadges: [],
-      },
-      lastMileTravelString: "4.4 kms",
-      hasSurge: false,
-      sla: {
-        restaurantId: "23742",
-        deliveryTime: 39,
-        minDeliveryTime: 39,
-        maxDeliveryTime: 39,
-        lastMileTravel: 4.400000095367432,
-        lastMileDistance: 0,
-        serviceability: "SERVICEABLE",
-        rainMode: "NONE",
-        longDistance: "NOT_LONG_DISTANCE",
-        preferentialService: false,
-        iconType: "EMPTY",
-      },
-      promoted: false,
-      avgRating: "4.3",
-      totalRatings: 1000,
-      new: false,
-    },
-    subtype: "basic",
-  },
+
   {
     type: "restaurant",
     data: {
@@ -1886,18 +2009,26 @@ const restaurantList = [
   },
 ];
 
-const RestaurantCard = (props) => {
+const RestaurantCard = ({
+  name,
+  cuisines,
+  cloudinaryImageId,
+  avgRating,
+  lastMileTravelString,
+}) => {
   return (
     <div className="card">
       <img
         src={
           "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" +
-          props.restaurant.data?.cloudinaryImageId
+          cloudinaryImageId
         }
       />
-      <h2>{props.restaurant.data?.name}</h2>
-      <h3>{props.restaurant.data?.cuisines.join(",")}</h3>
-      <h4>{props.restaurant.data?.avgRating}stars</h4>
+      <h2 style={{ fontSize: "15px" }}>{name}</h2>
+      <h3 className="cuisines-text">{cuisines.join(",")}</h3>
+      <span>{avgRating} ★</span>
+      <span>||</span>
+      <span>{lastMileTravelString}</span>
     </div>
   );
 };
@@ -1905,21 +2036,9 @@ const RestaurantCard = (props) => {
 const Body = () => {
   return (
     <div className="rest-list">
-      <RestaurantCard restaurant={restaurantList[0]} />
-      <RestaurantCard restaurant={restaurantList[1]} />
-      <RestaurantCard restaurant={restaurantList[2]} />
-      <RestaurantCard restaurant={restaurantList[3]} />
-      <RestaurantCard restaurant={restaurantList[4]} />
-      <RestaurantCard restaurant={restaurantList[5]} />
-      <RestaurantCard restaurant={restaurantList[6]} />
-      <RestaurantCard restaurant={restaurantList[7]} />
-      <RestaurantCard restaurant={restaurantList[8]} />
-      <RestaurantCard restaurant={restaurantList[9]} />
-      <RestaurantCard restaurant={restaurantList[10]} />
-      <RestaurantCard restaurant={restaurantList[11]} />
-      <RestaurantCard restaurant={restaurantList[12]} />
-      <RestaurantCard restaurant={restaurantList[13]} />
-      <RestaurantCard restaurant={restaurantList[14]} />
+      {restaurantList.map((restaurant) => {
+        return <RestaurantCard {...restaurant.data} />;
+      })}
     </div>
   );
 };
@@ -1975,6 +2094,26 @@ const jsx = (
  */
 
 // config Driven Ui
+
+/*
+const RestaurantCard = ({ restaurant }) => {
+   destructuring props.
+  const RestaurantCard = (props) => {
+  return (
+    <div className="card">
+      <img
+        src={
+          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" +
+          restaurant.data?.cloudinaryImageId
+        }
+      />
+      <h2>{restaurant.data?.name}</h2>
+      <h3>{restaurant.data?.cuisines.join(",")}</h3>
+      <h4>{restaurant.data?.avgRating}stars</h4>
+    </div>
+  );
+};
+*/
 
 /*
 **const config = [
