@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-* {
-    box-sizing: border-box;
+*,
+ :after,
+ :before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: transparent;
+    -ms-text-size-adjust: none;
+    outline: none;
 }
 
 body {
@@ -44,11 +52,11 @@ body {
 }
 
 .card {
-    margin: 0.5rem;
+    margin: 1rem;
+    margin-left: 2.5rem;
     padding: 0.5rem;
     border: 1px solid bisque;
-    width: 250px;
-    height: auto;
+    width: 230px;
     cursor: pointer;
 }
 
@@ -56,9 +64,21 @@ body {
     width: 100%;
 }
 
+.card .cuisines-text {
+    color: #686b78;
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+.card>span {
+    padding: 0.5rem;
+}
+
 .rest-list {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 
