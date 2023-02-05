@@ -23,7 +23,7 @@ import Logo from "./icons/Chef in theHat (3).png";
 // JSX? React.createElement => Object =>Html(DOM) //react element /
 
 const Title = () => (
-  <div className="brand">
+  <div>
     <a href="/">
       <img className="logo" src={Logo} alt="logo" />
     </a>
@@ -41,7 +41,7 @@ const HeaderComponent = function () {
         <ul>
           <li>Home</li>
           <li>About us</li>
-          <li>Cart</li>
+          <li>cart</li>
         </ul>
       </div>
     </div>
@@ -2014,7 +2014,8 @@ const RestaurantCard = ({
   cuisines,
   cloudinaryImageId,
   avgRating,
-  lastMileTravelString,
+  deliveryTime,
+  costForTwoString,
 }) => {
   return (
     <div className="card">
@@ -2026,18 +2027,21 @@ const RestaurantCard = ({
       />
       <h2 style={{ fontSize: "15px" }}>{name}</h2>
       <h3 className="cuisines-text">{cuisines.join(",")}</h3>
-      <span>{avgRating} ★</span>
-      <span>||</span>
-      <span>{lastMileTravelString}</span>
+      <div className="card-footer">
+        <h4>{avgRating} ★</h4>
+        <h4>{deliveryTime} mins</h4>
+        <h4>{costForTwoString}</h4>
+      </div>
     </div>
   );
 };
 
+// no key (not acceptable) <<< index key(use only if you don't have anything LAST OPTION) <<< unique key (BEST PRACTICE).
 const Body = () => {
   return (
     <div className="rest-list">
       {restaurantList.map((restaurant) => {
-        return <RestaurantCard {...restaurant.data} />;
+        return <RestaurantCard key={restaurant.data.id} {...restaurant.data} />;
       })}
     </div>
   );
