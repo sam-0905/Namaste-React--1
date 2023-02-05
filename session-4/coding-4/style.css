@@ -23,6 +23,22 @@ body {
     height: auto;
 }
 
+#search-bar {
+    height: 40px;
+    width: 400px;
+    font-size: large;
+    cursor: pointer;
+    /*border-radius: 1rem;*/
+}
+
+#search-btn {
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    /*border-radius: 1rem;*/
+    font-size: large;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -51,6 +67,9 @@ body {
     border: 1px solid bisque;
     width: 230px;
     cursor: pointer;
+    /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);*/
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
 }
 
 .card>img {
@@ -77,24 +96,23 @@ body {
     justify-content: center;
 }
 
+.foot {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: 700;
+    background-color: #597aff;
+    color: ghostwhite;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
 
-/*/
-
-#search-bar {
-    height: 40px;
-    width: 500px;
-    font-size: large;
+.foot>ul {
+    display: flex;
     cursor: pointer;
-    /*border-radius: 1rem;*/
+}
 
-
-/*}*/
-
-
-/*#search-btn {
-    height: 50px;
-    width: 50px;
-    cursor: pointer;
-    border-radius: 1rem;
-    font-size: large;
-}*/
+.foot>ul>li {
+    list-style: none;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}

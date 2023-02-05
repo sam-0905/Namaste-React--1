@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Logo from "./icons/Chef in theHat (3).png";
+import linkedin from "./icons/icons8-linkedin.svg";
+import twitter from "./icons/icons8-twitter.svg";
 
 /* My Food App structure will look like this, 
             1) Header
@@ -37,11 +39,14 @@ const HeaderComponent = function () {
   return (
     <div className="header">
       <Title />
+
       <div className="Nav-container">
         <ul>
-          <li>Home</li>
+          <li>
+            🏠Home <a href="/"></a>
+          </li>
           <li>About us</li>
-          <li>cart</li>
+          <li>🛒cart</li>
         </ul>
       </div>
     </div>
@@ -2048,7 +2053,26 @@ const Body = () => {
 };
 
 const Footer = () => {
-  return <h3>Footer</h3>;
+  return (
+    <div className="foot">
+      <div>
+        <Title />
+      </div>
+      <h4>©️ 2023 | Chef in the Hat |</h4>
+      <ul>
+        <li>
+          <a href="https://twitter.com/AllanSam5050">
+            <img src={linkedin} />
+          </a>
+        </li>
+        <li>
+          <a class="link" href="https://www.linkedin.com/in/allan-sam/">
+            <img src={twitter} />
+          </a>
+        </li>
+      </ul>
+    </div>
+  );
 };
 
 const Applayout = () => {
