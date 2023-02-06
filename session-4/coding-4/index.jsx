@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "font-awesome/css/font-awesome.min.css";
 import Logo from "./icons/Chef in theHat (3).png";
 import linkedin from "./icons/icons8-linkedin.svg";
 import twitter from "./icons/icons8-twitter.svg";
@@ -43,10 +44,14 @@ const HeaderComponent = function () {
       <div className="Nav-container">
         <ul>
           <li>
-            🏠Home <a href="/"></a>
+            <i className="fa fa-home"> Home</i>
           </li>
-          <li>About us</li>
-          <li>🛒cart</li>
+          <li>
+            <i className="fa fa-info-circle"> About us</i>
+          </li>
+          <li>
+            <i className="fa fa-shopping-cart"> Cart</i>
+          </li>
         </ul>
       </div>
     </div>
@@ -2055,9 +2060,9 @@ const Body = () => {
 const Footer = () => {
   return (
     <div className="foot">
-      <div>
+      <span className="logo1">
         <Title />
-      </div>
+      </span>
       <h4>©️ 2023 | Chef in the Hat |</h4>
       <ul>
         <li>

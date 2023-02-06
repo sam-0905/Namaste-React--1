@@ -19,8 +19,9 @@ body {
 
 .logo {
     width: 70px;
-    margin-left: 20px;
-    height: auto;
+    display: flex;
+    position: relative;
+    left: 10px;
 }
 
 #search-bar {
@@ -44,9 +45,9 @@ body {
     justify-content: space-between;
     align-items: center;
     font-weight: 700;
+    font-size: 1.2rem;
     background-color: #597aff;
     color: ghostwhite;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .Nav-container>ul {
@@ -101,9 +102,9 @@ body {
     justify-content: space-evenly;
     align-items: center;
     font-weight: 700;
+    font-size: 1rem;
     background-color: #597aff;
     color: ghostwhite;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .foot>ul {
@@ -113,6 +114,13 @@ body {
 
 .foot>ul>li {
     list-style: none;
-    padding: 0.5rem;
-    margin: 0.5rem;
+    /*padding: 0.5rem;*/
+    /*margin: 0.5rem;*/
+}
+
+.foot .logo1 {
+    width: 70px;
+    display: flex;
+    position: relative;
+    right: 14rem;
 }
