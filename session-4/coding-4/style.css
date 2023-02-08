@@ -24,27 +24,6 @@ body {
     left: 10px;
 }
 
-
-/*
-#search-bar {
-    height: 40px;
-    width: 400px;
-    font-size: large;
-    cursor: pointer;
-    /*border-radius: 1rem;*/
-
-
-/*
-}
-#search-btn {
-    height: 35px;
-    width: 35px;
-    cursor: pointer;
-    /*border-radius: 1rem;*/
-
-
-/*}*/
-
 .header {
     display: flex;
     justify-content: space-between;
@@ -68,14 +47,14 @@ body {
 
 .card {
     margin: 1rem;
-    margin-left: 2rem;
+    margin-left: 1.6rem;
     padding: 0.5rem;
-    transition: transform .1s;
-    /*zoom card;*/
     border: 1px solid bisque;
     width: 230px;
     height: auto;
     cursor: pointer;
+    /*zoom card;*/
+    transition: transform .1s;
     /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);*/
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     border-radius: 0.5rem;
@@ -137,3 +116,24 @@ body {
     position: relative;
     right: 14rem;
 }
+
+
+/*
+#search-bar {
+    height: 40px;
+    width: 400px;
+    font-size: large;
+    cursor: pointer;
+    /*border-radius: 1rem;*/
+
+
+/*
+}
+#search-btn {
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    /*border-radius: 1rem;*/
+
+
+/*}*/
