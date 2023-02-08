@@ -1,62 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import Header from "../components/Header";
 import "font-awesome/css/font-awesome.min.css";
-import Logo from "./icons/Chef in theHat (3).png";
-import linkedin from "./icons/icons8-linkedin.svg";
-import twitter from "./icons/icons8-twitter.svg";
-
-/* My Food App structure will look like this, 
-            1) Header
-                - Logo
-                - Nav Items(right side)
-                - Cart
-            2) Body
-                - Search bar
-                - restaurants List
-                    - restaurant card
-                        - Image
-                        - Name
-                        - Rating
-            3) Footer
-                - Links
-                - Copyrights
-       
-*/
-
-//JSX? React.createElement => Object =>Html(DOM) //react element /
-
-const Title = () => (
-  <div>
-    <a href="/">
-      <img className="logo" src={Logo} alt="logo" />
-    </a>
-  </div>
-);
+//import linkedin from "../coding-5/icons/linkedin.svg";
+//import twitter from "../coding-5/icons/twitter.svg";
 
 // Functional Component
-
-const HeaderComponent = function () {
-  // Normal function
-  return (
-    <div className="header">
-      <Title />
-
-      <div className="Nav-container">
-        <ul>
-          <li>
-            <i className="fa fa-home"> Home</i>
-          </li>
-          <li>
-            <i className="fa fa-info-circle"> About us</i>
-          </li>
-          <li>
-            <i className="fa fa-shopping-cart"> Cart</i>
-          </li>
-        </ul>
-      </div>
-    </div>
-  );
-};
 
 // config Driven Ui
 
@@ -2020,6 +1969,7 @@ const restaurantList = [
 ];
 
 const RestaurantCard = ({
+  // props
   name,
   cuisines,
   cloudinaryImageId,
@@ -2060,19 +2010,17 @@ const Body = () => {
 const Footer = () => {
   return (
     <div className="foot">
-      <span className="logo1">
-        <Title />
-      </span>
+      <span className="logo1">{/*<Title />*/}</span>
       <h4>©️ 2023 | Chef in the Hat |</h4>
       <ul>
         <li>
           <a href="https://twitter.com/AllanSam5050">
-            <img src={linkedin} />
+            {/*<img src={linkedin} />*/}
           </a>
         </li>
         <li>
           <a class="link" href="https://www.linkedin.com/in/allan-sam/">
-            <img src={twitter} />
+            {/*<img src={twitter} />*/}
           </a>
         </li>
       </ul>
@@ -2083,7 +2031,7 @@ const Footer = () => {
 const Applayout = () => {
   return (
     <React.Fragment>
-      <HeaderComponent />
+      <Header />
       <Body />
       <Footer />
     </React.Fragment>
