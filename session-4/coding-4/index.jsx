@@ -2099,7 +2099,7 @@ root.render(<Applayout />);
 
 /***
 
- * If we writ this it gives error Jsx has only one parent and one root
+ * If we write this it gives error Jsx has only one parent and one root
  * by using this it will create a new div and not inside our root div.
 //const jsx = (
 //  <h1>jsx</h1>
@@ -2113,7 +2113,7 @@ const jsx = (
 // </div>
 //)
 
-* Inside React.Fragment it gets work & put inside our root div not a separate div.
+* Inside React.Fragment it gets work & put inside our root it nt render inside a separate div.
 
 //React.Fragment 
 const jsx = (
