@@ -45,6 +45,26 @@ body {
     margin-right: 20px;
 }
 
+
+/*.search-bar {
+    display: flex;
+    width: 70%;
+    height: 7vh;
+    margin: auto;
+    margin-top: 1rem;
+    font-size: large;
+    cursor: pointer;
+}
+
+#search-btn {
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    /*border-radius: 1rem;*/
+
+
+/*}*/
+
 .card {
     margin: 1rem;
     margin-left: 1.6rem;
@@ -116,24 +136,3 @@ body {
     position: relative;
     right: 14rem;
 }
-
-
-/*
-#search-bar {
-    height: 40px;
-    width: 400px;
-    font-size: large;
-    cursor: pointer;
-    /*border-radius: 1rem;*/
-
-
-/*
-}
-#search-btn {
-    height: 35px;
-    width: 35px;
-    cursor: pointer;
-    /*border-radius: 1rem;*/
-
-
-/*}*/

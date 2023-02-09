@@ -1,6 +1,6 @@
 import Logo from "../icons/Chef in the Hat.png";
 
-const Title = () => (
+export const Title = () => (
   <div>
     <a href="/">
       <img className="logo" src={Logo} alt="logo" />
