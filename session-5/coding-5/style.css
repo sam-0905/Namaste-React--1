@@ -45,25 +45,20 @@ body {
     margin-right: 20px;
 }
 
-
-/*.search-bar {
-    display: flex;
+.search-bar {
     width: 70%;
     height: 7vh;
-    margin: auto;
-    margin-top: 1rem;
+    margin: 1rem 0rem 0rem 10rem;
     font-size: large;
     cursor: pointer;
 }
 
-#search-btn {
+
+/*.search-btn {
     height: 35px;
     width: 35px;
     cursor: pointer;
-    /*border-radius: 1rem;*/
-
-
-/*}*/
+}*/
 
 .card {
     margin: 1rem;
