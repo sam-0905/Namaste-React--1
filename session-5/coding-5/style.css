@@ -45,20 +45,34 @@ body {
     margin-right: 20px;
 }
 
-.search-bar {
-    width: 70%;
-    height: 7vh;
-    margin: 1rem 0rem 0rem 10rem;
-    font-size: large;
-    cursor: pointer;
+.Search-container {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.5rem auto;
+    border: 1px solid black;
+    border-radius: 0rem 1rem 1rem 0rem;
 }
 
-
-/*.search-btn {
-    height: 35px;
-    width: 35px;
+.search-bar {
+    width: 90%;
+    height: 7vh;
+    font-size: large;
     cursor: pointer;
-}*/
+    border: transparent;
+}
+
+.search-btn {
+    width: 8%;
+    height: 7vh;
+    cursor: pointer;
+    border: transparent;
+    background-color: #597aff;
+    color: ghostwhite;
+    font-size: 17px;
+    border-radius: 0rem 1rem 1rem 0rem;
+}
 
 .card {
     margin: 1rem;
