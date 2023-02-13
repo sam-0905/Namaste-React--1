@@ -3,17 +3,26 @@ import { restaurantList } from "../coding-5/constant";
 import RestaurantCard from "./RestaurantCard";
 import { useState } from "react";
 
+function filterData(searchText, restaurants) {
+  const filterData = restaurants.filter((restaurant) =>
+    restaurant.data.name.includes(searchText)
+  );
+  return filterData;
+}
+
 const Body = () => {
   // This is how we create a variable in JavaScript
   //const searchTxt = "KFC";
 
-  const [searchText, setSearchText] = useState("KFC");
-
+  const [searchText, setSearchText] = useState("");
+  const [restaurants, setRestaurant] = useState(restaurantList);
+  //
   //useState() - retruns an array = [1st variablename /  setFunction - function to update the variable]
   // This is how we create a variable in React
   // function os his useState is? To create state variable;
 
-  const [searchClicked, setSearchClicked] = useState("false");
+  //
+  //const [searchClicked, setSearchClicked] = useState("false");
 
   return (
     <>
@@ -28,13 +37,25 @@ const Body = () => {
         {/*<h1>{searchText}</h1>*/}
         {/*//we can use this as local variable in any where.
         //This is Know as two way binding.*/}
-        <button className="search-btn" onClick={() => setSearchClicked("true")}>
+        {/*<button className="search-btn" onClick={() => setSearchClicked("true")}>*/}
+        {/*//*/}
+        {/*//*/}
+        {/*For restaurantList we want filterData()*/}
+        <button
+          className="search-btn"
+          onClick={() => {
+            //need to filterData
+            //update the state - restaurants
+            const data = filterData(searchText, restaurants);
+            setRestaurant(data);
+          }}
+        >
           <i className="fa fa-search"></i>
         </button>
-        <h1>{searchClicked}</h1>
+        {/*<h1>{searchClicked}</h1>*/}
       </div>
       <div className="rest-list">
-        {restaurantList.map((restaurant) => {
+        {restaurants.map((restaurant) => {
           return (
             <RestaurantCard key={restaurant.data.id} {...restaurant.data} />
           );
