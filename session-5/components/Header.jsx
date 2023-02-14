@@ -8,6 +8,8 @@ export const Title = () => (
   </div>
 );
 
+// Functional Component
+
 const Header = function () {
   // Normal function
   return (

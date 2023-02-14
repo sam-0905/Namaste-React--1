@@ -54,9 +54,11 @@ const Body = () => {
         </button>
         {/*<h1>{searchClicked}</h1>*/}
       </div>
+
       <div className="rest-list">
         {restaurants.map((restaurant) => {
           return (
+            // no key (not acceptable) <<< index key(use only if you don't have anything LAST OPTION) <<< unique key (BEST PRACTICE).
             <RestaurantCard key={restaurant.data.id} {...restaurant.data} />
           );
         })}
