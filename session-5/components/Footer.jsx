@@ -1,3 +1,4 @@
+// Named import
 import { Title } from "./Header";
 import linkedin from "../icons/linkedin.svg";
 import twitter from "../icons/twitter.svg";
