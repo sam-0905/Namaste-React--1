@@ -17,8 +17,8 @@ const Body = () => {
   const [searchText, setSearchText] = useState("");
   const [restaurants, setRestaurant] = useState(restaurantList);
   //
-  //useState() - retruns an array = [1st variablename /  setFunction - function to update the variable]
   // This is how we create a variable in React
+  //useState() - retruns an array = [1st variablename /  setFunction - function to update the variable]
   // function os his useState is? To create state variable;
 
   //

@@ -52,7 +52,7 @@ body {
     justify-content: space-between;
     margin: 1.5rem auto;
     border: 1px solid black;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
 }
 
 .search-bar {
@@ -64,6 +64,7 @@ body {
     border-radius: 1rem;
     vertical-align: middle;
     overflow: hidden;
+    padding-left: 1rem;
 }
 
 .search-btn {
@@ -73,8 +74,8 @@ body {
     border: transparent;
     background-color: #597aff;
     color: ghostwhite;
-    font-size: 17px;
-    border-radius: 0rem 1rem 1rem 0rem;
+    font-size: 20px;
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
 }
 
 .card {
@@ -138,4 +139,5 @@ body {
 
 .foot>ul>li {
     list-style: none;
+    padding-right: 1rem;
 }
