@@ -36,17 +36,17 @@ const Body = () => {
         />
         {/*<h1>{searchText}</h1>*/}
         {/*//we can use this as local variable in any where.
-        //This is Know as two way binding.*/}
+           //This is Know as two way binding.*/}
         {/*<button className="search-btn" onClick={() => setSearchClicked("true")}>*/}
         {/*//*/}
-        {/*//*/}
+
         {/*For restaurantList we want filterData()*/}
         <button
           className="search-btn"
           onClick={() => {
             //need to filterData
-            //update the state - restaurants
             const data = filterData(searchText, restaurants);
+            //update the state - restaurants
             setRestaurant(data);
           }}
         >
