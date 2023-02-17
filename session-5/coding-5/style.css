@@ -127,7 +127,6 @@ body {
     justify-content: space-between;
     align-items: center;
     font-weight: 500;
-    font-size: 1rem;
     background-color: #597aff;
     color: ghostwhite;
 }
@@ -137,7 +136,12 @@ body {
     cursor: pointer;
 }
 
+.foot>h4 {
+    padding-left: 6rem;
+    font-size: 1.5rem;
+}
+
 .foot>ul>li {
     list-style: none;
-    padding-right: 1rem;
+    padding-right: 1.5rem;
 }
