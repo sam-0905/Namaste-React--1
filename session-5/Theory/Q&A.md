@@ -69,7 +69,7 @@ Example : All API Base URLs, CDN links, config data from backend, default values
 
 ## What are React Hooks? 
 
-         A: In React version 16.8, React introduced a new pattern called Hooks. React Hooks are simple JavaScript functions that we can use to isolate the reusable part from a functional component. Hooks can be stateful and can manage side-effects.
+          In React version 16.8, React introduced a new pattern called Hooks. React Hooks are simple JavaScript functions that we can use to isolate the reusable part from a functional component. Hooks can be stateful and can manage side-effects.
 Hooks allow you to reuse stateful logic without changing your component hierarchy. This makes it easy to share Hooks among many components or with the community.
 ### React provides a bunch of standard in-built hooks:
 - useState: To manage states. Returns a stateful value and an updater function to update it.

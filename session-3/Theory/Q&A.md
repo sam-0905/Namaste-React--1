@@ -1,9 +1,9 @@
---What is JSX?
+## What is JSX?
       JSX is a Html like syntax , but it is not Html inside JavaScript.JSX makes it easier to write and add HTML in React. JSX converts HTML tags into react elements. 
 ##### Example
       `const Title = <h1>This is JSX !</h1>`
 
---Superpowers of JSX .
+## Superpowers of JSX .
       
   ### It enhances:
 
@@ -30,7 +30,7 @@
     `text/typescript`: As the name suggest the script is written in TypeScript.
 
 
---{TitleComponent} VS {<TitleComponent/>} VS {<TitleComponent></TitleComponent>} in JSX
+## {TitleComponent} VS {<TitleComponent/>} VS {<TitleComponent></TitleComponent>} in JSX
 
       {TitleComponent}: This value describes the TitleComponent as a javascript expression or a variable. 
       The {} can embed a javascript expression or a variable inside it.
