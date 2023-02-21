@@ -6,12 +6,12 @@
   There are two types `Import` and `Export`
   - Default
   - Named 
-  - * as obj
+  -  * as obj
 
 ### And we have maked `File Structre ` and put our files in Componets file.
  - also we have created constant file separately to put all our Hardcode data init.
 
-### Finally we hav madee `Search Bar` 
+### Finally we have made `Search Bar` 
  - We have made a input box to search Restaurants .
  - For that we have made using `React Hooks`.
  - with `useState Hooks` we have made to wrok our input box.
