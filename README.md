@@ -2,6 +2,5 @@
 
 ## Namaste React Live Course from Zero to Hero 🚀 by @Akshay Saini 👨🏻‍💻. # namaste # javascript # react ❤ 
 
-Topic
-react - react-router - reactjs - react-redux - react-app react-hooks - reactjs-course - react-class-components namaste-react-course  namaste-react react-live-course namaste-react-live
+Topic: react - react-router - reactjs - react-redux - react-app react-hooks - reactjs-course - react-class-components namaste-react-course  namaste-react react-live-course namaste-react-live
  
