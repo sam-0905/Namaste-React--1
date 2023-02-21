@@ -2063,7 +2063,9 @@ const Footer = () => {
       <span className="logo1">
         <Title />
       </span>
-      <h4>©️ 2023 | Chef in the Hat |</h4>
+      <h4>
+        <i className="fa fa-copyright"></i> | Chef in the Hat | 2023 |
+      </h4>
       <ul>
         <li>
           <a href="https://twitter.com/AllanSam5050">

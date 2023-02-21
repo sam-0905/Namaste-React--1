@@ -91,7 +91,7 @@ body {
 
 .foot {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     font-weight: 700;
     font-size: 1rem;
@@ -104,36 +104,12 @@ body {
     cursor: pointer;
 }
 
+.foot>h4 {
+    padding-left: 6rem;
+    font-size: 1.5rem;
+}
+
 .foot>ul>li {
     list-style: none;
-    /*padding: 0.5rem;*/
-    /*margin: 0.5rem;*/
+    padding-right: 2rem;
 }
-
-.foot .logo1 {
-    width: 70px;
-    display: flex;
-    position: relative;
-    right: 14rem;
-}
-
-
-/*
-#search-bar {
-    height: 40px;
-    width: 400px;
-    font-size: large;
-    cursor: pointer;
-    /*border-radius: 1rem;*/
-
-
-/*
-}
-#search-btn {
-    height: 35px;
-    width: 35px;
-    cursor: pointer;
-    /*border-radius: 1rem;*/
-
-
-/*}*/
