@@ -23,6 +23,12 @@ const Body = () => {
 
   //
   //const [searchClicked, setSearchClicked] = useState("false");
+  //
+  //
+
+  // if we refresh this it re-render the whole component once if we had made any changes.IN case of search it we rnder eachand every time when input is happens.
+  console.log("render");
+  console.log(restaurants);
 
   return (
     <>
