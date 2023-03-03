@@ -1,7 +1,7 @@
 // Named import and import {} from"";
 import { restaurantList } from "../coding-6/constant";
 import RestaurantCard from "./RestaurantCard";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function filterData(searchText, restaurants) {
   const filterData = restaurants.filter((restaurant) =>
@@ -15,20 +15,43 @@ const Body = () => {
   //const searchTxt = "KFC";
 
   const [searchText, setSearchText] = useState("");
-  const [restaurants, setRestaurant] = useState(restaurantList);
-  //
-  // This is how we create a variable in React
-  //useState() - retruns an array = [1st variablename /  setFunction - function to update the variable]
-  // function os his useState is? To create state variable;
+  const [restaurants, setRestaurants] = useState([]);
 
-  //
-  //const [searchClicked, setSearchClicked] = useState("false");
-  //
-  //
+  /*
+   This is how we create a variable in React
+  useState() - retruns an array = [1st variablename /  setFunction - function to update the variable]
+   function os his useState is? To create state variable;
 
-  // if we refresh this it re-render the whole component once if we had made any changes.IN case of search it we rnder eachand every time when input is happens.
+  
+  const [searchClicked, setSearchClicked] = useState("false");
+
+  
+    if we refresh this it re-render the whole component once if we had made any changes.IN case of search it we rnder eachand every time when input is happens.
+    console.log("render");
+    console.log(restaurants);
+*/
+
+  /*
+  Empty dependency array  ======>  once render after one render happend
+  dep array [searchText]  ======>  once after intial render + everytime re-render when my searchText changes(on every key press.)
+  */
   console.log("render");
-  console.log(restaurants);
+
+  useEffect(() => {
+    //fecht API
+    getRestaurants();
+  }, []);
+
+  async function getRestaurants() {
+    const data = await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.3164945&lng=78.03219179999999&page_type=DESKTOP_WEB_LISTING"
+    );
+    const json = await data.json();
+    console.log(json);
+    //setRestaurants(json.data.cards[2].data.data.cards) // This is a bad way.by doing this it will break.
+    // Optional  chaining
+    setRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+  }
 
   return (
     <>
@@ -53,7 +76,7 @@ const Body = () => {
             //need to filterData
             const data = filterData(searchText, restaurants);
             //update the state - restaurants
-            setRestaurant(data);
+            setRestaurants(data);
           }}
         >
           <i className="fa fa-search"></i>
