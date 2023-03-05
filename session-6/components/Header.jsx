@@ -1,4 +1,5 @@
 import Logo from "../icons/Chef in the Hat.png";
+import { useState } from "react";
 
 export const Title = () => (
   <div>
@@ -12,6 +13,8 @@ export const Title = () => (
 
 const Header = function () {
   // Normal function
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   return (
     <div className="header">
       <Title />
@@ -29,6 +32,11 @@ const Header = function () {
           </li>
         </ul>
       </div>
+      {isLoggedIn ? (
+        <button onClick={() => setIsLoggedIn(false)}>logout</button>
+      ) : (
+        <button onClick={() => setIsLoggedIn(true)}>login</button>
+      )}
     </div>
   );
 };

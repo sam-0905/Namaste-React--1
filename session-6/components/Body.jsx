@@ -2,6 +2,7 @@
 import { restaurantList } from "../coding-6/constant";
 import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
+import Shimmer from "./shimmer";
 
 function filterData(searchText, restaurants) {
   const filterData = restaurants.filter((restaurant) =>
@@ -15,7 +16,8 @@ const Body = () => {
   //const searchTxt = "KFC";
 
   const [searchText, setSearchText] = useState("");
-  const [restaurants, setRestaurants] = useState([]);
+  const [allRestaurants, setAllRestaurants] = useState([]);
+  const [filteredRestaurants, setFilteredRestaurants] = useState([]);
 
   /*
    This is how we create a variable in React
@@ -50,10 +52,21 @@ const Body = () => {
     console.log(json);
     //setRestaurants(json.data.cards[2].data.data.cards) // This is a bad way.by doing this it will break.
     // Optional  chaining
-    setRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+    setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+    setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
   }
 
-  return (
+  /*  
+  -> Conditional Rendering:
+      -if the restaurant is empty ⇒ Shimmer UI
+      -if the restaurant has data ⇒ actual data UI
+*/
+
+  // not render components(Early retrun)
+  if (!allRestaurants) return null;
+  return allRestaurants.length === 0 ? (
+    <Shimmer />
+  ) : (
     <>
       <div className="Search-container">
         <input
@@ -74,9 +87,9 @@ const Body = () => {
           className="search-btn"
           onClick={() => {
             //need to filterData
-            const data = filterData(searchText, restaurants);
+            const data = filterData(searchText, allRestaurants);
             //update the state - restaurants
-            setRestaurants(data);
+            setFilteredRestaurants(data);
           }}
         >
           <i className="fa fa-search"></i>
@@ -85,7 +98,7 @@ const Body = () => {
       </div>
 
       <div className="rest-list">
-        {restaurants.map((restaurant) => {
+        {filteredRestaurants.map((restaurant) => {
           return (
             // no key (not acceptable) <<< index key(use only if you don't have anything LAST OPTION) <<< unique key (BEST PRACTICE).
             <RestaurantCard key={restaurant.data.id} {...restaurant.data} />
