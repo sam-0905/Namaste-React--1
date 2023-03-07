@@ -1,100 +1,78 @@
-# Chapter 05 - Let's get Hooked!
+# Chapter 06 - Exploring the world
+##  What is `Microservice`?
+      A microservices architecture, also simply known as microservices, is an architectural method that relies on a series of `Independently deployable services.` These services have their own business logic and database with a specific goal. Updating, testing, deployment, and scaling occur within each service. Microservices decouple major business, domain-specific concerns into separate, independent code bases.
 
-## What is the difference between `Named export`, `Default export`, and `* as export`?
-    ES6 provides us to import & export a module and use it in other files. ES6 provides two ways to export a module from a file: `named export` and `default export`.
-  In `Named export`, one can have multiple named exports per file. Then import the specific exports they want surrounded in `{}` braces. The name of imported module has to be the same as the name of the exported module.
-In `Named export` examples:
+- Benefits of Microservices:
+    - Flexible Scaling
+    - Easy Deployment
+    - Technological Freedom
+    - Reusable Code
+    - Resilience
 
-export const Title = () => {}
-and the component is `Imported` from component.js file like: here we must use `{}` in `{Title}`.
+    
+##  What is `Monolith architecture`?
+     A `Monolith architecture` is a traditional model of a software program, which is built as a unified unit that is self-contained and independent from other applications. A monolithic architecture is `a singular, large computing network with one code base that couples all of the business concerns together`. To make a change to this sort of application requires `updating the entire stack by accessing the code base and building and deploying an updated version of the service-side interface.` This makes updates restrictive and time-consuming.
+     means we are not dividing software into small, well-defined modules, we use every services like, database, server or a UI of the application, in one Application file.
+
+     - Benefits of `Monolith architecture`:
+
+     **Easy deployment** – One executable file or directory makes deployment easier.
+
+     **Development** – When an application is built with one code base, it is easier to develop.
+
+     **Performance** – In a centralized code base and repository, one API can often perform the same function that numerous APIs perform with microservices.
+
+     **Simplified testing** – Since a monolithic application is a single, centralized unit, end-to-end testing can be performed faster than with a distributed application. **Easy debugging** – With all code located in one place, it’s easier to follow a request and find an issue.
+          
+## - What is the `difference` between `Monolith and Microservice?
+
+     | Parameters   | Monolith Architecture  | Microservices Architecture  |
+ | ------------ | --------------------   | :-------------------------: |
+ | Development | When an application is built with one code base, it is easier to develop. This is true for small applications, but when the application takes larger, development becomes slower and complex    | Micro services add more complexity compared to monolith arch. If development sprawl isn’t properly managed, it results in slower development speed and poor operational performance.   |
+ | Testing | Since a monolithic application is a single, centralized unit, end-to-end testing can be performed faster than with a distributed application. | Teams can experiment with new features and roll back if something doesn’t work. This makes it easier to update code and accelerates time-to-market for new features. Plus, it is easy to isolate and fix faults and bugs in individual services. |
+ | Performance | In a centralized code base and repository, one API can often perform the same function that numerous APIs perform with microservices | Though performance could be an issue in microservices, it could be over come by various performance optimisation techniques | 
+ | Debugging  | With all code located in one place, it’s easier to follow a request and find an issue. |  Each microservice has its own set of logs, which makes debugging more complicated. Plus, a single business process can run across multiple machines, further complicating debugging. |
+ | Scalability | You can’t scale individual components |If a microservice reaches its load capacity, new instances of that service can rapidly be deployed to the accompanying cluster to help relieve pressure.|
+ | Relaibility | If there’s an error in any module, it could affect the entire application’s availability. | You can deploy changes for a specific service, without the threat of bringing down the entire application.|
+ | Tech Adoption | Any changes in the framework or language affects the entire application, making changes often expensive and time-consuming. | Any new tech changes can eaily be adopted as an independent service | 
+ | Deployment |    One executable file or directory makes deployment easier. But, a small change to a monolithic application requires the redeployment of the entire monolith.      |  Microservices make it easier for teams to update code and accelerate release cycles with continuous integration and continuous delivery (CI/CD).   |
+ | Agility | There is no agility in monolith | Promote agile ways of working with small teams that deploy frequently. |
+
+## Why do we need `useEffect Hook`?
+
+    `useEffect Hook` is javascript function provided by `react`. The useEffect Hook allows you to  `eliminate side effects` in your components. Some examples of side effects are: `fetching API data`, `directly updating the DOM`, and `setting up subscriptions or timers`, etc can be lead to unwarranted side-effects.
+useEffect accepts `two arguments`, a `callback function` and a `dependency array`. The second argument is optional.
+
+```
+useEffect(() => {}, [])
+```
+The `() => {}` is callback function and `[]` is called a empty dependency array. 
+If anything that we pass (suppose currentState) inside the `[]` it trigger the callback function and changes the state of the application.
+```
+useEffect(() => {
+    setCurrentState("true");
+}, [currentState])
+```
+If we do not pass empty dependency array then the useEffect runs everytime when the UI is rendered.
+
+```
+useEffect(() => {})
 ```
 
-// ex. importing a single named export
-import { Component } from "./Component";
+## What is `Optional Chaining`?
+    `Optional Chaining` (`?.`) operator accesses an object's property or calls a function. If the object   accessed or function called is `undefined or null` , it returns `undefined` instead of throwing an error.
 
-// ex. importing multiple named exports
-import { Component, Component2 } from "./Component";
+    `Optional Chaining` (`?.`) is good way of accessing the object keys, it prevents the application from being crashed if the key that we are trying to access is not present. If the key is not present then instead of a throwing key error, it returns `undefined`.
 
-// ex. giving a named import a different name by using "as":
-import { Component2 as MyNewComponent } from "./Component";
+## What is `Shimmer UI`?
+      A shimmer screen is a version of the UI that doesn’t contain actual content. Instead, it mimics the page’s layout by showing its elements in a shape similar to the actual content as it is loading and becoming available (i.e. when network latency allows).
 
-
-
-In `Default export`, One can have only one default export per file. The naming of import is completely independent in default export and we can use any name we like.
-In `Default export`, the component is exported from Component.js file like:
-```
-const Header = () => {}
-export default Header;
-```
-and the component is imported from Component.js file like: here we must omit `{}` in Component.
-```
-import Component from "./Component";
-```
-
-In `* as export`, it is used to import the whole module as a component and access the components inside the module.
-In `* as export`, the component is exported from Component.js file like:
-```
-export const Header = () => {}
-export const Body = () => {}
-export const Footer = () => {}
-``` 
-and the component is imported from Component.js file like:
-```
-import * as xyz from "./Component";
-```
-Now we can use them in JSX as:
-```
-<xyz.Header />
-<xyz.Body />
-<xyz.Footer />
-```
-We can use `Named export` and `Default export` together. So you should export like:
-```
-export const Component2 = () => {}
-const Component = () => {}
-export default Component;
-```
-and import like:
-```
-import Component, {Component2} from "./Component";
-```
+      A shimmer screen is essentially a wireframe of the page, with placeholder boxes for text and images.
 
 
-
-## What is the importance of config.js file? 
-
-      config.js file can be used to store the hardcoded values in one file, so that when the value needs to be modified, it can be easy to do the modification in one file.
-
-Example : All API Base URLs, CDN links, config data from backend, default values needed in the app are could be placed in config.js file.
-
-## What are React Hooks? 
-
-          In React version 16.8, React introduced a new pattern called Hooks. React Hooks are simple JavaScript functions that we can use to isolate the reusable part from a functional component. Hooks can be stateful and can manage side-effects.
-Hooks allow you to reuse stateful logic without changing your component hierarchy. This makes it easy to share Hooks among many components or with the community.
-### React provides a bunch of standard in-built hooks:
-- useState: To manage states. Returns a stateful value and an updater function to update it.
-- useEffect: To manage side-effects like API calls, subscriptions, timers, mutations, and more.
-- useContext: To return the current value for a context.
-- useReducer: A useState alternative to help with complex state management.
-
-
-## Why do we need useState Hook?
-
-      `useState hook` is used to maintain the state in our React application. It keeps track of the state changes so basically useState has the ability to encapsulate local state in a functional component.
-The  useState hook is a special function that takes the `initial state` as an `argument` and `returns an array` of two entries.  UseState encapsulate only singular value from the state, for multiple state need to have useState calls.
-
-#### Syntax for useState hook
-```
-const [state, setState] = useState(initialstate);
-```
-#### Importing: To use useState you need to import useState from react as shown below:
-```
-import React, { useState } from "react";
-```
-we can use Hooks in Functional Components
-```
-const Example = (props) => {
-  // You can use Hooks here!
-  return <div />;
-}
-```
+## What is the `difference` between `JS expression and JS statement`?
+    
+## What is `Conditional Rendering`? explain with a code example.
+## What is `CORS`?
+## What is `async and await`?
+## What is the use of `const json = await data.json()`; in `getRestaurants()`?
