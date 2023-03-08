@@ -11,6 +11,7 @@
 
     
 ##  What is `Monolith architecture`?
+
      A `Monolith architecture` is a traditional model of a software program, which is built as a unified unit that is self-contained and independent from other applications. A monolithic architecture is `a singular, large computing network with one code base that couples all of the business concerns together`. To make a change to this sort of application requires `updating the entire stack by accessing the code base and building and deploying an updated version of the service-side interface.` This makes updates restrictive and time-consuming.
      means we are not dividing software into small, well-defined modules, we use every services like, database, server or a UI of the application, in one Application file.
 
@@ -41,13 +42,18 @@
 ## Why do we need `useEffect Hook`?
 
     `useEffect Hook` is javascript function provided by `react`. The useEffect Hook allows you to  `eliminate side effects` in your components. Some examples of side effects are: `fetching API data`, `directly updating the DOM`, and `setting up subscriptions or timers`, etc can be lead to unwarranted side-effects.
-useEffect accepts `two arguments`, a `callback function` and a `dependency array`. The second argument is optional.
+    useEffect accepts `two arguments`, first is a `callback function` and a `dependency array`. The second argument is optional.
 
 ```
-useEffect(() => {}, [])
-```
+Syntax
+
+`useEffect(() => {}, [])`
+
+````
+
 The `() => {}` is callback function and `[]` is called a empty dependency array. 
 If anything that we pass (suppose currentState) inside the `[]` it trigger the callback function and changes the state of the application.
+
 ```
 useEffect(() => {
     setCurrentState("true");
@@ -69,10 +75,42 @@ useEffect(() => {})
 
       A shimmer screen is essentially a wireframe of the page, with placeholder boxes for text and images.
 
-
 ## What is the `difference` between `JS expression and JS statement`?
-    
+     
+      A `JS expression` returns a value that we use in the application. for example: 
+```
+1 + 2 // expresses 
+"foo".toUpperCase() // expresses 'FOO'
+console.log(2) // logs '2'
+isTrue ? true : false // returns us a true or false value based on isTrue value
+```
+A `JS statement`, does not return a value. for example:
+```
+let x; // variable declaration
+if () { } // if condition
+```
+If we want to use `JS expression` in JSX, we have to wrap in `{/* expression slot */}` and if we want to use `JS statement` in JSX, we have to wrap in `{(/* statement slot */)}`;
+
 ## What is `Conditional Rendering`? explain with a code example.
+        Conditional rendering in React works the same way conditions work in JavaScript. Use JavaScript operators like if or the conditional operator to create elements representing the current state, and let React update the UI to match them.
+
+        Consider these two components:
+
+        `function UserGreeting(props) {
+        return <h1>Welcome back!</h1>;
+        }
+
+        function GuestGreeting(props) {
+        return <h1>Please sign up.</h1>;   
+        }`
+     
+
 ## What is `CORS`?
+
+       `Cross-Origin Resource Sharing (CORS)` is an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources. CORS also relies on a mechanism by which browsers make a "pre-flight" request to the server hosting the cross-origin resource, in order to check that the server will permit the actual request. In that pre-flight, the browser sends headers that indicate the HTTP method and headers that will be used in the actual request.
+   
+
 ## What is `async and await`?
+        
+    
 ## What is the use of `const json = await data.json()`; in `getRestaurants()`?
