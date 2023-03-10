@@ -1,8 +1,9 @@
 # Chapter 06 - Exploring the world
 ##  What is `Microservice`?
-      A microservices architecture, also simply known as microservices, is an architectural method that relies on a series of `Independently deployable services.` These services have their own business logic and database with a specific goal. Updating, testing, deployment, and scaling occur within each service. Microservices decouple major business, domain-specific concerns into separate, independent code bases.
+      A microservices architecture, also simply known as microservices, is an architectural method that relies on a series of `Independently deployable services.` These services have their own business logic and database with a specific goal.` Updating, testing, deployment, and scaling `occur within each service. Microservices decouple major business, domain-specific concerns into separate, independent code bases.
 
 - Benefits of Microservices:
+    - Easier to Test
     - Flexible Scaling
     - Easy Deployment
     - Technological Freedom
@@ -12,11 +13,11 @@
     
 ##  What is `Monolith architecture`?
 
-     A `Monolith architecture` is a traditional model of a software program, which is built as a unified unit that is self-contained and independent from other applications. A monolithic architecture is `a singular, large computing network with one code base that couples all of the business concerns together`. To make a change to this sort of application requires `updating the entire stack by accessing the code base and building and deploying an updated version of the service-side interface.` This makes updates restrictive and time-consuming.
+     A `Monolith architecture` is a traditional model of a software program, which is built as a unified unit that is self-contained and independent from other applications. A monolithic architecture is `a singular, large computing network with` one code base` that couples all of the business concerns together`. To make a change to this sort of application requires `updating the entire stack by accessing the code base and building and deploying an updated version of the service-side interface.` This makes updates restrictive and time-consuming.
      means we are not dividing software into small, well-defined modules, we use every services like, database, server or a UI of the application, in one Application file.
 
      - Benefits of `Monolith architecture`:
-
+     
      **Easy deployment** – One executable file or directory makes deployment easier.
 
      **Development** – When an application is built with one code base, it is easier to develop.
