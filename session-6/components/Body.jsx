@@ -34,8 +34,8 @@ const Body = () => {
 */
 
   /*
-  Empty dependency array  ======>  once render after one render happend
-  dep array [searchText]  ======>  once after intial render + everytime re-render when my searchText changes(on every key press.)
+  Empty dependency array  ======>  render once  after Intial  render happend
+  dep array [searchText]  ======>  render once  after Intial  render happend + everytime re-render when my searchText changes(on every key press.)
   */
   console.log("render");
 
