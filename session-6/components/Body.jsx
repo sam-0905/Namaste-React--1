@@ -34,13 +34,16 @@ const Body = () => {
 */
 
   /*
-  Empty dependency array  ======>  render once  after Intial  render happend
+  if we have i)render 
+            ii)UseEffect   below comnditions will follow⬇️
+
+  Empty dependency array[]  ======>  render once after render
   dep array [searchText]  ======>  render once  after Intial  render happend + everytime re-render when my searchText changes(on every key press.)
   */
   console.log("render");
 
   useEffect(() => {
-    //fecht API
+    //fecht (Make an API call)
     getRestaurants();
   }, []);
 
@@ -50,16 +53,19 @@ const Body = () => {
     );
     const json = await data.json();
     console.log(json);
-    //setRestaurants(json.data.cards[2].data.data.cards) // This is a bad way.by doing this it will break.
-    // Optional  chaining
+    /*
+     setRestaurants(json.data.cards[2].data.data.cards) 
+     This is a bad way.by doing this it will break. so We use
+     - Optional  chaining -
+    */
     setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
     setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
   }
 
   /*  
   -> Conditional Rendering:
-      -if the restaurant is empty ⇒ Shimmer UI
-      -if the restaurant has data ⇒ actual data UI
+      - If the restaurant is empty ⇒ Shimmer UI
+      - If the restaurant has data ⇒ actual data UI
 */
 
   // not render components(Early retrun)
