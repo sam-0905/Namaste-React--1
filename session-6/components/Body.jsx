@@ -68,6 +68,7 @@ const Body = () => {
       - If the restaurant has data ⇒ actual data UI
 */
 
+  // When we dont have any restaurant dont return anything.⬇️
   // not render components(Early retrun)
   if (!allRestaurants) return null;
   return allRestaurants.length === 0 ? (
