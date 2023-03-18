@@ -32,13 +32,14 @@ const Header = function () {
             <i className="fa fa-shopping-cart"> Cart</i>
           </li>
 
-          <div className="Log-btn">
+          {/* use conditional rendering for login and logout */}
+          <li className="Log-btn">
             {isLoggedIn ? (
               <button onClick={() => setIsLoggedIn(false)}>logout</button>
             ) : (
               <button onClick={() => setIsLoggedIn(true)}>login</button>
             )}
-          </div>
+          </li>
         </ul>
       </div>
     </div>
