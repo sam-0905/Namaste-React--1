@@ -14,6 +14,7 @@ export const Title = () => (
 const Header = function () {
   // Normal function
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [chkName, setChkName] = useState("false");
 
   return (
     <div className="header">
@@ -30,13 +31,16 @@ const Header = function () {
           <li>
             <i className="fa fa-shopping-cart"> Cart</i>
           </li>
+
+          <div className="Log-btn">
+            {isLoggedIn ? (
+              <button onClick={() => setIsLoggedIn(false)}>logout</button>
+            ) : (
+              <button onClick={() => setIsLoggedIn(true)}>login</button>
+            )}
+          </div>
         </ul>
       </div>
-      {isLoggedIn ? (
-        <button onClick={() => setIsLoggedIn(false)}>logout</button>
-      ) : (
-        <button onClick={() => setIsLoggedIn(true)}>login</button>
-      )}
     </div>
   );
 };

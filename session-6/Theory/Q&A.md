@@ -13,7 +13,7 @@
     
 ##  What is `Monolith architecture`?
 
-     A `Monolith architecture` is a traditional model of a software program, which is built as a unified unit that is self-contained and independent from other applications. A monolithic architecture is `a singular, large computing network with` one code base` that couples all of the business concerns together`. To make a change to this sort of application requires `updating the entire stack by accessing the code base and building and deploying an updated version of the service-side interface.` This makes updates restrictive and time-consuming.
+     A `Monolith architecture` is a traditional model of a software program, which is built as a unified unit that is self-contained and independent from other applications. A monolithic architecture is `a singular, large computing network with` one code base` that couples all of the business concerns together`. To make a change or a small change in it (We need to deploy the hole project init.For instance we changed a button we use deploy our Whole project.) to this sort of application requires `updating the entire stack by accessing the code base and building and deploying an updated version of the service-side interface.` This makes updates restrictive and time-consuming.
      means we are not dividing software into small, well-defined modules, we use every services like, database, server or a UI of the application, in one Application file.
 
      - Benefits of `Monolith architecture`:
@@ -44,17 +44,12 @@
 
     `useEffect Hook` is javascript function provided by `react`. The useEffect Hook allows you to  `eliminate side effects` in your components. Some examples of side effects are: `fetching API data`, `directly updating the DOM`, and `setting up subscriptions or timers`, etc can be lead to unwarranted side-effects.
     useEffect accepts `two arguments`, first is a `callback function` and a `dependency array`. The second argument is optional.
-
 ```
 Syntax
-
 `useEffect(() => {}, [])`
-
-````
-
+```
 The `() => {}` is callback function and `[]` is called a empty dependency array. 
 If anything that we pass (suppose currentState) inside the `[]` it trigger the callback function and changes the state of the application.
-
 ```
 useEffect(() => {
     setCurrentState("true");
@@ -65,7 +60,6 @@ If we do not pass empty dependency array then the useEffect runs everytime when 
 ```
 useEffect(() => {})
 ```
-
 ## What is `Optional Chaining`?
     `Optional Chaining` (`?.`) operator accesses an object's property or calls a function. If the object   accessed or function called is `undefined or null` , it returns `undefined` instead of throwing an error.
 
@@ -90,7 +84,7 @@ A `JS statement`, does not return a value. for example:
 let x; // variable declaration
 if () { } // if condition
 ```
-If we want to use `JS expression` in JSX, we have to wrap in `{/* expression slot */}` and if we want to use `JS statement` in JSX, we have to wrap in `{(/* statement slot */)}`;
+If we want to use `JS expression` in JSX, we have to wrap in `{/* expression slot */}` and if we want to use `JS statement` in JSX, we have to wrap in `{(/* statement slot */)}`.
 
 ## What is `Conditional Rendering`? explain with a code example.
         Conditional rendering in React works the same way conditions work in JavaScript. Use JavaScript operators like if or the conditional operator to create elements representing the current state, and let React update the UI to match them.

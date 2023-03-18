@@ -45,6 +45,19 @@ body {
     margin-right: 20px;
 }
 
+.Log-btn {
+    display: flex;
+    cursor: pointer;
+    padding: 10px;
+    margin-right: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Log-btn>button {
+    background-color: #597aff;
+    color: ghostwhite;
+}
+
 .Search-container {
     width: 70%;
     display: flex;

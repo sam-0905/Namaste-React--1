@@ -1,5 +1,5 @@
 // Named import and import {} from"";
-import { restaurantList } from "../coding-6/constant";
+//import { restaurantList } from "../coding-6/constant";(We use live api data now)
 import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./shimmer";
