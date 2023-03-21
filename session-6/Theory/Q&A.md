@@ -106,6 +106,48 @@ If we want to use `JS expression` in JSX, we have to wrap in `{/* expression slo
    
 
 ## What is `async and await`?
-        
+        Async/await are keywords to make a normal function behave like a asynchornous funtion. 
+
+`async` function always returns a promise, any values are automatically wrapped inside a resolved promise. 
+
+`await` keyword makes javascript wait until the promise settles, and return its result. await cannot be used in a non-async function.  
+
+
+For example : Let's try to write a function getRestaurants() to fetch restaurant data from a public API. 
+
+First, let's try to write it with `Promise chaining` : fetch(url) returns a promise (resolve or reject), which can be consumed by the `then` (success) handler or `catch` (error) handler 
+
+```
+function getRestaurants() {
+  fetch(url).then((data)=>{data.json()})
+    .then((json)=>{
+    console.log(json); 
+  }).catch((err)=>{
+    console.log(err);
+  })
+}
+```
+
+
+Using `async` and `await` : await waits until fetch(url) returns a promise with the data and headers which again needs to be resolved using .json() method to get the data. If any of promise inside try block is rejected, the control jumps to catch block.
+
+```
+async function getRestaurants() {
+  try {
+    const data = await fetch(url);
+    const json = await data.json();
+    console.log(json);
+  } catch(err) {
+    console.log(err);
+  }
+}
+
+```
     
 ## What is the use of `const json = await data.json()`; in `getRestaurants()`?
+
+    The `data` object, returned by the `await fetch()`, is a generic placeholder for multiple data formats.
+so we can extract the `JSON object` from a `fetch` response by using `await data.json()`.
+`data.json()` is a method on the data object that lets you extract a `JSON object` from the data or response. The method returns a promise because we have used `await` keyword.
+so `data.json()` returns a promise resolved to a `JSON object`.
+
