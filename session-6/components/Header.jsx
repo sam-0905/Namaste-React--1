@@ -33,11 +33,18 @@ const Header = function () {
           </li>
 
           {/* use conditional rendering for login and logout */}
-          <li className="Log-btn">
+          <li>
             {isLoggedIn ? (
-              <button onClick={() => setIsLoggedIn(false)}>logout</button>
+              <button
+                className="logout-btn"
+                onClick={() => setIsLoggedIn(false)}
+              >
+                Logout
+              </button>
             ) : (
-              <button onClick={() => setIsLoggedIn(true)}>login</button>
+              <button className="login-btn" onClick={() => setIsLoggedIn(true)}>
+                Login
+              </button>
             )}
           </li>
         </ul>
