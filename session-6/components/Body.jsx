@@ -77,6 +77,7 @@ const Body = () => {
   // When we dont have any restaurant dont return anything.⬇️
   // not render components(Early retrun)
   if (!allRestaurants) return null;
+
   return allRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
