@@ -47,26 +47,32 @@ const Body = () => {
     getRestaurants();
   }, []);
 
+  // async function getRestaurant to fetch Swiggy API data
   async function getRestaurants() {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.3164945&lng=78.03219179999999&page_type=DESKTOP_WEB_LISTING"
-    );
-    const json = await data.json();
-    console.log(json);
-    /*
-     setRestaurants(json.data.cards[2].data.data.cards) 
-     This is a bad way.by doing this it will break. so We use
-     - Optional  chaining -
-    */
-    setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
-    setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+    // handle the error using try... catch
+    try {
+      const data = await fetch(
+        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.3164945&lng=78.03219179999999&page_type=DESKTOP_WEB_LISTING"
+      );
+      const json = await data.json();
+      console.log(json);
+      /*
+       setRestaurants(json.data.cards[2].data.data.cards) 
+       This is a bad way.by doing this it will break. so We use
+       - Optional  chaining -
+      */
+      setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+      setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   /*  
-  -> Conditional Rendering:
+    Conditional Rendering:
       - If the restaurant is empty ⇒ Shimmer UI
       - If the restaurant has data ⇒ actual data UI
-*/
+  */
 
   // When we dont have any restaurant dont return anything.⬇️
   // not render components(Early retrun)
