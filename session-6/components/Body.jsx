@@ -40,7 +40,6 @@ const Body = () => {
   Empty dependency array[]  ======>  render once after render
   dep array [searchText]  ======>  render once  after Intial  render happend + everytime re-render when my searchText changes(on every key press.)
   */
-  console.log("render");
 
   useEffect(() => {
     //fecht (Make an API call)
@@ -68,6 +67,8 @@ const Body = () => {
     }
   }
 
+  console.log("render");
+
   /*  
     Conditional Rendering:
       - If the restaurant is empty ⇒ Shimmer UI
@@ -78,7 +79,7 @@ const Body = () => {
   // not render components(Early retrun)
   if (!allRestaurants) return null;
 
-  return allRestaurants.length === 0 ? (
+  return allRestaurants?.length === 0 ? ( //Optional Chaining
     <Shimmer />
   ) : (
     <>
