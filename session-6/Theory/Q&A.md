@@ -1,6 +1,6 @@
 # Chapter 06 - Exploring the world
 ##  What is `Microservice`?
-      A microservices architecture, also simply known as microservices, is an architectural method that relies on a series of `Independently deployable services.` These services have their own business logic and database with a specific goal.` Updating, testing, deployment, and scaling `occur within each service. Microservices decouple major business, domain-specific concerns into separate, independent code bases.
+ A microservices architecture, also simply known as microservices, is an architectural method that relies on a series of `Independently deployable services.` These services have their own business logic and database with a specific goal.` Updating, testing, deployment, and scaling `occur within each service. Microservices decouple major business, domain-specific concerns into separate, independent code bases.
 
 - Benefits of Microservices:
     - Easier to Test
@@ -13,8 +13,9 @@
     
 ##  What is `Monolith architecture`?
 
-     A `Monolith architecture` is a traditional model of a software program, which is built as a unified unit that is self-contained and independent from other applications. A monolithic architecture is `a singular, large computing network with` one code base` that couples all of the business concerns together`. To make a change or a small change in it (We need to deploy the hole project init.For instance we changed a button we use deploy our Whole project.) to this sort of application requires `updating the entire stack by accessing the code base and building and deploying an updated version of the service-side interface.` This makes updates restrictive and time-consuming.
-     means we are not dividing software into small, well-defined modules, we use every services like, database, server or a UI of the application, in one Application file.
+A `Monolith architecture` is a traditional model of a software program, which is built as a unified unit that is self-contained and independent from other applications. A monolithic architecture is `a singular, large computing network with` one code base` that couples all of the business concerns together`. To make a change or a small change in it (We need to deploy the hole project init.For instance we changed a button we use deploy our Whole project.) to this sort of application requires `updating the entire stack by accessing the code base and building and deploying an updated version of the service-side interface.` This makes updates restrictive and time-consuming.
+
+ means we are not dividing software into small, well-defined modules, we use every services like, database, server or a UI of the application, in one Application file.
 
      - Benefits of `Monolith architecture`:
      
@@ -42,7 +43,7 @@
 
 ## Why do we need `useEffect Hook`?
 
-    `useEffect Hook` is javascript function provided by `react`. The useEffect Hook allows you to  `eliminate side effects` in your components. Some examples of side effects are: `fetching API data`, `directly updating the DOM`, and `setting up subscriptions or timers`, etc can be lead to unwarranted side-effects.
+`useEffect Hook` is javascript function provided by `react`. The useEffect Hook allows you to  `eliminate side effects` in your components. Some examples of side effects are: `fetching API data`, `directly updating the DOM`, and `setting up subscriptions or timers`, etc can be lead to unwarranted side-effects.
     useEffect accepts `two arguments`, first is a `callback function` and a `dependency array`. The second argument is optional.
 ```
 Syntax
@@ -61,18 +62,19 @@ If we do not pass empty dependency array then the useEffect runs everytime when 
 useEffect(() => {})
 ```
 ## What is `Optional Chaining`?
-    `Optional Chaining` (`?.`) operator accesses an object's property or calls a function. If the object   accessed or function called is `undefined or null` , it returns `undefined` instead of throwing an error.
 
-    `Optional Chaining` (`?.`) is good way of accessing the object keys, it prevents the application from being crashed if the key that we are trying to access is not present. If the key is not present then instead of a throwing key error, it returns `undefined`.
+`Optional Chaining` (`?.`) operator accesses an object's property or calls a function. If the object   accessed or function called is `undefined or null` , it returns `undefined` instead of throwing an error.
+
+ `Optional Chaining` (`?.`) is good way of accessing the object keys, it prevents the application from being crashed if the key that we are trying to access is not present. If the key is not present then instead of a throwing key error, it returns `undefined`.
 
 ## What is `Shimmer UI`?
-      A shimmer screen is a version of the UI that doesn’t contain actual content. Instead, it mimics the page’s layout by showing its elements in a shape similar to the actual content as it is loading and becoming available (i.e. when network latency allows).
+ A shimmer screen is a version of the UI that doesn’t contain actual content. Instead, it mimics the page’s layout by showing its elements in a shape similar to the actual content as it is loading and becoming available (i.e. when network latency allows).
 
-      A shimmer screen is essentially a wireframe of the page, with placeholder boxes for text and images.
+A shimmer screen is essentially a wireframe of the page, with placeholder boxes for text and images.
 
 ## What is the `difference` between `JS expression and JS statement`?
      
-      A `JS expression` returns a value that we use in the application. for example: 
+ A `JS expression` returns a value that we use in the application. for example: 
 ```
 1 + 2 // expresses 
 "foo".toUpperCase() // expresses 'FOO'
@@ -87,26 +89,26 @@ if () { } // if condition
 If we want to use `JS expression` in JSX, we have to wrap in `{/* expression slot */}` and if we want to use `JS statement` in JSX, we have to wrap in `{(/* statement slot */)}`.
 
 ## What is `Conditional Rendering`? explain with a code example.
-        Conditional rendering in React works the same way conditions work in JavaScript. Use JavaScript operators like if or the conditional operator to create elements representing the current state, and let React update the UI to match them.
+Conditional rendering in React works the same way conditions work in JavaScript. Use JavaScript operators like if or the conditional operator to create elements representing the current state, and let React update the UI to match them.
+    Consider these two components:
+    `function UserGreeting(props) {
+    return <h1>Welcome back!</h1>;
+    }
 
-        Consider these two components:
-
-        `function UserGreeting(props) {
-        return <h1>Welcome back!</h1>;
-        }
-
-        function GuestGreeting(props) {
-        return <h1>Please sign up.</h1>;   
-        }`
+  function GuestGreeting(props) {
+  return <h1>Please sign up.</h1>;   
+   }`
      
 
 ## What is `CORS`?
 
-       `Cross-Origin Resource Sharing (CORS)` is an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources. CORS also relies on a mechanism by which browsers make a "pre-flight" request to the server hosting the cross-origin resource, in order to check that the server will permit the actual request. In that pre-flight, the browser sends headers that indicate the HTTP method and headers that will be used in the actual request.
+
+  `Cross-Origin Resource Sharing (CORS)` is an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources. CORS also relies on a mechanism by which browsers make a "pre-flight" request to the server hosting the cross-origin resource, in order to check that the server will permit the actual request. In that pre-flight, the browser sends headers that indicate the HTTP method and headers that will be used in the actual request.
    
 
 ## What is `async and await`?
-        Async/await are keywords to make a normal function behave like a asynchornous funtion. 
+        
+  Async/await are keywords to make a normal function behave like a asynchornous funtion. 
 
 `async` function always returns a promise, any values are automatically wrapped inside a resolved promise. 
 
@@ -146,7 +148,7 @@ async function getRestaurants() {
     
 ## What is the use of `const json = await data.json()`; in `getRestaurants()`?
 
-    The `data` object, returned by the `await fetch()`, is a generic placeholder for multiple data formats.
+  The `data` object, returned by the `await fetch()`, is a generic placeholder for multiple data formats.
 so we can extract the `JSON object` from a `fetch` response by using `await data.json()`.
 `data.json()` is a method on the data object that lets you extract a `JSON object` from the data or response. The method returns a promise because we have used `await` keyword.
 so `data.json()` returns a promise resolved to a `JSON object`.
