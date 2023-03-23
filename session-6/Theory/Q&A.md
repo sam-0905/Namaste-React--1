@@ -1,6 +1,6 @@
 # Chapter 06 - Exploring the world
 ##  What is `Microservice`?
- A microservices architecture, also simply known as microservices, is an architectural method that relies on a series of `Independently deployable services.` These services have their own business logic and database with a specific goal.` Updating, testing, deployment, and scaling `occur within each service. Microservices decouple major business, domain-specific concerns into separate, independent code bases.
+ A `Microservices` architecture, also simply known as microservices, is an architectural method that relies on a series of `Independently deployable services.` These services have their own business logic and database with a specific goal.` Updating, testing, deployment, and scaling `occur within each service. Microservices decouple major business, domain-specific concerns into separate, independent code bases.
 
 - Benefits of Microservices:
     - Easier to Test
@@ -44,7 +44,7 @@ A `Monolith architecture` is a traditional model of a software program, which is
 ## Why do we need `useEffect Hook`?
 
 `useEffect Hook` is javascript function provided by `react`. The useEffect Hook allows you to  `eliminate side effects` in your components. Some examples of side effects are: `fetching API data`, `directly updating the DOM`, and `setting up subscriptions or timers`, etc can be lead to unwarranted side-effects.
-    useEffect accepts `two arguments`, first is a `callback function` and a `dependency array`. The second argument is optional.
+ useEffect accepts `two arguments`, first is a `callback function` and a `dependency array`. The second argument is optional.
 ```
 Syntax
 `useEffect(() => {}, [])`
@@ -68,6 +68,7 @@ useEffect(() => {})
  `Optional Chaining` (`?.`) is good way of accessing the object keys, it prevents the application from being crashed if the key that we are trying to access is not present. If the key is not present then instead of a throwing key error, it returns `undefined`.
 
 ## What is `Shimmer UI`?
+
  A shimmer screen is a version of the UI that doesn’t contain actual content. Instead, it mimics the page’s layout by showing its elements in a shape similar to the actual content as it is loading and becoming available (i.e. when network latency allows).
 
 A shimmer screen is essentially a wireframe of the page, with placeholder boxes for text and images.
@@ -94,22 +95,19 @@ Conditional rendering in React works the same way conditions work in JavaScript.
     Consider these two components:
     `function UserGreeting(props) {
     return <h3>Welcome back!</h3>;
-    }
+    }`
 
-  function GuestGreeting(props) {
-  return <h3>Please sign up.</h3>;   
+   `function GuestGreeting(props) {
+    return <h3>Please sign up.</h3>;   
    }`
      
-
 ## What is `CORS`?
 
-
-  `Cross-Origin Resource Sharing (CORS)` is an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources. CORS also relies on a mechanism by which browsers make a "pre-flight" request to the server hosting the cross-origin resource, in order to check that the server will permit the actual request. In that pre-flight, the browser sends headers that indicate the HTTP method and headers that will be used in the actual request.
+`Cross-Origin Resource Sharing (CORS)` is an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources. CORS also relies on a mechanism by which browsers make a "pre-flight" request to the server hosting the cross-origin resource, in order to check that the server will permit the actual request. In that pre-flight, the browser sends headers that indicate the HTTP method and headers that will be used in the actual request.
    
-
 ## What is `async and await`?
         
-  Async/await are keywords to make a normal function behave like a asynchornous funtion. 
+ Async/await are keywords to make a normal function behave like a asynchornous funtion. 
 
 `async` function always returns a promise, any values are automatically wrapped inside a resolved promise. 
 
@@ -146,7 +144,6 @@ async function getRestaurants() {
 }
 
 ```
-    
 ## What is the use of `const json = await data.json()`; in `getRestaurants()`?
 
   The `data` object, returned by the `await fetch()`, is a generic placeholder for multiple data formats.
