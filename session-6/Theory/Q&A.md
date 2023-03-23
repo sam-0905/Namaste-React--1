@@ -90,13 +90,14 @@ If we want to use `JS expression` in JSX, we have to wrap in `{/* expression slo
 
 ## What is `Conditional Rendering`? explain with a code example.
 Conditional rendering in React works the same way conditions work in JavaScript. Use JavaScript operators like if or the conditional operator to create elements representing the current state, and let React update the UI to match them.
+
     Consider these two components:
     `function UserGreeting(props) {
-    return <h1>Welcome back!</h1>;
+    return <h3>Welcome back!</h3>;
     }
 
   function GuestGreeting(props) {
-  return <h1>Please sign up.</h1>;   
+  return <h3>Please sign up.</h3>;   
    }`
      
 
