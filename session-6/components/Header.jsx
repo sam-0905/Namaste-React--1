@@ -1,4 +1,5 @@
 import Logo from "../icons/Chef in the Hat.png";
+import { useState } from "react";
 
 export const Title = () => (
   <div>
@@ -12,6 +13,9 @@ export const Title = () => (
 
 const Header = function () {
   // Normal function
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [chkName, setChkName] = useState("false");
+
   return (
     <div className="header">
       <Title />
@@ -26,6 +30,22 @@ const Header = function () {
           </li>
           <li>
             <i className="fa fa-shopping-cart"> Cart</i>
+          </li>
+
+          {/* use conditional rendering for login and logout */}
+          <li>
+            {isLoggedIn ? (
+              <button
+                className="logout-btn"
+                onClick={() => setIsLoggedIn(false)}
+              >
+                Logout
+              </button>
+            ) : (
+              <button className="login-btn" onClick={() => setIsLoggedIn(true)}>
+                Login
+              </button>
+            )}
           </li>
         </ul>
       </div>

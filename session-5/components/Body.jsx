@@ -3,9 +3,13 @@ import { restaurantList } from "../coding-5/constant";
 import RestaurantCard from "./RestaurantCard";
 import { useState } from "react";
 
+//what is state?
+//what is React Hooks? - functions
+//what is use state?
+
 function filterData(searchText, restaurants) {
   const filterData = restaurants.filter((restaurant) =>
-    restaurant.data.name.toLowerCase().includes(searchText.toLowerCase())
+    restaurant?.data?.name?.toLowerCase()?.includes(searchText?.toLowerCase())
   );
   return filterData;
 }

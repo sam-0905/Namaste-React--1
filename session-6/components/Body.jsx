@@ -1,11 +1,12 @@
 // Named import and import {} from"";
-import { restaurantList } from "../coding-6/constant";
+//import { restaurantList } from "../coding-6/constant";(We use live api data now)
 import RestaurantCard from "./RestaurantCard";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Shimmer from "./shimmer";
 
 function filterData(searchText, restaurants) {
   const filterData = restaurants.filter((restaurant) =>
-    restaurant.data.name.toLowerCase().includes(searchText.toLowerCase())
+    restaurant?.data?.name?.toLowerCase()?.includes(searchText?.toLowerCase())
   );
   return filterData;
 }
@@ -15,16 +16,72 @@ const Body = () => {
   //const searchTxt = "KFC";
 
   const [searchText, setSearchText] = useState("");
-  const [restaurants, setRestaurant] = useState(restaurantList);
-  //
-  // This is how we create a variable in React
-  //useState() - retruns an array = [1st variablename /  setFunction - function to update the variable]
-  // function os his useState is? To create state variable;
+  const [allRestaurants, setAllRestaurants] = useState([]);
+  const [filteredRestaurants, setFilteredRestaurants] = useState([]);
 
-  //
-  //const [searchClicked, setSearchClicked] = useState("false");
+  /*
+   This is how we create a variable in React
+  useState() - retruns an array = [1st variablename /  setFunction - function to update the variable]
+   function os his useState is? To create state variable;
 
-  return (
+  
+  const [searchClicked, setSearchClicked] = useState("false");
+
+  
+    if we refresh this it re-render the whole component once if we had made any changes.IN case of search it we rnder eachand every time when input is happens.
+    console.log("render");
+    console.log(restaurants);
+*/
+
+  /*
+  if we have i)render 
+            ii)UseEffect   below comnditions will follow⬇️
+
+  Empty dependency array[]  ======>  render once after render
+  dep array [searchText]  ======>  render once  after Intial  render happend + everytime re-render when my searchText changes(on every key press.)
+  */
+
+  useEffect(() => {
+    //fecht (Make an API call)
+    getRestaurants();
+  }, []);
+
+  // async function getRestaurant to fetch Swiggy API data
+  async function getRestaurants() {
+    // handle the error using try... catch
+    try {
+      const data = await fetch(
+        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.3164945&lng=78.03219179999999&page_type=DESKTOP_WEB_LISTING"
+      );
+      const json = await data.json();
+      console.log(json);
+      /*
+       setRestaurants(json.data.cards[2].data.data.cards) 
+       This is a bad way.by doing this it will break. so We use
+       - Optional  chaining -
+      */
+      setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+      setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  console.log("render");
+
+  /*  
+    Conditional Rendering:
+      - If the restaurant is empty ⇒ Shimmer UI
+      - If the restaurant has data ⇒ actual data UI
+  */
+
+  // When we dont have any restaurant dont return anything.⬇️
+  // not render components(Early retrun)
+  if (!allRestaurants) return null;
+
+  return allRestaurants?.length === 0 ? ( //Optional Chaining
+    <Shimmer />
+  ) : (
     <>
       <div className="Search-container">
         <input
@@ -45,9 +102,9 @@ const Body = () => {
           className="search-btn"
           onClick={() => {
             //need to filterData
-            const data = filterData(searchText, restaurants);
+            const data = filterData(searchText, allRestaurants);
             //update the state - restaurants
-            setRestaurant(data);
+            setFilteredRestaurants(data);
           }}
         >
           <i className="fa fa-search"></i>
@@ -56,7 +113,7 @@ const Body = () => {
       </div>
 
       <div className="rest-list">
-        {restaurants.map((restaurant) => {
+        {filteredRestaurants.map((restaurant) => {
           return (
             // no key (not acceptable) <<< index key(use only if you don't have anything LAST OPTION) <<< unique key (BEST PRACTICE).
             <RestaurantCard key={restaurant.data.id} {...restaurant.data} />

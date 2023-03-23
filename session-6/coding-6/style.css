@@ -45,6 +45,25 @@ body {
     margin-right: 20px;
 }
 
+.login-btn {
+    height: 5vh;
+    width: 5vw;
+    background-color: #ffde59;
+    color: #597aff;
+    border-radius: 0.5rem;
+    border: 1px solid ghostwhite;
+    font-size: large;
+}
+
+.logout-btn {
+    height: 5vh;
+    width: 5vw;
+    background-color: #ffde59;
+    color: #597aff;
+    border-radius: 0.5rem;
+    font-size: large;
+}
+
 .Search-container {
     width: 70%;
     display: flex;
