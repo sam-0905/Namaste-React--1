@@ -28,7 +28,7 @@
           
 ## - What is the `difference` between `Monolith and Microservice?
 
-     | Parameters   | Monolith Architecture  | Microservices Architecture  |
+ | Parameters   | Monolith Architecture  | Microservices Architecture  |
  | ------------ | --------------------   | :-------------------------: |
  | Development | When an application is built with one code base, it is easier to develop. This is true for small applications, but when the application takes larger, development becomes slower and complex    | Micro services add more complexity compared to monolith arch. If development sprawl isn’t properly managed, it results in slower development speed and poor operational performance.   |
  | Testing | Since a monolithic application is a single, centralized unit, end-to-end testing can be performed faster than with a distributed application. | Teams can experiment with new features and roll back if something doesn’t work. This makes it easier to update code and accelerates time-to-market for new features. Plus, it is easy to isolate and fix faults and bugs in individual services. |
