@@ -18,6 +18,7 @@ const Body = () => {
   const [searchText, setSearchText] = useState("");
   const [allRestaurants, setAllRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
+  const [errorMessage, setErrorMessage] = useState("");
 
   /*
    This is how we create a variable in React
@@ -67,7 +68,21 @@ const Body = () => {
     }
   }
 
-  console.log("render");
+  const searchData = (searchText, restaurants) => {
+    if (searchText !== "") {
+      const data = filterData(searchText, restaurants);
+      setFilteredRestaurants(data);
+      setErrorMessage("");
+      if (data.length === 0) {
+        setErrorMessage("No matches restaurant found");
+      }
+    } else {
+      setErrorMessage("");
+      setFilteredRestaurants(restaurants);
+    }
+  };
+
+  //console.log("render");
 
   /*  
     Conditional Rendering:
@@ -79,11 +94,9 @@ const Body = () => {
   // not render components(Early retrun)
   if (!allRestaurants) return null;
 
-  return allRestaurants?.length === 0 ? ( //Optional Chaining
-    <Shimmer />
-  ) : (
+  return (
     <>
-      <div className="Search-container">
+      <xdiv className="Search-container">
         <input
           type="text"
           className="search-bar"
@@ -102,24 +115,36 @@ const Body = () => {
           className="search-btn"
           onClick={() => {
             //need to filterData
-            const data = filterData(searchText, allRestaurants);
+            //const data = filterData(searchText, allRestaurants);
             //update the state - restaurants
-            setFilteredRestaurants(data);
+            //setFilteredRestaurants(data);
+
+            // user click on button searchData function is called
+            searchData(searchText, allRestaurants);
           }}
         >
           <i className="fa fa-search"></i>
         </button>
         {/*<h1>{searchClicked}</h1>*/}
-      </div>
-
-      <div className="rest-list">
-        {filteredRestaurants.map((restaurant) => {
-          return (
-            // no key (not acceptable) <<< index key(use only if you don't have anything LAST OPTION) <<< unique key (BEST PRACTICE).
-            <RestaurantCard key={restaurant.data.id} {...restaurant.data} />
-          );
-        })}
-      </div>
+      </xdiv>
+      {/*
+            ->if restaurants data is not fetched then display Shimmer UI after the fetched data display restaurants cards 
+            -> Also handled shimmer with search box
+            */}
+      {errorMessage && <div className="error-container">{errorMessage}</div>}
+      {allRestaurants?.length === 0 ? ( //Optional Chaining
+        <Shimmer />
+      ) : (
+        <div className="restaurant-list">
+          {filteredRestaurants.map((restaurant) => {
+            return (
+              // no key (not acceptable) <<< index key(use only if you don't have anything LAST OPTION) <<< unique key (BEST PRACTICE).
+              <RestaurantCard key={restaurant.data.id} {...restaurant.data} />
+            );
+          })}
+        </div>
+      )}
+      ;
     </>
   );
 };
