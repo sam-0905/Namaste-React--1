@@ -45,6 +45,9 @@ body {
     margin-right: 20px;
 }
 
+
+/*.login/logout-btn*/
+
 .login-btn {
     height: 5vh;
     width: 5vw;
@@ -64,6 +67,9 @@ body {
     border: 1px solid ghostwhite;
     font-size: large;
 }
+
+
+/*search box*/
 
 .Search-container {
     width: 70%;
@@ -103,6 +109,9 @@ body {
     font-size: x-large;
     margin: 1rem 1rem;
 }
+
+
+/*card */
 
 .card {
     margin: 1rem 1rem;
@@ -209,6 +218,9 @@ body {
         background-position: 1000px 0;
     }
 }
+
+
+/*footer*/
 
 .foot {
     display: flex;
