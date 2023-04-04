@@ -1,5 +1,6 @@
 import Logo from "../icons/Chef in the Hat.png";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Title = () => (
   <div>
@@ -22,13 +23,24 @@ const Header = function () {
       <div className="Nav-container">
         <ul>
           <li>
-            <i className="fa fa-home"> Home</i>
+            <Link to="/" className="fa fa-home">
+              Home
+            </Link>
           </li>
           <li>
-            <i className="fa fa-info-circle"> About us</i>
+            <Link to="/about" className="fa fa-info-circle">
+              About us
+            </Link>
           </li>
           <li>
-            <i className="fa fa-shopping-cart"> Cart</i>
+            <Link to="/contact" className="fa fa-shopping-cart">
+              Cart
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" className="fa fa-address-book">
+              contact
+            </Link>
           </li>
 
           {/* use conditional rendering for login and logout */}
