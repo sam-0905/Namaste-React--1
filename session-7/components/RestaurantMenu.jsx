@@ -6,6 +6,7 @@ import Shimmer from "./shimmer";
 const RestaurantMenu = () => {
   //   some cool devel also destructure in fly
   const { resId } = useParams(); // destructuring the id
+  //console.log(resId);
   // --------
   //  const params = useParams();
   //  const { id } = params;
