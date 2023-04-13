@@ -6,7 +6,7 @@
   There are two types `Import` and `Export`
   - Default
   - Named 
-  -* as obj
+  - * as obj
 
 ### And we have maked `File Structre ` and put our files in Componets file.
  - also we have created constant file separately to put all our Hardcode data init.
