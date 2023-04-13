@@ -12,7 +12,7 @@ const RestaurantMenu = () => {
   //  const { id } = params;
   //  console.log(params);
 
-  const [restaurant, setRestaurant] = useState({});
+  const [restaurantDetails, setRestaurantDetails] = useState({});
   const [restaurantMenu, setRestaurantMenu] = useState([]);
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const RestaurantMenu = () => {
     );
     const json = await data.json();
     console.log(json);
-    setRestaurant(json?.data?.cards[0]?.card?.card?.info);
+    setRestaurantDetails(json?.data?.cards[0]?.card?.card?.info);
     setRestaurantMenu(
       json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card
         ?.card?.itemCards
@@ -40,12 +40,15 @@ const RestaurantMenu = () => {
       <div className="Menu">
         <div>
           <h1>Restautant id: {resId}</h1>
-          <h2>{restaurant.name}</h2>
-          <img src={IMG_CDN_URl + restaurant.cloudinaryImageId} />
-          <h3>{restaurant.areaName}</h3>
-          <h3>{restaurant.city}</h3>
-          <h3>{restaurant.avgRating} stars</h3>
-          <h3>{restaurant.costForTwoMessage}</h3>
+          <h2>{restaurantDetails?.name}</h2>
+          <img
+            src={IMG_CDN_URl + restaurantDetails?.cloudinaryImageId}
+            alt={restaurantDetails?.name}
+          />
+          <h3>{restaurantDetails?.areaName}</h3>
+          <h3>{restaurantDetails?.city}</h3>
+          <h3>{restaurantDetails?.avgRating} stars</h3>
+          <h3>{restaurantDetails?.costForTwoMessage}</h3>
         </div>
 
         <div>

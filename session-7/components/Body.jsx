@@ -97,7 +97,7 @@ const Body = () => {
 
   return (
     <>
-      <xdiv className="Search-container">
+      <div className="Search-container">
         <input
           type="text"
           className="search-bar"
@@ -127,7 +127,7 @@ const Body = () => {
           <i className="fa fa-search"></i>
         </button>
         {/*<h1>{searchClicked}</h1>*/}
-      </xdiv>
+      </div>
       {/*
             ->if restaurants data is not fetched then display Shimmer UI after the fetched data display restaurants cards 
             -> Also handled shimmer with search box
