@@ -18,6 +18,7 @@ export const Title = () => (
 const Header = function () {
   // Normal function
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  //console.log(useState());
 
   return (
     <div className="header">
