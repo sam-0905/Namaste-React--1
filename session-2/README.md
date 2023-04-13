@@ -1,6 +1,4 @@
-# Namaste-react-02 📚
-
-### -Igniting our app
+# Chapter -02 📚  -Igniting our app
  
 ### -we have installed parcel into our app.
 
