@@ -16,6 +16,6 @@ However we can also write`
     In react we should have a proper `Keys` init .Because react gets confuse if we have a multiple element 
 in the same name.if we intoduce any new component init it gets confuse where it should get place .so, by giving a proper key make a good practise.
 
-### And made a `Header  component` with react using these concepts in Assigment.
+### And made a `Header component` with react using these concepts in Assigment.
 
 
