@@ -10,7 +10,7 @@
 #### - Never write useState inside for loop.
 #### - Never create useState outside your component.
 
-### Note: -It is a good practise to put all our `Images` in the `Assets` folder. And use `Formik` for making forms.
+### Note: -It is a good practise to put all our `Images` in the `Assets` folder. And use `Formik` While making our forms.
 ### - And then we have learn about 
 ```
 `Single Page Application (SPA)` is a web application that dynamically updates the webpage with data from web server without reloading/refreshing the entire page. All the HTML, CSS, JS are retrieved in the initial load and other data/resources can be loaded dynamically whenever required. An SPA is sometimes referred to as a `single-page interface (SPI)`.
