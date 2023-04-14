@@ -4,10 +4,10 @@
 
 ## In this First we have seen about, We should never do ,the following cases:
 
-- Never write a component inside another component
-- Never write useState inside if else
-- Never write useState inside for loop
-- Never create useState outside your component
+#### - Never write a component inside another component.
+#### - Never write useState inside if else.
+#### - Never write useState inside for loop.
+#### - Never create useState outside your component.
 
 ### Note: -It is a good practise to put all our `Images` in the `Assets` folder. And use `Formik` for making forms.
 ### And then we have learn about 
