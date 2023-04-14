@@ -1,6 +1,6 @@
 # Chapter 06 - Expolring the world 📚
 
-### In the previous session we have learned about `constants` or `configu` file. Also we studied about one of the most important Hook `useState Hook`.
+### In the previous session we have learned about `constants` or `configuration` file. Also we studied about one of the most important Hook `useState Hook`.
 
 ### In this , First we have learnt about 
   - Microservices
