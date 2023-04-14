@@ -36,7 +36,7 @@ root.render(<RouterProvider router={appRouter} />);
 ### -Also one of the important concept in`createBrowserRouter` is `Children` we will put all our component which we wwant to route according to `Nested Routing`.
 ### → to create `Nested Routing` we have to create a <Outlet /> .Whatever inside the children will come inside this <Outlet /> . And children doen't want to maintain any sequence or any order.we can put randomly which sequcence we want.
 
-• Outlet - A component that renders the next match in a set of matches.All the Children objects are come into the <Outlet />.
+#### • Outlet - A component that renders the next match in a set of matches.All the Children objects are come into the <Outlet />.
 
 ```
 const appRouter = createBrowserRouter([
