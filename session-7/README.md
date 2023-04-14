@@ -4,7 +4,7 @@
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
 ## In this, First we have seen about:
-###  - We should never use the following cases:
+###  - We should `Never` use the following cases:
 #### - Never write a component inside another component.
 #### - Never write useState inside if else.
 #### - Never write useState inside for loop.
