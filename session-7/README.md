@@ -2,8 +2,9 @@
 
 ### In the previous session we have studied abot difference between `Monolith` and `Microservice`. And then we have learned one of the most important Hook `useEffect Hook`,And then we Have created a `Shimmer UI.
 
-## In this First we have seen about, We should never do ,the following cases:
+## In this, First we have seen about:
 
+     - We should never  the following cases:
 #### - Never write a component inside another component.
 #### - Never write useState inside if else.
 #### - Never write useState inside for loop.
@@ -22,7 +23,7 @@ Link - By using this our page will not get reload if change to diffrent pages in
 ```
 ### - And then , we have read about `{createBrowserRouter}` this will helps us to create routing .It is coming from `react-router-dom` which we installed as a package.`createBrowserRouter` takes two parameters First one is [array] and inside that we had a {object} i.e.(array of objects).In the object we give a path and element.
 
-### - And to make this `createBrowserRouter` to wprk we shld also provide `RouterProvider` with a configuration in our root.render(</>).
+### - And to make this `createBrowserRouter` to work we shld also provide `RouterProvider` with a configuration in our root.render(</>).
 
 ```
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -68,7 +69,8 @@ const appRouter = createBrowserRouter([
 ```
 
 ### Finally we have studied the `Dynamic Routing`
-## `Dynamic Routing` - It will render different restaurant menu using `path:”/restaurant/:id”` and it will get render our UI. 
+
+### `Dynamic Routing` - It will render different restaurant menu using `path:”/restaurant/:id”` and will update on UI. 
 
 ### → path:”/restaurant/:id” this is dynamic route  The two segments with : are dynamic.
 
