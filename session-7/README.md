@@ -1,6 +1,7 @@
 # Chapter 07 - Finding the Path 📚
 
 ### In the previous session we have studied abot difference between `Monolith` and `Microservice`. And then we have learned one of the most important Hook `useEffect Hook`,And then we Have created a `Shimmer UI.
+-----------------------------------------------------------------------------------------------------------------------------------------------
 
 ## In this, First we have seen about:
      - We should never the following cases:
