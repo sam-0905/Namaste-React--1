@@ -2,7 +2,7 @@
 
 ### In the previous session we have studied abot difference between `Monolith` and `Microservice`.And then we have learned one of the most important Hook `useEffect Hook` , And then we Have created a `Shimmer UI.
 
-## In this First we have seen about, We never do in these types of cases
+## In this First we have seen about, We should never do ,the following cases:
 
 - Never write a component inside another component
 - Never write useState inside if else
