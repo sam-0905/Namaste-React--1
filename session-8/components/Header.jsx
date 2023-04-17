@@ -1,4 +1,4 @@
-import Logo from "../icons/Chef in the Hat.png";
+import Logo from "../images/Chef in the Hat.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 

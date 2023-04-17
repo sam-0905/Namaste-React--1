@@ -248,7 +248,7 @@ body {
 .Err-btn {
     width: 110px;
     height: 7vh;
-    list-style: none;
+    text-decoration: none;
     background-color: #EDD947;
     color: #394CB5;
     border: 1px solid #F66B00;
