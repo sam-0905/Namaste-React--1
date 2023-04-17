@@ -1,4 +1,4 @@
-# Chapter 06 - Expolring the world 📚
+# Chapter 06 - Exploring the world 📚
 
 ### In the previous session we have learned about `constants` or `configuration` file. Also we studied about one of the most important Hook `useState Hook`.
 
