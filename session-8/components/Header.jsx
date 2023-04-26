@@ -40,18 +40,14 @@ const Header = function () {
             <Link
               to="/contact"
               id="Nav-container"
-              className="fa fa-shopping-cart"
+              className="fa fa-address-book"
             >
-              Cart
+              Contact
             </Link>
           </li>
           <li>
-            <Link
-              to="/contact"
-              id="Nav-container"
-              className="fa fa-address-book"
-            >
-              contact
+            <Link id="Nav-container" className="fa fa-shopping-cart">
+              Cart
             </Link>
           </li>
 
