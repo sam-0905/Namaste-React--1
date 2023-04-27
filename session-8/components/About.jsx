@@ -9,8 +9,10 @@ const About = () => {
       <h1>Chef in the hat</h1>
       <p>This is namaste react live class</p>
       {/*<Outlet />*/}
+      <br />
       <Profile name={"Appu"} />
-      <ProfileClass name={"ALLAN"} />
+      <br />
+      <ProfileClass name={"ALLAN"} xyz="Abc" />
     </div>
   );
 };
