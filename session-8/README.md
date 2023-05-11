@@ -106,3 +106,42 @@ To avoid this, we need to cleanup this functionality. We know that when a compon
 To do that, while writing the setInterval(), store it in a variable using the “this” keyword and reference that variable in the clearInterval() too like :-
 Doing this, the statement will get printed only when we are in the About page and not any other page because as soon as we navigate away from the About Page, that setInterval() will be cleaned up.
 Performing.
+
+
+```
+In claas based component
+ComponentDidMount(){
+  this.timer = setInterval(()=>{
+    console.log("hello");
+  }, 1000);
+}
+
+ComponentDidMount(){
+  this.timer = setInterval(()=>{
+    console.log("hello");
+  }, 1000);
+}
+
+```
+
+```
+In Function components
+
+useEffect(()=>{
+   const timer = setInterval(() => {
+    console.log("hello");
+  },1000);
+   console.log("UseEffect");
+
+  return() => {
+// This is the Unmounting Phase
+    clearInterval(timer)	
+    console.log("UseEffect return"); // this is the Unmounting Phase.
+}
+
+//This function is basically when you Unmounting this component.
+//It is called when we leave our page.
+
+},[]); 
+
+```
