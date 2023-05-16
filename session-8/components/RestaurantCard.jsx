@@ -1,4 +1,4 @@
-import { IMG_CDN_URl } from "../coding-8/constant";
+import { IMG_CDN_URl } from "../coding-9/constant";
 
 const RestaurantCard = ({
   // props

@@ -3,8 +3,8 @@
     "version": "1.0.0",
     "description": "This is a live course",
     "scripts": {
-        "start": "parcel coding-8/index.html",
-        "build": "parcel build coding-8/index.html",
+        "start": "parcel coding-9/index.html",
+        "build": "parcel build coding-9/index.html",
         "test": "jest"
     },
     "repository": {
