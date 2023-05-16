@@ -1,16 +1,21 @@
 # Chapter 08 - Let's get Classy 📚
-### In the previous session we have studied about some following cases that We should never do ,the following cases:
+
+### In the previous session we have studied about some following cases that We should never do ,the following cases
+
 - Never write a component inside another component
 - Never write useState inside if else
 - Never write useState inside for loop
 - Never create useState outside your component.
+
   ### And then we have learn about 
+
 `Single Page Application (SPA)` is a web application that dynamically updates the webpage with data from web server without reloading/refreshing the entire page.
 In `Client-side routing or rendering (CSR)`, during the first load, the webapp is loaded from server to client, after which whenever there is a change in URL, the router library navigates the user to the new page without sending any request to backend. All `Single Page Applications uses client-side routing`. 
 
 ### we have also studied `{createBrowserRouter}` this will helps us to create routing .It is coming from `react-router-dom` which we installed as a package.`createBrowserRouter` takes two parameters First one is [] and inside that we had a {} i.e.(array of objects).In the object we give a path and element.  And to make this `createBrowserRouter` to wprk we shld also provide `RouterProvider` with a configuration in our root.render(</>)
-        
+
 ### And we have studied about `Nested Routing`
+
 - Nested Routing is the general idea of coupling segments of the URL to component hierarchy and data
 
 • Outlet - A component that renders the next match in a set of matches.All the Children objects are come into the <Outlet />.
@@ -19,8 +24,8 @@ In `Client-side routing or rendering (CSR)`, during the first load, the webapp i
 ----------------------------------------------------------------------------------------------------------------
 
 ## In This video we have mainly studied about `class Bssed Comoponent`
-
 ### Nested Paths :-
+
 A path inside another path. It can be created by making a children array for an already existing children. Ex :-
 In the 1st layer of children, we are specifying path with the suffix “/”, which denotes root (like -> “/about”). We could have also written “about” instead and it would work just fine because the parent path is already specified as root (since it’s written path: “/” ).
 However, in the nested path, always write just the name in the path argument (like :- path: ”profile”), and not path: “/profile”. This is because in the latter one, the actual path will be treated as “localhost:1234/profile”, since as stated earlier, “/” denotes root path.
@@ -64,7 +69,7 @@ So, in CBC too, first of all we have to render and then update. For this purpose
 #### Then we hve also seen somme example with the React LifeCycle Methods.
 
 ### In CBC we make an API in call from componentDidMount():-
-#### -> componentDidMount() - It is called after every render.
+#### -> componentDidMount() - It is called after every or intial render.
 ```
  async componentDidMount() {
     //This is the best place we make an API call
@@ -80,7 +85,7 @@ So, in CBC too, first of all we have to render and then update. For this purpose
 
 ### Finally we have seen about `componentDidUpdate` & `ComponentWillUnmount`
 
-#### -> componentDidUpdate() -It is called when the rerendering of an existing component and its updation in DOM has already been done. In simple words, this method will be called after every next render.
+#### -> componentDidUpdate() - It is mainly called When we update Or whenever the setState gets updated. If there is no change in our State & props (Then how many times we will think it will get called Zero[0]).It happens when we change some data (or) some change in behaviour in component i.e. change in state, props etc. 
 
 #### -> ComponentWillUnmount() - It is called when it is destroying it will call tihs(IT's like loading) or If we leave or switch to another page it will be called.
 
