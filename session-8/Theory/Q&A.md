@@ -63,14 +63,16 @@ Other than that, it is functionally the same as `createBrowserRouter`.
 5. componentWillUnmount()
 
 For more reference [React-Lifecycle-methods-Diagram](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
+
 ## Why do we use `componentDidMount`? 
+
   `componentDidMount`- In CBC it is the best place to make an API call.Like we make an api call inside useEffect in fumctional component .Bcz intially react first finishes the render() Phase and it updates the DOM ,Then it make an API call(it need to load some data).So it takes some time to load and also we use `componentDidMount` as a `async function `so it delays the component to print.It is called after intial or every render.
   Example:
 ```
     async componentDidMount() {
     //This is the best place we make an API call
     const data = await fetch("https://api.github.com/users/sam-0905");
-    const json = await data.json();
+    const json = await data.json();s
     this.setState({
       userInfo: json,
     });
@@ -78,6 +80,7 @@ For more reference [React-Lifecycle-methods-Diagram](https://projects.wojtekmaj.
     console.log("componentDidMount");
   }
 ```
+
 ## Why do we use `componentWillUnmount`? Show with `example`. 
 `ComponentWillUnmount()` - It is called when it is destroying it will call tihs(IT's like loading) or If we leave or switch to another page it will be called.ince we are working with a SPA(Single Page Application) the component process always runs in the background even if we switch to another route. So it is required to stop those processes before leaving the page. If we revisit the same page, a new process starts that affects the browser performance.
 
