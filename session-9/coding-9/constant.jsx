@@ -1,8 +1,12 @@
 // These are Hardcoded data.So once we eport it import form anywhere.
 
 // Named import and import {} from"";
+
 export const IMG_CDN_URl =
   "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
+
+export const FETCH_MENU_URL =
+  "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.931948400167405&lng=80.1345556229353&restaurantId=";
 
 // Named import
 export const restaurantList = [
