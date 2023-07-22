@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 //it return a boolean value true/false
-/*
-
-**/
+/*This is a junior level code
 const useOnline = () => {
   const [isOnline, setIsOnline] = useState(true);
 
@@ -19,26 +17,32 @@ const useOnline = () => {
 };
 export default useOnline;
 
-//const useOnline = () => {
-//  const [isOnline, setIsOnline] = useState(true);
 
-//  useEffect(() => {
-//    const handleOnline = () => {
-//      setIsOnline(true);
-//    };
+**/
 
-//    const handleOffline = () => () => {
-//      setIsOnline(false);
-//    };
+/*This is a senior level code*/
+/*Here we reomve the addEventListener*/
 
-//    window.addEventListener("online", handleOnline);
-//    window.addEventListener("offline", handleOffline);
-//  }, []);
+const useOnline = () => {
+  const [isOnline, setIsOnline] = useState(true);
 
-//  return () => {
-//    window.removeEventListener("online", handleOnline);
-//    window.removeEventListener("offline", handleOffline);
-//  };
-//};
+  useEffect(() => {
+    const handleOnline = () => {
+      setIsOnline(true);
+    };
 
-//export default useOnline;
+    const handleOffline = () => () => {
+      setIsOnline(false);
+    };
+
+    window.addEventListener("online", handleOnline);
+    window.addEventListener("offline", handleOffline);
+  }, []);
+
+  return () => {
+    window.removeEventListener("online", handleOnline);
+    window.removeEventListener("offline", handleOffline);
+  };
+};
+
+export default useOnline;
