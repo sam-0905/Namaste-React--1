@@ -4,6 +4,7 @@ import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./shimmer";
 import { Link } from "react-router-dom";
+import useOnline from "../utils/useOnline";
 
 function filterData(searchText, restaurants) {
   const filterData = restaurants.filter((restaurant) =>
@@ -84,7 +85,11 @@ const Body = () => {
   };
 
   //console.log("render");
+  const isOnline = useOnline();
 
+  if (!isOnline) {
+    return <h1>🥵Opps!looks like you are offline</h1>;
+  }
   /*  
     Conditional Rendering:
       - If the restaurant is empty ⇒ Shimmer UI
