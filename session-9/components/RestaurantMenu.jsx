@@ -22,16 +22,19 @@ const RestaurantMenu = () => {
     <>
       <div className="Menu">
         <div>
-          <h1>Restautant id: {resId}</h1>
           <h2>{restaurantDetails?.name}</h2>
           <img
+            className="res-img"
             src={IMG_CDN_URl + restaurantDetails?.cloudinaryImageId}
             alt={restaurantDetails?.name}
           />
-          <h3>{restaurantDetails?.areaName}</h3>
-          <h3>{restaurantDetails?.city}</h3>
-          <h3>{restaurantDetails?.avgRating} stars</h3>
-          <h3>{restaurantDetails?.costForTwoMessage}</h3>
+          <h3>Restautant id: {resId}</h3>
+          <div className="rest-details">
+            <h3>{restaurantDetails?.areaName}</h3>
+            <h3>{restaurantDetails?.city}</h3>
+            <h3>{restaurantDetails?.avgRating} stars</h3>
+            <h3>{restaurantDetails?.costForTwoMessage}</h3>
+          </div>
         </div>
 
         <div>
