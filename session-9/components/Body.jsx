@@ -52,19 +52,18 @@ const Body = () => {
   // async function getRestaurant to fetch Swiggy API data
   async function getRestaurants() {
     // handle the error using try... catch
+    console.log("getRestaurants called");
     try {
+      console.log("Inside try getRestaurants");
       const data = await fetch(
         "https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.3164945&lng=78.03219179999999&page_type=DESKTOP_WEB_LISTING"
       );
       const json = await data.json();
-      console.log(json);
-      /*
-       setRestaurants(json.data.cards[2].data.data.cards) 
-       This is a bad way.by doing this it will break. so We use
-       - Optional  chaining -
-      */
-      setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
-      setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+      const cards = await json.data.cards;
+
+      for (let i = 0; i < cards.length; i++) {
+        console.log(`card count: ${i} : `, cards[i]);
+      }
     } catch (error) {
       console.log(error);
     }
