@@ -52,9 +52,7 @@ const Body = () => {
   // async function getRestaurant to fetch Swiggy API data
   async function getRestaurants() {
     // handle the error using try... catch
-    console.log("getRestaurants called");
     try {
-      console.log("Inside try getRestaurants");
       const data = await fetch(
         "https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.3164945&lng=78.03219179999999&page_type=DESKTOP_WEB_LISTING"
       );
@@ -62,7 +60,15 @@ const Body = () => {
       const cards = await json.data.cards;
 
       for (let i = 0; i < cards.length; i++) {
-        console.log(`card count: ${i} : `, cards[i]);
+        if (cards[i]?.card?.card?.gridElements?.infoWithStyle?.restaurants) {
+          setAllRestaurants(
+            cards[i].card.card.gridElements.infoWithStyle.restaurants
+          );
+          setFilteredRestaurants(
+            cards[i].card.card.gridElements.infoWithStyle.restaurants
+          );
+          return;
+        }
       }
     } catch (error) {
       console.log(error);
@@ -85,6 +91,7 @@ const Body = () => {
 
   //console.log("render");
   const isOnline = useOnline();
+  console.log(isOnline);
 
   if (!isOnline) {
     return <h1>🥵Opps!looks like you are offline</h1>;
@@ -145,11 +152,11 @@ const Body = () => {
             return (
               // no key (not acceptable) <<< index key(use only if you don't have anything LAST OPTION) <<< unique key (BEST PRACTICE).
               <Link
-                to={"/restaurant/" + restaurant.data.id}
-                key={restaurant.data.id}
+                to={"/restaurant/" + restaurant.info.id}
+                key={restaurant.info.id}
                 style={{ textDecoration: "none" }}
               >
-                <RestaurantCard {...restaurant.data} />
+                <RestaurantCard {...restaurant.info} />
               </Link>
             );
           })}
