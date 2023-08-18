@@ -1,6 +1,7 @@
 import Logo from "../images/Chef in the Hat.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import useOnline from "../utils/useOnline";
 
 // SPA - Single Page Routing
 // Client Side Routing
@@ -18,6 +19,7 @@ export const Title = () => (
 const Header = function () {
   // Normal function
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const isOnline = useOnline();
   //console.log(useState());
 
   return (
@@ -46,20 +48,26 @@ const Header = function () {
             </Link>
           </li>
           <li>
+            <Link id="Nav-container" to="/Instamart">
+              Instamart
+            </Link>
+          </li>
+          <li>
             <Link id="Nav-container" className="fa fa-shopping-cart">
               Cart
             </Link>
           </li>
 
           {/* use conditional rendering for login and logout */}
+          <h1>{isOnline ? "🟢" : "🔴"}</h1>
           <li>
             {isLoggedIn ? (
-              <button
+              <buttons
                 className="logout-btn"
                 onClick={() => setIsLoggedIn(false)}
               >
                 Logout
-              </button>
+              </buttons>
             ) : (
               <button className="login-btn" onClick={() => setIsLoggedIn(true)}>
                 Login
