@@ -19,13 +19,10 @@ const useRestaurant = (resId) => {
         ?.card?.itemCards
     );
   }
-  // return restaurant data
-
   //let obj = {
   //  restaurantMenu: restaurantMenu,
   //  restaurantDetails: restaurantDetails
   //}
-
   //return obj;/or⬇️
 
   return {

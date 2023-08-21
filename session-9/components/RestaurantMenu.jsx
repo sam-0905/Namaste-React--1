@@ -10,7 +10,7 @@ const RestaurantMenu = () => {
   //console.log(resId);
   // --------
   //  const params = useParams();
-  //  const { id } = params;
+  //  const { id } = useparams;
   //  console.log(params);
   const { restaurantMenu, restaurantDetails } = useRestaurant(resId);
 
