@@ -26,8 +26,7 @@ However, in the nested path, always write just the name in the path argument (li
 
 -----------------------------------------------------------------------------------------------------
 
-## In tis class we have mainly see about 
-
+## In this class we have seen about 
 custom Hooks :-
 We can build our own hooks to ensure
 • readability,
