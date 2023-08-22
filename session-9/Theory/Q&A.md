@@ -1,104 +1,82 @@
 ## Namaste React Course by Akshay Saini
-# Chapter 08 - Let's get Classy
+
+## Chapter 09 - Optimizing our App
+
 ## Theory Assignment: 
 
-## How do you create `Nested Routes react-router-dom` configuration? 
-     We can create a `Nested Routes` inside a react router configuration as follows:
-first call createBrowserRouter for routing different pages
-```
-const router = createBrowserRouter([
-   {
-      path: "/", // show path for routing
-      element: <Parent />, // show component for particular path
-      errorElement: <Error />, // show error component for path is different
-      children: [ // show children component for routing
-         {
-            path: "/path",
-            element: <Child />
-         }
-      ],
-   }
-])
-```
-Now we can create a nested routing for `/path` using `children` again as follows:
+## When and why do we need `lazy()`?
 
-```
-const router = createBrowserRouter([
-   {
-      path: "/",
-      element: <Parent />,
-      errorElement: <Error />,
-      children: [
-         {
+  React.lazy is used to `dynamically import` a component when it is first rendered, instead of importing at the beginning till when the file loads. This is called `Code Splitting`/ `On-demading loading`. 
+
+  In our example : In App.js, Instamart component and about component are lazy loaded, which means only when the user clicks on the navigation button, those components are imported and rendered. This improves the performance of the application. So, lazy is used when that component might not be used by all users, instead of loaded in the beginning, only when the user really needs it, its loaded.
+
+## What is `suspense`?
+
+   By the way of keeping a component inside a `suspense` react will take care of all.In before it will not load our code for first time ,but after using suspense its works fine(React will take care behind the secenes.)
+
+   Suspense component allows us to show some `fallback{}` content (such as a loading indicator/ Shimmer component) while we’re waiting for the lazy component to load or the component is not yet rendered. 
+   
+```javascript Eg:
+import React, { lazy ,Suspense } from 'react';
+
+const Instamart = lazy(() => import("../components/Instamart"));
+
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <Applayout />,
+    errorElement: <Error />,
+    children: [
+      {
+        path: "/",
+        element: <Body />,
+      },
+      {
         path: "/about",
         element: <About />,
         children: [
           {
-            path: "profile", // // nested routing for subchild
+            path: "profile", // ->/about/profile -This will also work -> If we given Like this - ParentPath/{path}
             element: <Profile />,
           },
         ],
-        }
-      ],
-   }
-])
-```
-
-## Read about `createHashRouter`, `createMemoryRouter` from React Router docs. 
-
-`createHashRouter` is useful if you are unable to configure your web server to direct all traffic to your React Router application. Instead of using normal URLs, it will use the `hash (#)` portion of the URL to manage the "application URL".
-Other than that, it is functionally the same as `createBrowserRouter`.
-  
---------------------------------------------
-
-`createMemoryRouter` Instead of using the browsers history a memory router manages it's own history stack in memory. It's primarily useful for testing and component development tools like Storybook, but can also be used for running React Router in any non-browser environment.
-
-## What is the `order of life cycle method calls` in `Class Based Components`? 
-
-   Following is the order of lifecycle methods calls in `Class Based Components`:
-1. constructor()
-2. render ()
-3. componentDidMount()
-4. componentDidUpdate()
-5. componentWillUnmount()
-
-For more reference [React-Lifecycle-methods-Diagram](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
-
-## Why do we use `componentDidMount`? 
-
-  `componentDidMount`- In CBC it is the best place to make an API call.Like we make an api call inside useEffect in fumctional component .Bcz intially react first finishes the render() Phase and it updates the DOM ,Then it make an API call(it need to load some data).So it takes some time to load and also we use `componentDidMount` as a `async function `so it delays the component to print.It is called after intial or every render.
-  Example:
-```
-    async componentDidMount() {
-    //This is the best place we make an API call
-    const data = await fetch("https://api.github.com/users/sam-0905");
-    const json = await data.json();s
-    this.setState({
-      userInfo: json,
-    });
-    console.log("userInfo", json);
-    console.log("componentDidMount");
-  }
-```
-
-## Why do we use `componentWillUnmount`? Show with `example`. 
-`ComponentWillUnmount()` - It is called when it is destroying it will call tihs(IT's like loading) or If we leave or switch to another page it will be called.ince we are working with a SPA(Single Page Application) the component process always runs in the background even if we switch to another route. So it is required to stop those processes before leaving the page. If we revisit the same page, a new process starts that affects the browser performance.
-
- For example,A timer is set with an interval of every one second to print in console. When the component is unmounted (users moves to a different page), the timer will be running in the background, which we might not even realize and causing huge performance issue. To avoid such situations the cleanup function can be done in componentWillUnmount, in this example `clearInterval`(timer) to clear the timer interval before unmounting Repo component.
-
-```
-“localhost:1234/about” or “localhost:1234/about/profile”. Now, in this page, the About component, along with its child components (here ProfileClass component) is displayed in the webpage.
-The moment we navigate to the Home/Contacts component from the navbar, we will see that the console log inside the `ComponentWillUnmount() `gets printed.
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
+        path: "/restaurant/:resId",
+        element: <RestaurantMenu />,
+      },
+      {
+        path: "/instamart",
+        element: (
+          <Suspense fallback={<Shimmer />}>
+            <Instamart />
+          </Suspense>
+        ),
+      },
+    ],
+  },
+]);
 
 ```
 
-## (Research) Why do we use `super(props)` in `constructor`? 
-
-`super(props)` is used to inherit the properties and access of variables of the React parent class when we initialize our component.
-super() is used inside constructor of a class to derive the parent's all properties inside the class that extended it. If super() is not used, then Reference Error : Must call super constructor in derived classes before accessing 'this' or returning from derived constructor is thrown in the console.
-The main difference between super() and super(props) is the this.props is undefined in child's constructor in super() but this.props contains the passed props if super(props) is used.
+The `fallback` prop accepts any `React elements` that you want to render while waiting for the component to load. You can place the Suspense component anywhere above the lazy component. You can even wrap `multiple lazy components` with a `single` Suspense component.
 
 
-## (Research) Why `can't we have` the `callback function` of `useEffect async`?
+## Why we got this `error`: A component was suspended while responding to `synchronous input`. This will cause the `UI` to be replaced with a `loading indicator`. To `fix this`, `updates that suspend` should be wrapped with `start transition`? How does `suspense fix` this error?
 
-`useEffect` expects it's callback function to return nothing or return a function (cleanup function that is called when the component is unmounted). If we make the callback function as `async`, it will return a `promise` and the promise will affect the clean-up function from being called.
+This error is thrown as Exception by React when the promise to dynamically import the lazy component is not yet resolved and the Component is expected to render in the meantime. If only the dynamic import is done and there is no `<Suspense />` component then this error is shown. React expects a Suspense boundary to be in place for showing a fallback prop until the promise is getting resolved. If showing the shimmer (loading indicator) is not desirable in some situations, then `startTransistion` API can used to show the old UI while new UI is being prepared. React do this without having to delete or remove the Suspense component or its props from your code.
+## `Advantages and Disadvantages` of using this `code splitting pattern`?
+
+| Advantages  | Disadvantages |
+| :---------- | :----------   |
+| Reduces the page load time by bundling the large code into smaller bundles and laoding dynamically only when the component is loaded | Though the initial page load time is reduced, this increases the load time of each component thats loaded dynamically |
+| Only the components that the user needs are loaded initially | There will be many http requests as the components are loaded dynamically |
+| Cna imporve the user experience while loaded by showing suspense fallback/ loading dicator | But, this suspense boundary needs a new chunk of code to be written for showing the shimmer component |
+
+## When `do we and why do we need suspense`?
+
+Suspense are useful when the components are `waiting` (React.lazy components are getting dynamically loaded) before rendering. Today, React Suspense only supports one use case which is loading components dynamically with React lazy(). In the future, it will support other use cases like data fetching. 
