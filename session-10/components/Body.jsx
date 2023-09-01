@@ -7,42 +7,18 @@ import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
 
 function filterData(searchText, restaurants) {
+  console.log({ restaurants });
   const filterData = restaurants.filter((restaurant) =>
-    restaurant?.data?.name?.toLowerCase()?.includes(searchText?.toLowerCase())
+    restaurant?.info?.name?.toLowerCase()?.includes(searchText?.toLowerCase())
   );
   return filterData;
 }
 
 const Body = () => {
-  // This is how we create a variable in JavaScript
-  //const searchTxt = "KFC";
-
   const [searchText, setSearchText] = useState("");
   const [allRestaurants, setAllRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
-
-  /*
-   This is how we create a variable in React
-  useState() - retruns an array = [1st variablename /  setFunction - function to update the variable]
-   function os his useState is? To create state variable;
-
-  
-  const [searchClicked, setSearchClicked] = useState("false");
-
-  
-    if we refresh this it re-render the whole component once if we had made any changes.IN case of search it we rnder eachand every time when input is happens.
-    console.log("render");
-    console.log(restaurants);
-*/
-
-  /*
-  if we have i)render 
-            ii)UseEffect   below comnditions will follow⬇️
-
-  Empty dependency array[]  ======>  render once after render
-  dep array [searchText]  ======>  render once  after Intial  render happend + everytime re-render when my searchText changes(on every key press.)
-  */
 
   useEffect(() => {
     //fecht (Make an API call)
@@ -89,7 +65,6 @@ const Body = () => {
     }
   };
 
-  //console.log("render");
   const isOnline = useOnline();
   console.log(isOnline);
 
@@ -97,14 +72,6 @@ const Body = () => {
     return <h1>🥵Opps!looks like you are offline</h1>;
   }
 
-  /** 
-  Conditional Rendering:
-  - If the restaurant is empty ⇒ Shimmer UI
-  - If the restaurant has data ⇒ actual data UI
-*/
-
-  // When we dont have any restaurant dont return anything.⬇️
-  // not render components(Early retrun)
   if (!allRestaurants) return null;
 
   return (
@@ -117,33 +84,16 @@ const Body = () => {
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
         />
-        {/*<h1>{searchText}</h1>*/}
-        {/*//we can use this as local variable in any where.
-           //This is Know as two way binding.*/}
-        {/*<button className="search-btn" onClick={() => setSearchClicked("true")}>*/}
-        {/*//*/}
-
-        {/*For restaurantList we want filterData()*/}
         <button
           className="search-btn"
           onClick={() => {
-            //need to filterData
-            //const data = filterData(searchText, allRestaurants);
-            //update the state - restaurants
-            //setFilteredRestaurants(data);
-
-            // user click on button searchData function is called
             searchData(searchText, allRestaurants);
           }}
         >
           <i className="fa fa-search"></i>
         </button>
-        {/*<h1>{searchClicked}</h1>*/}
       </div>
-      {/*
-            ->if restaurants data is not fetched then display Shimmer UI after the fetched data display restaurants cards 
-            -> Also handled shimmer with search box
-            */}
+
       {errorMessage && <div className="error-container">{errorMessage}</div>}
       {allRestaurants?.length === 0 ? ( //Optional Chaining
         <Shimmer />
@@ -151,7 +101,6 @@ const Body = () => {
         <div className="restaurant-list">
           {filteredRestaurants.map((restaurant) => {
             return (
-              // no key (not acceptable) <<< index key(use only if you don't have anything LAST OPTION) <<< unique key (BEST PRACTICE).
               <Link
                 to={"/restaurant/" + restaurant.info.id}
                 key={restaurant.info.id}
