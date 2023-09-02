@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/*tailwind css*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 *,
  :after,
  :before {
@@ -304,3 +310,13 @@ body {
     list-style: none;
     padding-right: 1.5rem;
 }
+
+
+/*
+Tailwind CSS Framework
+    - CSS on the go(In the same file,Earlier we used create a id / className and then go the `index.css` file then we will write up the code)
+    - Reusability
+    - Less bundle size
+    - Flexible UI(Bcz it is easy to Customize)
+    - Tailwind CSS jucst work with className.Every css style that we put in will be a new className.
+*/
