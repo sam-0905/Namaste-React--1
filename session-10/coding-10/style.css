@@ -268,12 +268,14 @@ body {
 }
 
 .ErrorImg {
-    width: 30%;
+    width: 32%;
     height: auto;
+    text-align: center;
+    padding-left: 26.5rem;
 }
 
 .Err-btn {
-    width: 110px;
+    width: 130px;
     height: 7vh;
     text-decoration: none;
     background-color: #EDD947;
