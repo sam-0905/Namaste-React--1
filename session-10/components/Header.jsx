@@ -59,7 +59,7 @@ const Header = function () {
           </li>
 
           {/* use conditional rendering for login and logout */}
-          <h1>{isOnline ? "🟢" : "🔴"}</h1>
+          <h1 className="py-2.5">{isOnline ? "🟢" : "🔴"}</h1>
           <li>
             {isLoggedIn ? (
               <buttons
