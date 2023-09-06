@@ -150,7 +150,7 @@ module.exports = {
 ```
 #### For more reference ```[https://tailwindcss.com/docs/configuration#theme]``` .
 
-## Why do we have `.postcssrc `file?
+### Why do we have `.postcssrc `file?
 
 
 PostCSS is a CSS parser, framework or API that allows us to use plugins which can do various tasks. We use PostCSS because tailwind is installed as a PostCSS plugin. 
