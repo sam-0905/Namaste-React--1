@@ -17,7 +17,7 @@ style = {{
 
 ```
 
--	Third way is using library or Framework.
+-	Third way is using `component library` or Framework.
 
 ```
  MaterialUI, Bootstrap, Base Web UI, Ant design, chakra UI
@@ -147,9 +147,9 @@ module.exports = {
     require('@tailwindcss/aspect-ratio'),
   ],
 }
-For more reference [https://tailwindcss.com/docs/configuration#theme]
 
 ```
+For more reference [https://tailwindcss.com/docs/configuration#theme]
 
 ### 4.Why do we have `.postcssrc `file?
 
@@ -166,6 +166,6 @@ It is a tool for transforming css with js.It helps to tells our `parcel` and bro
     "tailwindcss": {}
   }
 }
-For more refernce [https://www.freecodecamp.org/news/what-is-postcss/]
 
 ```
+For more refernce [https://www.freecodecamp.org/news/what-is-postcss/]
