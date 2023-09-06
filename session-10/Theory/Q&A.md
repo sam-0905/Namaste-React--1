@@ -1,82 +1,168 @@
 ## Namaste React Course by Akshay Saini
 
-## Chapter 09 - Optimizing our App
+## Chapter 10 - What you see is that what sells
 
 ## Theory Assignment: 
+##  Explore all the ways of writing css. 
 
-## When and why do we need `lazy()`?
+### There are several ways of css:
+- First way is to create a separate stylesheet(index.css) and in code we create a style using a className,id,..etc. It in also know as `Native Css`
 
-  React.lazy is used to `dynamically import` a component when it is first rendered, instead of importing at the beginning till when the file loads. This is called `Code Splitting`/ `On-demading loading`. 
+-	Second way is `Inline` styling.
 
-  In our example : In App.js, Instamart component and about component are lazy loaded, which means only when the user clicks on the navigation button, those components are imported and rendered. This improves the performance of the application. So, lazy is used when that component might not be used by all users, instead of loaded in the beginning, only when the user really needs it, its loaded.
-
-## What is `suspense`?
-
-   By the way of keeping a component inside a `suspense` react will take care of all.In before it will not load our code for first time ,but after using suspense its works fine(React will take care behind the secenes.)
-
-   Suspense component allows us to show some `fallback{}` content (such as a loading indicator/ Shimmer component) while we’re waiting for the lazy component to load or the component is not yet rendered. 
-   
-```javascript Eg:
-import React, { lazy ,Suspense } from 'react';
-
-const Instamart = lazy(() => import("../components/Instamart"));
-
-const appRouter = createBrowserRouter([
-  {
-    path: "/",
-    element: <Applayout />,
-    errorElement: <Error />,
-    children: [
-      {
-        path: "/",
-        element: <Body />,
-      },
-      {
-        path: "/about",
-        element: <About />,
-        children: [
-          {
-            path: "profile", // ->/about/profile -This will also work -> If we given Like this - ParentPath/{path}
-            element: <Profile />,
-          },
-        ],
-      },
-      {
-        path: "/contact",
-        element: <Contact />,
-      },
-      {
-        path: "/restaurant/:resId",
-        element: <RestaurantMenu />,
-      },
-      {
-        path: "/instamart",
-        element: (
-          <Suspense fallback={<Shimmer />}>
-            <Instamart />
-          </Suspense>
-        ),
-      },
-    ],
-  },
-]);
+```
+style = {{
+  backgroundColor : "red"
+}}
 
 ```
 
-The `fallback` prop accepts any `React elements` that you want to render while waiting for the component to load. You can place the Suspense component anywhere above the lazy component. You can even wrap `multiple lazy components` with a `single` Suspense component.
+-	Third way is using library or Framework.
+
+```
+ MaterialUI, Bootstrap, Base Web UI, Ant design, chakra UI
+```
+
+-	Fourth way is to using `SCSS & SASS`.
+
+-	Styled components -  styled-components lets you write actual CSS in your JavaScript.Styled-components allows you to create components and attach styles to it using ES6 tagged template literals. The styles attached are written in CSS.
+
+```
+import styled from 'styled-components';
+
+const Button = styled.button`
+  padding: 10px;
+  border: 2px solid blue;
+  border-radius: 4px;
+`;
+
+const Example1 = () => {
+  return (
+    <main>
+      <Button>Click me</Button>
+    </main>
+  );
+};
+
+export default Example1;
+```
+
+##  How do we configure tailwind?
+Steps to use tailwind css in app : 
+- Install tailwind css
+
+```
+npm install -D tailwindcss postcss
+npx tailwindcss init
+```
+
+- Configure PostCSS
+```json
+{
+  "plugins": {
+    "tailwindcss": {}
+  }
+}
+```
+
+- Configure your template paths
+
+```
+module.exports = {
+  content: [
+    "./src/**/*.{html,js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+- Add the Tailwind directives to your CSS
+
+```
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+##  In tailwind.config.js, what does all the keys mean (content, theme, extend, plugins)? 
+ 
+* `Content`
+The content section is where you configure the paths to all of your HTML templates, JS components, and any other files that contain Tailwind class names.
+
+```
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    './pages/**/*.{html,js}',
+    './components/**/*.{html,js}',
+  ],
+  // ...
+}
+```
+
+* `Theme`
+The theme section is where you define your color palette, fonts, type scale, border sizes, breakpoints — anything related to the visual design of your site.
+
+```
+
+`tailwind.config.js`
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  // ...
+  theme: {
+    colors: {
+      'blue': '#1fb6ff',
+      'purple': '#7e5bef',
+    },
+    fontFamily: {
+      sans: ['Graphik', 'sans-serif'],
+    },
+    extend: {
+      spacing: {
+        '8xl': '96rem',
+      },
+      borderRadius: {
+        '4xl': '2rem',
+      }
+    }
+  }
+}
+```
+
+*  `Plugins`
+The plugins section allows you to register plugins with Tailwind that can be used to generate extra utilities, components, base styles, or custom variants.
+
+```
+tailwind.config.js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  // ...
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
+}
+```
+#### For more reference ```[https://tailwindcss.com/docs/configuration#theme]``` .
+
+## Why do we have `.postcssrc `file?
 
 
-## Why we got this `error`: A component was suspended while responding to `synchronous input`. This will cause the `UI` to be replaced with a `loading indicator`. To `fix this`, `updates that suspend` should be wrapped with `start transition`? How does `suspense fix` this error?
+PostCSS is a CSS parser, framework or API that allows us to use plugins which can do various tasks. We use PostCSS because tailwind is installed as a PostCSS plugin. 
 
-This error is thrown as Exception by React when the promise to dynamically import the lazy component is not yet resolved and the Component is expected to render in the meantime. If only the dynamic import is done and there is no `<Suspense />` component then this error is shown. React expects a Suspense boundary to be in place for showing a fallback prop until the promise is getting resolved. If showing the shimmer (loading indicator) is not desirable in some situations, then `startTransistion` API can used to show the old UI while new UI is being prepared. React do this without having to delete or remove the Suspense component or its props from your code.
-## `Advantages and Disadvantages` of using this `code splitting pattern`?
+While installing tailwind, install postcss as its peer dependency. Create a '.postcssrc' file in project root, and enable the tailwindcss plugin.
 
-| Advantages  | Disadvantages |
-| :---------- | :----------   |
-| Reduces the page load time by bundling the large code into smaller bundles and laoding dynamically only when the component is loaded | Though the initial page load time is reduced, this increases the load time of each component thats loaded dynamically |
-| Only the components that the user needs are loaded initially | There will be many http requests as the components are loaded dynamically |
-| Cna imporve the user experience while loaded by showing suspense fallback/ loading dicator | But, this suspense boundary needs a new chunk of code to be written for showing the shimmer component |
+It is a tool for transforming css with js.It helps to tells our `parcel` and browser to understant that we are using `Tailwindcss`
 
-## When `do we and why do we need suspense`?
-
-Suspense are useful when the components are `waiting` (React.lazy components are getting dynamically loaded) before rendering. Today, React Suspense only supports one use case which is loading components dynamically with React lazy(). In the future, it will support other use cases like data fetching.
+```json
+{
+  "plugins": {
+    "tailwindcss": {}
+  }
+}
+```
+#### For more refernce `[https://www.freecodecamp.org/news/what-is-postcss/]`
