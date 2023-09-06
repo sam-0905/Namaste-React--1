@@ -147,7 +147,7 @@ module.exports = {
     require('@tailwindcss/aspect-ratio'),
   ],
 }
-#### For more reference [https://tailwindcss.com/docs/configuration#theme]
+For more reference [https://tailwindcss.com/docs/configuration#theme]
 
 ```
 
@@ -166,6 +166,6 @@ It is a tool for transforming css with js.It helps to tells our `parcel` and bro
     "tailwindcss": {}
   }
 }
-#### For more refernce [https://www.freecodecamp.org/news/what-is-postcss/]
+For more refernce [https://www.freecodecamp.org/news/what-is-postcss/]
 
 ```
