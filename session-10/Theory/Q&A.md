@@ -25,7 +25,7 @@ style = {{
 
 -	Fourth way is to using `SCSS & SASS`.
 
--	Styled components -  styled-components lets you write actual CSS in your JavaScript.Styled-components allows you to create components and attach styles to it using ES6 tagged template literals. The styles attached are written in CSS.
+-	Fifth way is `Styled components` -  styled-components lets you write actual CSS in your JavaScript.Styled-components allows you to create components and attach styles to it using ES6 tagged template literals. The styles attached are written in CSS.
 
 ```
 import styled from 'styled-components';
@@ -47,7 +47,8 @@ const Example1 = () => {
 export default Example1;
 ```
 
-##  How do we configure tailwind?
+## How do we configure tailwind?
+
 Steps to use tailwind css in app : 
 - Install tailwind css
 
@@ -89,7 +90,7 @@ module.exports = {
 
 ##  In tailwind.config.js, what does all the keys mean (content, theme, extend, plugins)? 
  
-* `Content`
+#### `Content`
 The content section is where you configure the paths to all of your HTML templates, JS components, and any other files that contain Tailwind class names.
 
 ```
@@ -103,7 +104,7 @@ module.exports = {
 }
 ```
 
-* `Theme`
+#### `Theme`
 The theme section is where you define your color palette, fonts, type scale, border sizes, breakpoints — anything related to the visual design of your site.
 
 ```
@@ -133,7 +134,7 @@ module.exports = {
 }
 ```
 
-*  `Plugins`
+####  `Plugins`
 The plugins section allows you to register plugins with Tailwind that can be used to generate extra utilities, components, base styles, or custom variants.
 
 ```
