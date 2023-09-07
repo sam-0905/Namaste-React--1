@@ -3,7 +3,7 @@
 ## Chapter 10 - What you see is that what sells
 
 ## Theory Assignment: 
-##  Explore all the ways of writing css. 
+### 1.Explore all the ways of writing css. 
 
 ### There are several ways of css:
 - First way is to create a separate stylesheet(index.css) and in code we create a style using a className,id,..etc. It in also know as `Native Css`
@@ -17,7 +17,7 @@ style = {{
 
 ```
 
--	Third way is using library or Framework.
+-	Third way is using `component library` or Framework.
 
 ```
  MaterialUI, Bootstrap, Base Web UI, Ant design, chakra UI
@@ -47,7 +47,7 @@ const Example1 = () => {
 export default Example1;
 ```
 
-## How do we configure tailwind?
+## 2.How do we configure tailwind?
 
 Steps to use tailwind css in app : 
 - Install tailwind css
@@ -88,7 +88,7 @@ module.exports = {
 @tailwind utilities;
 ```
 
-##  In tailwind.config.js, what does all the keys mean (content, theme, extend, plugins)? 
+### 3.In tailwind.config.js, what does all the keys mean (content, theme, extend, plugins)? 
  
 #### `Content`
 The content section is where you configure the paths to all of your HTML templates, JS components, and any other files that contain Tailwind class names.
@@ -147,10 +147,11 @@ module.exports = {
     require('@tailwindcss/aspect-ratio'),
   ],
 }
-```
-#### For more reference ```[https://tailwindcss.com/docs/configuration#theme]``` .
 
-## Why do we have `.postcssrc `file?
+```
+For more reference [https://tailwindcss.com/docs/configuration#theme]
+
+### 4.Why do we have `.postcssrc `file?
 
 
 PostCSS is a CSS parser, framework or API that allows us to use plugins which can do various tasks. We use PostCSS because tailwind is installed as a PostCSS plugin. 
@@ -165,5 +166,6 @@ It is a tool for transforming css with js.It helps to tells our `parcel` and bro
     "tailwindcss": {}
   }
 }
+
 ```
-#### For more refernce `[https://www.freecodecamp.org/news/what-is-postcss/]`
+For more refernce [https://www.freecodecamp.org/news/what-is-postcss/]
