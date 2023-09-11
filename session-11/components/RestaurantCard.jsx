@@ -6,10 +6,11 @@ const RestaurantCard = ({
   cuisines,
   cloudinaryImageId,
   avgRating,
-  deliveryTime,
-  costForTwoString,
+  sla,
+  costForTwo,
 }) => {
-  console.log({ deliveryTime, costForTwoString });
+  const { deliveryTime } = sla;
+  //console.log({ deliveryTime, costForTwo });
   return (
     <div className="card">
       <img src={IMG_CDN_URl + cloudinaryImageId} />
@@ -18,7 +19,7 @@ const RestaurantCard = ({
       <div className="card-footer">
         <h4>{avgRating} ★</h4>
         <h4>{deliveryTime} mins</h4>
-        <h4>{costForTwoString}</h4>
+        <h4>{costForTwo}</h4>
       </div>
     </div>
   );
