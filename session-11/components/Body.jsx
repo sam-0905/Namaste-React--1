@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
 
 function filterData(searchText, restaurants) {
-  //console.log({ restaurants });
+  console.log({ restaurants });
   const filterData = restaurants.filter((restaurant) =>
     restaurant?.info?.name?.toLowerCase()?.includes(searchText?.toLowerCase())
   );
