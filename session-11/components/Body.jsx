@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import Shimmer from "./shimmer";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
+import {MAIN_API_URL } from "../coding-11/constant";
 
 function filterData(searchText, restaurants) {
   console.log({ restaurants });
@@ -21,21 +22,21 @@ const Body = () => {
   const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
-    //fecht (Make an API call)
+    //fetch (Make an API call)
     getRestaurants();
   }, []);
 
-  // async function getRestaurant to fetch Swiggy API data
+  // async function getRestaurant to fetch API data
   async function getRestaurants() {
     // handle the error using try... catch
     try {
-      const data = await fetch(
-        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.3164945&lng=78.03219179999999&page_type=DESKTOP_WEB_LISTING"
-      );
+      const data = await fetch(MAIN_API_URL)
       const json = await data.json();
+      console.log(json);
+
       const cards = await json.data.cards;
 
-      for (let i = 0; i < cards.length; i++) {
+      for (let i = 1; i < cards.length; i++) {
         if (cards[i]?.card?.card?.gridElements?.infoWithStyle?.restaurants) {
           setAllRestaurants(
             cards[i].card.card.gridElements.infoWithStyle.restaurants
@@ -60,7 +61,7 @@ const Body = () => {
         setErrorMessage("No matches restaurant found");
       }
     } else {
-      setErrorMessage("");
+      setErrorMessage("");  
       setFilteredRestaurants(restaurants);
     }
   };
@@ -100,7 +101,7 @@ const Body = () => {
       ) : (
         <div className="restaurant-list">
           {filteredRestaurants.map((restaurant) => {
-            //console.log("Res:", restaurant);
+            // console.log("Res:", restaurant);
             return (
               <Link
                 to={"/restaurant/" + restaurant?.info?.id}
