@@ -21,7 +21,7 @@
         "@babel/core": "^7.20.12",
         "babel-plugin-transform-remove-console": "^6.9.4",
         "eslint": "^8.7.0",
-        "parcel": "^2.8.2",
+        "parcel": "^2.15.2",
         "postcss": "^8.4.29",
         "prettier": "^2.5.1",
         "process": "^0.11.10",
