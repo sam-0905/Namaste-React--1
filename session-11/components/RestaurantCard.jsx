@@ -2,9 +2,9 @@ import { IMG_CDN_URl } from "../coding-11/constant";
 
 const RestaurantCard = ({
   // props
+  cloudinaryImageId,
   name,
   cuisines,
-  cloudinaryImageId,
   avgRating,
   sla,
   costForTwo,
@@ -13,7 +13,7 @@ const RestaurantCard = ({
   //console.log({ deliveryTime, costForTwo });
   return (
     <div className="card">
-      <img src={IMG_CDN_URl + cloudinaryImageId} />
+      <img src={IMG_CDN_URl +`${cloudinaryImageId}`} />
       <h2 style={{ fontSize: "15px" }}>{name}</h2>
       <h3 className="cuisines-text">{cuisines?.join(",")}</h3>
       <div className="card-footer">
