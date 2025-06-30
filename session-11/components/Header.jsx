@@ -1,4 +1,4 @@
-import Logo from "../images/Chef in the Hat.png";
+import Logo from "../Assets/logo.png"
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
@@ -8,9 +8,9 @@ import useOnline from "../utils/useOnline";
 
 export const Title = () => (
   <div>
-    <a href="/">
+    <Link href="/">
       <img className="logo" src={Logo} alt="logo" />
-    </a>
+    </Link>
   </div>
 );
 
@@ -25,7 +25,6 @@ const Header = function () {
   return (
     <div className="header">
       <Title />
-
       <div className="Nav-container">
         <ul>
           <li>

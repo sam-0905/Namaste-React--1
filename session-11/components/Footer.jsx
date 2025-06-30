@@ -1,7 +1,7 @@
 // Named import
 import { Title } from "./Header";
-import linkedin from "../images/linkedin.svg";
-import twitter from "../images/twitter.svg";
+import linkedin from "../Assets/linkedin.svg";
+import twitter from "../Assets/twitter.svg";
 
 const Footer = () => {
   return (
@@ -12,16 +12,17 @@ const Footer = () => {
       </h4>
       <ul>
         <li>
-          <a href="https://twitter.com/AllanSam5050">
-            <img src={linkedin} />
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/allan-sam/">
-            <img src={twitter} />
-          </a>
-        </li>
-      </ul>
+        <a href="https://twitter.com/AllanSam5050">
+        <img src={twitter} alt="Twitter" />
+       </a>
+       </li>
+       <li>
+        <a href="https://www.linkedin.com/in/allan-sam/">
+       <img src={linkedin} alt="LinkedIn" />
+       </a>
+      </li>
+</ul>
+
     </div>
   );
 };
