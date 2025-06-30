@@ -1,4 +1,4 @@
-import { IMG_CDN_URl } from "../coding-11/constant";
+import { IMG_CDN_URl, REACT_MEDIA_URL } from "../coding-11/constant";
 
 const RestaurantCard = ({
   // props
@@ -13,7 +13,7 @@ const RestaurantCard = ({
   //console.log({ deliveryTime, costForTwo });
   return (
     <div className="card">
-      <img src={IMG_CDN_URl +`${cloudinaryImageId}`} />
+      <img src={REACT_MEDIA_URL+ IMG_CDN_URl +`${cloudinaryImageId}`} />
       <h2 style={{ fontSize: "15px" }}>{name}</h2>
       <h3 className="cuisines-text">{cuisines?.join(",")}</h3>
       <div className="card-footer">

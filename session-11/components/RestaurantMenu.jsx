@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { IMG_CDN_URl } from "../coding-11/constant";
 import Shimmer from "./shimmer";
 import useRestaurant from "../utils/useRestaurant";
+import { REACT_MEDIA_URL } from './../coding-11/constant';
 
 const RestaurantMenu = () => {
   //   some cool devel also destructure in fly
@@ -25,7 +26,7 @@ const RestaurantMenu = () => {
           <h2>{restaurantDetails?.name}</h2>
           <img
             className="res-img"
-            src={IMG_CDN_URl + restaurantDetails?.cloudinaryImageId}
+            src={REACT_MEDIA_URL+ IMG_CDN_URl + restaurantDetails?.cloudinaryImageId}
             alt={restaurantDetails?.name}
           />
           <h3>Restautant id: {resId}</h3>
