@@ -7,7 +7,9 @@ export const IMG_CDN_URl = "image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fi
 
 export const MAIN_API_URL = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.9581934&lng=72.8320729&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
 
-export const FETCH_MENU_URL = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.931948400167405&lng=80.1345556229353&restaurantId=";
+export const FETCH_MENU_URL = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.9581934&lng=72.8320729&restaurantId=&catalog_qa=undefined&submitAction="
+
+// "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.931948400167405&lng=80.1345556229353&restaurantId=";
 
 // Named import
 export const restaurantList = [
