@@ -47,7 +47,7 @@ const Header = function () {
             </Link>
           </li>
           <li>
-            <Link id="Nav-container" to="/Instamart">
+            <Link id="Nav-container" to="/Instamart" className="fa fa-bell">
               Instamart
             </Link>
           </li>
