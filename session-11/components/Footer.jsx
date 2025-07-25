@@ -1,7 +1,7 @@
 // Named import
 import { Title } from "./Header";
-import linkedin from "../Assets/linkedin.svg";
-import twitter from "../Assets/twitter.svg";
+import linkedin from "../assets/linkedin.svg";
+import twitter from "../assets/twitter.svg";
 
 const Footer = () => {
   return (
@@ -13,7 +13,7 @@ const Footer = () => {
       <ul>
         <li>
         <a href="https://twitter.com/AllanSam5050">
-        <img src={twitter} alt="Twitter" />
+        <img src={twitter} alt="Twitter"/>
        </a>
        </li>
        <li>
