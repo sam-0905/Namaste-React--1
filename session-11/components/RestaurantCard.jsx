@@ -14,7 +14,7 @@ const RestaurantCard = ({
   return (
     <div className="card">
       <img src={REACT_MEDIA_URL+ IMG_CDN_URl +`${cloudinaryImageId}`} />
-      <h2 style={{ fontSize: "15px" }}>{name}</h2>
+      <h2 className="card-name">{name}</h2>
       <h3 className="cuisines-text">{cuisines?.join(",")}</h3>
       <div className="card-footer">
         <h4>{avgRating} ★</h4>
