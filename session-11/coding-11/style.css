@@ -24,21 +24,28 @@ body {
 }
 
 .logo {
-    width: 70px;
-    display: flex;
-    position: relative;
-    left: 10px;
+  width: 80px;
+  aspect-ratio: 1;
+  object-fit: contain;
+  margin-left: 1rem;
+  transition: transform 0.3s ease;
+}
+.logo:hover {
+  transform: scale(1.1);
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: 700;
-    font-size: 1.2rem;
-    background-color: #597aff;
-    color: ghostwhite;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #4e61ff, #6d90ff);
+  color: ghostwhite;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
+
 
 .Nav-container>ul {
     list-style: none;
@@ -58,24 +65,22 @@ body {
 
 /*.login/logout-btn*/
 
-.login-btn {
-    height: 5vh;
-    width: 5vw;
-    background-color: #ffde59;
-    color: #597aff;
-    border-radius: 0.5rem;
-    border: 1px solid ghostwhite;
-    font-size: large;
-}
-
+.login-btn,
 .logout-btn {
-    height: 5vh;
-    width: 5vw;
-    background-color: #ffde59;
-    color: #597aff;
-    border-radius: 0.5rem;
-    border: 1px solid ghostwhite;
-    font-size: large;
+  height: 2.5rem;
+  min-width: 90px;
+  background: linear-gradient(145deg, #ffde59, #ffcb3c);
+  color: #1f3f9f;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+.login-btn:hover,
+.logout-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -123,41 +128,72 @@ body {
 
 /*card */
 
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .card {
-    margin: 1rem 1rem;
-    padding: 0.5rem;
-    border: 1px solid bisque;
-    width: 280px;
-    height: auto;
-    cursor: pointer;
-    /*zoom card;*/
-    transition: transform .1s;
-    /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);*/
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 0.5rem;
+  margin: 0.5rem;
+  padding: 1rem;
+  border: 1px solid #e2e2e2;
+  width: 70%;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 1rem;
+  background: #fff;
+  /* backdrop-filter: blur(5px); */
 }
-
 .card:hover {
-    transform: scale(1.1);
-    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: translateY(-5px) scale(1.03);
 }
 
-.card>img {
-    width: 100%;
+.card-name{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.card > img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover > img {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 .card .cuisines-text {
     color: #686b78;
     font-size: 11px;
     margin-top: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .card .card-footer {
     display: flex;
     justify-content: space-between;
+    text-align: center;
     font-size: 13px;
     margin-top: 6px;
+    padding: 3px;
     color: navy;
+}
+
+.card .rating{
+    background-color:#00ad1d;
+    color: #fff;
+    border-radius: 5px;
+    align-items: center;
+    padding: 3px;
 }
 
 .restaurant-list {
@@ -289,28 +325,101 @@ body {
 
 /*footer*/
 
+.foot-container {
+  background: linear-gradient(145deg, #4e61ff, #6d90ff);
+  color: white;
+  padding: 40px 20px;
+}
+
 .foot {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: 500;
-    background-color: #597aff;
-    color: ghostwhite;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.foot>ul {
-    display: flex;
-    cursor: pointer;
+.foot-brand span {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
 }
 
-.foot>h4 {
-    padding-left: 6rem;
-    font-size: 1.5rem;
+.brand-tagline {
+  font-size: 0.9rem;
+  color: whitesmoke;
+  margin-top: 5px;
 }
 
-.foot>ul>li {
-    list-style: none;
-    padding-right: 1.5rem;
+.foot-links {
+  display: flex;
+  gap: 40px;
+}
+
+.foot-col h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.foot-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.foot-col li a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.foot-col li a:hover {
+  color: #fff;
+}
+
+.foot-social {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #ffffff; /* Bright white text */
+}
+
+.foot-social h4 {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); /* Adds contrast */
+  margin: 0 0 8px;
+}
+
+.foot-social ul {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.foot-social li a img {
+  width: 10vw;
+  height: 10vh;
+  filter: brightness(1) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4)); /* Makes icons pop */
+  transition: transform 0.3s;
+}
+
+.foot-social li a img:hover {
+  transform: scale(1.15);
+}
+
+.foot-bottom {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 1rem;
+  color: whitesmoke;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 30px;
 }
 
 
