@@ -1,6 +1,6 @@
 //import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { IMG_CDN_URl } from "../coding-11/constant";
+import { IMG_CDN_URl, IMG_MENU_CDN } from "./../coding-11/constant";
 import Shimmer from "./shimmer";
 import useRestaurant from "../utils/useRestaurant";
 import { REACT_MEDIA_URL } from './../coding-11/constant';
@@ -40,9 +40,18 @@ const RestaurantMenu = () => {
 
         <div>
           <h1>Menu</h1>
-          {restaurantMenu.map((item) => (
-            <li key={item?.card?.info?.id}>{item?.card?.info?.name}</li>
-          ))}
+          {restaurantMenu.map((item) => {
+              const { id, name, REACT_MEDIA_URL,IMG_MENU_CDN, imageId } = item?.card?.info || {}
+              const imageUrl = `${REACT_MEDIA_URL || ""}${IMG_MENU_CDN}${imageId}`;
+
+              return(
+                 <li key={id}>
+              {name} 
+              {< img src={imageUrl} alt={name}/>} 
+              </li>
+              )
+  
+            })}
         </div>
       </div>
     </>
