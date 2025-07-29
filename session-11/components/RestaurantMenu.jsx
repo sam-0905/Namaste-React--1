@@ -6,8 +6,8 @@ import useRestaurant from "../utils/useRestaurant";
 import { REACT_MEDIA_URL } from './../coding-11/constant';
 import { IMG_MENU_URL } from './../coding-11/constant';
 import "../components/RestaurantMenu.css"
-import veg from "../assets/veg.png";
-import nonVeg from "../assets/non-veg.png";
+import veg from "../coding-11/assets/veg.png"
+import nonVeg from "../coding-11/assets/veg.png";
 
 
 

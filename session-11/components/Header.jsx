@@ -1,4 +1,4 @@
-import Logo from "../Assets/logo.png"
+import Logo from "../coding-11/assets/Logo.png"
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
@@ -8,7 +8,7 @@ import useOnline from "../utils/useOnline";
 
 export const Title = () => (
   <div>
-    <Link href="/">
+    <Link to="/">
       <img className="logo" src={Logo} alt="logo" />
     </Link>
   </div>
