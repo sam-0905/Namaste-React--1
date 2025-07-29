@@ -43,7 +43,7 @@ const RestaurantMenu = () => {
           <h1>Menu</h1>
           {restaurantMenu.map((item) => {
            const { id, name,imageId,description,price,ribbon,ratings,itemAttribute,ratingCountV2} = item?.card?.info || {}
-               const ribbonText = ribbon?.text || null;
+               const ribbonText = ribbon?.text || "New";
                 const food_Type = itemAttribute.vegClassifier;
                  const rating = ratings?.aggregatedRating?.rating || "–";
                   const ratingCount = ratings?.aggregatedRating?.ratingCountV2
