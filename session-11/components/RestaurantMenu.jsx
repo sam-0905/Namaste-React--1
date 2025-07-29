@@ -1,21 +1,19 @@
 //import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { IMG_CDN_URl, IMG_MENU_CDN } from "./../coding-11/constant";
+import { IMG_CDN_URl } from "./../coding-11/constant";
 import Shimmer from "./shimmer";
 import useRestaurant from "../utils/useRestaurant";
 import { REACT_MEDIA_URL } from './../coding-11/constant';
+import { IMG_MENU_URL } from './../coding-11/constant';
+import "../components/RestaurantMenu.css"
+
 
 const RestaurantMenu = () => {
-  //   some cool devel also destructure in fly
   const { resId } = useParams(); // destructuring the id
-  //console.log(resId);
-  // --------
-  //  const params = useParams();
-  //  const { id } = useparams;
-  //  console.log(params);
-  const { restaurantMenu, restaurantDetails } = useRestaurant(resId);
+  const { restaurantMenu, restaurantDetails } = useRestaurant(resId); 
+  const CDN_URL = IMG_MENU_URL;
 
-  console.log({ restaurantDetails, restaurantMenu });
+    console.log({ restaurantDetails, restaurantMenu });
 
   return !restaurantMenu ? (
     <Shimmer />
@@ -29,7 +27,7 @@ const RestaurantMenu = () => {
             src={REACT_MEDIA_URL+ IMG_CDN_URl + restaurantDetails?.cloudinaryImageId}
             alt={restaurantDetails?.name}
           />
-          <h3>Restautant id: {resId}</h3>
+          <h3>Restaurant id: {resId}</h3>
           <div className="rest-details">
             <h3>{restaurantDetails?.areaName}</h3>
             <h3>{restaurantDetails?.city}</h3>
@@ -41,13 +39,25 @@ const RestaurantMenu = () => {
         <div>
           <h1>Menu</h1>
           {restaurantMenu.map((item) => {
-              const { id, name, REACT_MEDIA_URL,IMG_MENU_CDN, imageId } = item?.card?.info || {}
-              const imageUrl = `${REACT_MEDIA_URL || ""}${IMG_MENU_CDN}${imageId}`;
+              const { id, name,imageId,description,price,ribbon,ratings} = item?.card?.info || {}
+               const ribbonText = ribbon?.text || null;
+                const rating = ratings?.aggregatedRating?.rating || "–";
 
               return(
                  <li key={id}>
-              {name} 
-              {< img src={imageUrl} alt={name}/>} 
+                <h1>{name}</h1>
+                <span>{ribbonText}</span>
+               {imageId && (
+                <img
+                  src={ REACT_MEDIA_URL +CDN_URL + imageId}
+                  style={{ width: "100px", height: "auto" }}
+                />
+              )}
+              <p>{description}</p>
+              <h3>₹ {price}</h3>
+                <p>
+                <strong>⭐ {rating}</strong> | ₹{(price || 0) / 100}
+              </p>
               </li>
               )
   
