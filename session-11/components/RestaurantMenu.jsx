@@ -6,6 +6,9 @@ import useRestaurant from "../utils/useRestaurant";
 import { REACT_MEDIA_URL } from './../coding-11/constant';
 import { IMG_MENU_URL } from './../coding-11/constant';
 import "../components/RestaurantMenu.css"
+import veg from "../assets/veg.png";
+import nonVeg from "../assets/non-veg.png";
+
 
 
 const RestaurantMenu = () => {
@@ -20,14 +23,14 @@ const RestaurantMenu = () => {
   ) : (
     <>
       <div className="Menu">
-        <div>
+        <div className="res-container">
           <h2>{restaurantDetails?.name}</h2>
           <img
             className="res-img"
             src={REACT_MEDIA_URL+ IMG_CDN_URl + restaurantDetails?.cloudinaryImageId}
             alt={restaurantDetails?.name}
           />
-          <h3>Restaurant id: {resId}</h3>
+          <h3 className="res-id">Restaurant id: {resId}</h3>
           <div className="rest-details">
             <h3>{restaurantDetails?.areaName}</h3>
             <h3>{restaurantDetails?.city}</h3>
@@ -39,25 +42,44 @@ const RestaurantMenu = () => {
         <div>
           <h1>Menu</h1>
           {restaurantMenu.map((item) => {
-              const { id, name,imageId,description,price,ribbon,ratings} = item?.card?.info || {}
+           const { id, name,imageId,description,price,ribbon,ratings,itemAttribute,ratingCountV2} = item?.card?.info || {}
                const ribbonText = ribbon?.text || null;
-                const rating = ratings?.aggregatedRating?.rating || "–";
+                const food_Type = itemAttribute.vegClassifier;
+                 const rating = ratings?.aggregatedRating?.rating || "–";
+                  const ratingCount = ratings?.aggregatedRating?.ratingCountV2
 
-              return(
-                 <li key={id}>
-                <h1>{name}</h1>
-                <span>{ribbonText}</span>
-               {imageId && (
-                <img
-                  src={ REACT_MEDIA_URL +CDN_URL + imageId}
-                  style={{ width: "100px", height: "auto" }}
-                />
-              )}
-              <p>{description}</p>
-              <h3>₹ {price}</h3>
-                <p>
-                <strong>⭐ {rating}</strong> | ₹{(price || 0) / 100}
-              </p>
+         return(
+                <li key={id}>
+                      <div className="menu-item-row">
+                       <div className="Menu-container">
+                          <h1>{name}</h1>
+
+                     {itemAttribute && (
+                      <span className="food-icon">
+                      {food_Type === "VEG" ? (
+                        <img src={veg} alt="Veg" />
+                                ) : (
+                        <img src={nonVeg} alt="Non-Veg" />
+                          )}
+                      </span>
+                         )}
+
+                    <span>{ribbonText || "\u00A0"}</span>
+                     <h3>₹ {(price || 0) / 100}</h3>
+                   <p>
+                   <strong>⭐ {rating} </strong>
+                   <i>({ratingCount})</i>
+                     </p>
+                  <p className="res-description">{description}</p>
+                  </div>
+
+                  <div className="Menu-img">
+                {imageId && (
+              <img src={REACT_MEDIA_URL + CDN_URL + imageId} alt={name} />
+                )}
+                </div>
+                 </div>
+               
               </li>
               )
   
