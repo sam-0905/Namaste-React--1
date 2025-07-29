@@ -7,20 +7,23 @@ const useRestaurant = (resId) => {
   // get data from API
   useEffect(() => {
     getRestaurantInfo();
-  }, []);
+  }, [resId]);
 
   async function getRestaurantInfo() {
-    console.log(restaurantDetails);
-    console.log("res", restaurantMenu);
-    const data = await fetch(FETCH_MENU_URL + resId);
-    const json = await data.json();
-    console.log(json);
-    setRestaurantDetails(json?.data?.cards[2]?.card?.card?.info);
-    setRestaurantMenu(
-      json?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
-        ?.card?.itemCards
-    );
+    try {
+      const data = await fetch(FETCH_MENU_URL + resId);
+      const json = await data.json();
+
+      setRestaurantDetails(json?.data?.cards[2]?.card?.card?.info);
+      setRestaurantMenu(
+        json?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]
+          ?.card?.card?.itemCards
+      );
+    } catch (err) {
+      console.error("Failed to fetch restaurant data:", err);
+    }
   }
+  
   //let obj = {
   //  restaurantMenu: restaurantMenu,
   //  restaurantDetails: restaurantDetails
