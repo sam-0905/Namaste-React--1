@@ -20,7 +20,7 @@ const Body = () => {
   const [allRestaurants, setAllRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
-
+  const [widget,setWidget] = useState([])
   useEffect(() => {
     //fetch (Make an API call)
     getRestaurants();
@@ -51,6 +51,18 @@ const Body = () => {
       console.log(error);
     }
   }
+
+  useEffect(()=>{
+    async function getWidget(){
+
+      try{
+      const data1 = await fetch(MAIN_API_URL)
+      const jsonData = await data1.json();
+      console.log(jsonData)
+      }
+      catch{}
+    }
+  },[])
 
   const searchData = (searchText, restaurants) => {
     if (searchText !== "") {
