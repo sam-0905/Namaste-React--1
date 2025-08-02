@@ -31,11 +31,6 @@ const Header = function () {
       <div className="Nav-container">
         <ul>
           <li>
-            <Link to="/" id="Nav-container" className="fa fa-home">
-              Home
-            </Link>
-          </li>
-          <li>
             <Link to="/about" id="Nav-container" className="fa fa-info-circle">
               About us
             </Link>
