@@ -1,15 +1,18 @@
-import Logo from "../assets/Logo.png"
+// import Logo from "../assets/Logo.png
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
 
 // SPA - Single Page Routing
 // Client Side Routing
-
+// const Logo = require("../assets/Logo.png");
+const logoUrl = new URL("../assets/Logo.png", import.meta.url).href;
+console.log("Logo")
+console.log(logoUrl);
 export const Title = () => (
   <div>
     <Link to="/">
-      <img className="logo" src={Logo} alt="logo" />
+      <img className="logo" src={logoUrl} alt="logo" />
     </Link>
   </div>
 );
