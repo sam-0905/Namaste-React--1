@@ -4,6 +4,8 @@ import { FETCH_MENU_URL } from "../constant";
 const useRestaurant = (resId) => {
   const [restaurantMenu, setRestaurantMenu] = useState([]);
   const [restaurantDetails, setRestaurantDetails] = useState({});
+
+  console.log(restaurantDetails)
   // get data from API
   useEffect(() => {
     getRestaurantInfo();
