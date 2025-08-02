@@ -1,4 +1,4 @@
-import { IMG_CDN_URl, REACT_MEDIA_URL } from "../coding-11/constant";
+import { IMG_CDN_URl, REACT_MEDIA_URL } from "../constant";
 
 const RestaurantCard = ({
   // props

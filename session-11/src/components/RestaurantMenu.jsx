@@ -1,13 +1,13 @@
 //import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { IMG_CDN_URl } from "./../coding-11/constant";
+import { IMG_CDN_URl } from "../constant";
 import Shimmer from "./shimmer";
 import useRestaurant from "../utils/useRestaurant";
-import { REACT_MEDIA_URL } from './../coding-11/constant';
-import { IMG_MENU_URL } from './../coding-11/constant';
-import "../components/RestaurantMenu.css"
-import veg from "../coding-11/assets/veg.png"
-import nonVeg from "../coding-11/assets/veg.png";
+import { REACT_MEDIA_URL } from '../constant';
+import { IMG_MENU_URL } from '../constant';
+import "./RestaurantMenu.css"
+import veg from "../assets/veg.png"
+import nonVeg from "../assets/veg.png";
 
 
 

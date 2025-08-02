@@ -15,7 +15,7 @@ const Profile = () => {
   return (
     <div>
       <img src={userInfo.avatar_url} alt="" />
-      <h1>Profile Component</h1>
+      <h1>Profile Functional component</h1>
       <h2>Name: {userInfo.login}</h2>
       <h3>id: {userInfo.id}</h3>
     </div>

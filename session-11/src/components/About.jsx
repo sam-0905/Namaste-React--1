@@ -1,6 +1,6 @@
 //import { Outlet } from "react-router-dom";
 //0r
-import Profile from "./ProfileFunction";
+import ProfileFunction from "./ProfileFunction";
 //---> by this also we can work profile component.
 import ProfileClass from "./ProfileClass";
 const About = () => {
@@ -10,7 +10,7 @@ const About = () => {
       <p>This is namaste react live class</p>
       {/*<Outlet />*/}
       <br />
-      <Profile name={"Appu"} />
+      <ProfileFunction name={"Appu"} />
       <br />
       <ProfileClass name={"ALLAN"} xyz="Abc" />
     </div>

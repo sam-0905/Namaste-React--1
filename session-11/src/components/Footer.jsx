@@ -1,7 +1,7 @@
 // Named import
 import { Title } from "./Header";
-import linkedin from "../coding-11/assets/linkedin.svg";
-import twitter from "../coding-11/assets/twitter.svg";
+import linkedin from "../assets/linkedin.svg";
+import twitter from "../assets/twitter.svg";
 
 const Footer = () => {
   return (

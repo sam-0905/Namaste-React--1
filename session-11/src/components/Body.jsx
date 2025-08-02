@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import Shimmer from "./shimmer";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
-import {MAIN_API_URL } from "../coding-11/constant";
+import {MAIN_API_URL } from "../constant";
 
 function filterData(searchText, restaurants) {
   console.log({ restaurants });
