@@ -139,11 +139,14 @@
   text-overflow: ellipsis;
   font-size: 1rem;
 }
+.food-info {
+  display: inline-flex;
+  align-items: center;
+}
 
 .food-icon {
   width: 16px;
   height: 16px;
-  margin-right: 6px;
   vertical-align: middle;
 }
 
@@ -156,9 +159,10 @@
 }
 
 .veg-icon {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   margin-right: 6px;
+  margin-bottom: 10px;
 }
 
 /* ✅ Responsive layout for mobile */

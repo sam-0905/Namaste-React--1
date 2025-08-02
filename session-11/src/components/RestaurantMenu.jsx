@@ -5,9 +5,9 @@ import Shimmer from "./shimmer";
 import useRestaurant from "../utils/useRestaurant";
 import { REACT_MEDIA_URL } from '../constant';
 import { IMG_MENU_URL } from '../constant';
-import "./RestaurantMenu.css"
-import veg from "../assets/veg.png"
-import nonVeg from "../assets/veg.png";
+import "./RestaurantMenu.css";
+
+import nonVeg from "../assets/non-veg.png";
 
 
 
@@ -47,6 +47,10 @@ const RestaurantMenu = () => {
                 const food_Type = itemAttribute.vegClassifier;
                  const rating = ratings?.aggregatedRating?.rating || "–";
                   const ratingCount = ratings?.aggregatedRating?.ratingCountV2
+                   const veg = new URL("../assets/veg.png", import.meta.url).href;
+                     const nonVeg = new URL("../assets/non-veg.png", import.meta.url).href;
+
+
 
          return(
                 <li key={id}>
@@ -54,17 +58,19 @@ const RestaurantMenu = () => {
                        <div className="Menu-container">
                           <h1>{name}</h1>
 
-                     {itemAttribute && (
-                      <span className="food-icon">
-                      {food_Type === "VEG" ? (
-                        <img src={veg} alt="Veg" />
-                                ) : (
-                        <img src={nonVeg} alt="Non-Veg" />
-                          )}
+                   <span className="food-info">
+                        {itemAttribute && (
+                          <span className="food-icon">
+                            {food_Type === "VEG" ? (
+                              <img src={veg} alt="Veg" className="veg-icon" />
+                            ) : (
+                              <img src={nonVeg} alt="Non-Veg" className="veg-icon" />
+                            )}
+                              </span>
+                            )}
+                          <span className="food-ribbon">{ribbonText || "\u00A0"}</span>
                       </span>
-                         )}
 
-                    <span>{ribbonText || "\u00A0"}</span>
                      <h3>₹ {(price || 0) / 100}</h3>
                    <p>
                    <strong>⭐ {rating} </strong>
