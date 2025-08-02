@@ -1,9 +1,13 @@
 // Named import
 import { Title } from "./Header";
-import linkedin from "../assets/linkedin.svg";
-import twitter from "../assets/twitter.svg";
+
 
 const Footer = () => {
+
+  const linkedin = new URL("../assets/linkedin.svg", import.meta.url).href;
+  const twitter = new URL("../assets/twitter.svg", import.meta.url).href;
+
+
   return (
     <div className="foot-container">
       <div className="foot">
