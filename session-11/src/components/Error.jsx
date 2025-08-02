@@ -1,8 +1,9 @@
 import { useRouteError, Link } from "react-router-dom";
-// import ErrImg from "../assets/";
 const Error = () => {
   const err = useRouteError();
   console.log(err);
+  const ErrImg = new URL("../assets/404.png", import.meta.url).href;
+
 
   return (
     <div className="ErrPage">
