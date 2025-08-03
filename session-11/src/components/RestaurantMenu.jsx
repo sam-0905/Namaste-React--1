@@ -7,10 +7,6 @@ import { REACT_MEDIA_URL } from '../constant';
 import { IMG_MENU_URL } from '../constant';
 import "./RestaurantMenu.css";
 
-import nonVeg from "../assets/non-veg.png";
-
-
-
 const RestaurantMenu = () => {
   const { resId } = useParams(); // destructuring the id
   const { restaurantMenu, restaurantDetails } = useRestaurant(resId); 
@@ -23,23 +19,28 @@ const RestaurantMenu = () => {
   ) : (
     <>
       <div className="Menu">
-        <div className="res-container">
-          <h2>{restaurantDetails?.name}</h2>
-          <img
-            className="res-img"
-            src={REACT_MEDIA_URL+ IMG_CDN_URl + restaurantDetails?.cloudinaryImageId}
-            alt={restaurantDetails?.name}
-          />
-          <h3 className="res-id">Restaurant id: {resId}</h3>
-          <div className="rest-details">
-            <h3>{restaurantDetails?.areaName}</h3>
-            <h3>{restaurantDetails?.city}</h3>
-            <h3>{restaurantDetails?.avgRating} stars</h3>
-            <h3>{restaurantDetails?.costForTwoMessage}</h3>
-          </div>
-        </div>
+          <div className="res-container">
+                <div className="res-left">
+                      <img
+                        className="res-img"
+                        src={REACT_MEDIA_URL + IMG_CDN_URl + restaurantDetails?.cloudinaryImageId}
+                        alt={restaurantDetails?.name}
+                      />
+                    </div>
 
-        <div>
+                    <div className="res-right">
+                      <h2>{restaurantDetails?.name}</h2>
+                      <p className="res-cuisines">{restaurantDetails?.cuisines?.join(", ")}</p>
+                      <div className="rest-details">
+                        <h3>{restaurantDetails?.areaName} |</h3>
+                        <h3>{restaurantDetails?.city} |</h3>
+                        <h3>{restaurantDetails?.costForTwoMessage} |</h3>
+                        <h3 className="res-ratings">{restaurantDetails?.avgRating} stars</h3>
+                      </div>
+                    </div>
+                  </div>
+
+         <div>
           <h1>Menu</h1>
           {restaurantMenu.map((item) => {
            const { id, name,imageId,description,price,ribbon,ratings,itemAttribute,ratingCountV2} = item?.card?.info || {}
@@ -49,9 +50,6 @@ const RestaurantMenu = () => {
                   const ratingCount = ratings?.aggregatedRating?.ratingCountV2
                    const veg = new URL("../assets/veg.png", import.meta.url).href;
                      const nonVeg = new URL("../assets/non-veg.png", import.meta.url).href;
-
-
-
          return(
                 <li key={id}>
                       <div className="menu-item-row">
