@@ -1,6 +1,8 @@
 import "./Contact.css";
 
 const Contact = () => {
+    const contact = new URL("../assets/contact.png", import.meta.url).href;
+
   return (
     <div className="contact-container">
       <div className="contact-left">
@@ -18,12 +20,21 @@ const Contact = () => {
         </form>
       </div>
 
-      <div className="contact-right">
-        <img
-          src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/swiggy_contact_us_image"
-          alt="Contact Illustration"
-        />
-      </div>
+        <div className="contact-right">
+            <img
+              src={contact}
+              alt="Contact Illustration"
+              className="contact-img"
+            />
+            <div className="contact-overlay">
+              <h1>Support Our Food Community</h1>
+              <p>
+                Help us bring delicious, fresh meals and quality ingredients to your doorstep
+                while supporting local growers and chefs.
+              </p>
+            </div>
+          </div>
+
     </div>
   );
 };
