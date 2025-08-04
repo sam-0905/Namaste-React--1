@@ -7,15 +7,15 @@ import "font-awesome/css/font-awesome.min.css";
 import Header from "./src/components/Header";
 import Body from "./src/components/Body";
 import Footer from "./src/components/Footer";
-import About from "./src/components/About";
-import Error from "./src/components/Error";
-import Contact from "./src/components/Contact";
+import About from "./src/pages/About";
+import Error from "./src/pages/Error";
+import Contact from "./src/pages/Contact";
 import RestaurantMenu from "./src/components/RestaurantMenu";
 import Profile from "./src/components/ProfileFunction";
 import Shimmer from "./src/components/shimmer";
 //import Instamart from "../components/Instamart";
 
-const Instamart = lazy(() => import("./src/components/Instamart"));
+const Instamart = lazy(() => import("./src/pages/Instamart"));
 //upon On Demand Loading ->upon render -> suspend loading
 
 //Chunking
