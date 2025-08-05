@@ -1,5 +1,7 @@
 // Named import
+import { Link } from "react-router-dom";
 import { Title } from "./Header";
+import Support from './../pages/support';
 
 
 const Footer = () => {
@@ -31,7 +33,7 @@ const Footer = () => {
           <div className="foot-col">
             <h4>Contact</h4>
             <ul>
-              <li><a href="/help">Help & Support</a></li>
+              <li><Link to="/Support">Help & Support</Link></li>
               {/* <li><a href="/partner">Partner with Us</a></li>
               <li><a href="/ride">Ride with Us</a></li> */}
             </ul>
