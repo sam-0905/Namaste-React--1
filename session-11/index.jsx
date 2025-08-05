@@ -13,6 +13,7 @@ import Contact from "./src/pages/Contact";
 import RestaurantMenu from "./src/components/RestaurantMenu";
 import Profile from "./src/components/ProfileFunction";
 import Shimmer from "./src/components/shimmer";
+import Support from "./src/pages/support";
 //import Instamart from "../components/Instamart";
 
 const Instamart = lazy(() => import("./src/pages/Instamart"));
@@ -56,12 +57,16 @@ const appRouter = createBrowserRouter([
         ],
       },
       {
+        path: "/restaurant/:resId",
+        element: <RestaurantMenu />,
+      },
+      {
         path: "/contact",
         element: <Contact />,
       },
       {
-        path: "/restaurant/:resId",
-        element: <RestaurantMenu />,
+        path: "/support",
+        element: <Support />,
       },
       {
         path: "/instamart",
