@@ -63,6 +63,23 @@
   transform: translateY(-2px);
 }
 
+.success-message {
+  margin-top: 15px;
+  color: green;
+  font-weight: 500;
+  background: rgba(0, 255, 0, 0.1);
+  padding: 8px 12px;
+  border-radius: 6px;
+  animation: fadeOut 0.5s ease-in-out 2.5s forwards; /* starts fade at 2.5s */
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+}
+
 .contact-right {
   display: flex;
   justify-content: space-evenly;
@@ -74,7 +91,7 @@
 }
 
 .contact-img {
-  width: 70%;
+  width: 80%;
   height: auto;
   display: block;
   border-radius: 12px;
@@ -82,8 +99,8 @@
 
 .contact-overlay {
   position: absolute;
-  top: 50%; /* move to vertical center */
-  left: 50%; /* move to horizontal center */
+  top: 50%; 
+  left: 50%; 
   transform: translate(-50%, -50%); /* perfect center */
   
   text-align: center;
