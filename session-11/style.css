@@ -24,8 +24,8 @@ body {
 }
 
 .logo {
-  width: 70px;
-  height: auto;
+  width: 60px;
+  height: 60px;
   aspect-ratio: 1;
   object-fit: contain;
   transition: transform 0.3s ease;
@@ -40,8 +40,8 @@ body {
   justify-content: space-between;
   align-items: center;
   font-weight: 700;
-  font-size: 1.2rem;
-  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  padding: 0.65rem 0.45rem;
   background: linear-gradient(135deg, #4e61ff, #6d90ff);
   color: ghostwhite;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
@@ -55,14 +55,13 @@ body {
 }
 
 .Nav-container>ul>li {
-    padding: 10px;
-    margin-right: 20px;
+    padding: 8px;
+    margin-right: 15px;
 }
 
 #Nav-container {
     text-decoration: none;
 }
-
 
 /*.login/logout-btn*/
 
@@ -137,29 +136,26 @@ body {
 }
 
 .card {
-  margin: 0.5rem;
+  margin: 1rem;
   padding: 1rem;
   border: 1px solid #e2e2e2;
-  width: 70%;
+  width: 250px; 
+  height: 260px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* spaces out content */
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   border-radius: 1rem;
   background: #fff;
-  /* backdrop-filter: blur(5px); */
 }
+
 .card:hover {
   transform: translateY(-5px) scale(1.03);
 }
 
-.card-name{
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    margin-top: 1rem;
-    font-size: 15px;
-}
-
+/* Image styling */
 .card > img {
   width: 100%;
   height: 160px;
@@ -174,36 +170,46 @@ body {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
+/* Truncate text */
+.card-name,
 .card .cuisines-text {
-    color: #686b78;
-    font-size: 11px;
-    margin-top: 4px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-name {
+  margin-top: 1rem;
+  font-size: 15px;
+}
+
+.card .cuisines-text {
+  color: #686b78;
+  font-size: 11px;
+  margin-top: 4px;
 }
 
 .card .card-footer {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    font-size: 13px;
-    margin-top: 6px;
-    padding: 3px;
-    color: navy;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-top: auto; /* pushes footer to bottom */
+  padding: 3px;
+  color: navy;
 }
 
-.card .rating{
-    background-color:#00ad1d;
-    color: #fff;
-    border-radius: 5px;
-    align-items: center;
-    padding: 3px;
+.card .rating {
+  background-color: #00ad1d;
+  color: #fff;
+  border-radius: 5px;
+  padding: 3px;
 }
 
 .restaurant-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem;
 }
 
 /*shimmmer*/
