@@ -15,34 +15,29 @@ const Profile = () => {
   }
 
   return (
+
     <div className="profile-card">
-      <div className="profile-avatar">
-        <img src={userInfo.avatar_url} alt={userInfo.login} />
-      </div>
-      <h1 className="profile-title">About Me</h1>
-      <h2 className="profile-name">👤 {userInfo.login}</h2>
-      <p className="profile-id">🆔 ID: {userInfo.id}</p>
+            <div className="profile-banner"></div>
+            
+            <div className="profile-avatar">
+             <img src={userInfo.avatar_url} alt={userInfo.login} />
+            </div>
+            
+            <div className="profile-info">
+              <h2 className="profile-title">About Me</h2>
+              <p className="profile-name">👤 Allan sam</p>
+              <p className="profile-id">🆔 {userInfo.id}</p>
+                <div className="skills">
+                  <strong>Tech Stack:</strong> React, JavaScrpit , Html , css
+                </div>
 
-      {/* GitHub Link */}
-      <a
-        href={userInfo.html_url}
-        target="_blank"
-        rel="noreferrer"
-        className="profile-link github"
-      >
-        View GitHub Profile ↗
-      </a>
+              <div className="profile-links">
+                <a href={userInfo.html_url} className="profile-link github">GitHub</a>
+                <a href="https://www.linkedin.com/in/allan-sam/" className="profile-link linkedin">LinkedIn</a>
+              </div>
+            </div>
+     </div>
 
-      {/* LinkedIn Link */}
-      <a
-        href="https://www.linkedin.com/in/allan-sam/"
-        target="_blank"
-        rel="noreferrer"
-        className="profile-link linkedin"
-      >
-        Connect on LinkedIn 🔗
-      </a>
-    </div>
   );
 };
 
