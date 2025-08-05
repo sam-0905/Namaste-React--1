@@ -17,9 +17,9 @@ const RestaurantCard = ({
       <h2 className="card-name">{name}</h2>
       <h3 className="cuisines-text">{cuisines?.join(",")}</h3>
       <div className="card-footer">
-        <h4>{avgRating} ★</h4>
-        <h4>{deliveryTime} mins</h4>
-        <h4>{costForTwo}</h4>
+        <h4 className="rating">{avgRating} ★</h4>
+        <h4 className="foot-txt">{deliveryTime} mins</h4>
+        <h4 className="foot-txt">{costForTwo}</h4>
       </div>
     </div>
   );
