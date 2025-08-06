@@ -1,4 +1,4 @@
-# [alt text](session-11/src/assets/logosmall.png) Chef in the Hat — Food Ordering App
+# ![alt text](session-11/src/assets/logosmall.png) Chef in the Hat — Food Ordering App
 
 
 **Live Demo:** [chefinthehat1.netlify.app](https://chefinthehat1.netlify.app/)
