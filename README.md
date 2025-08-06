@@ -47,12 +47,12 @@ cd chef-in-the-hat
 npm install
 
 --------
-3️⃣ Start Development Server
+### 3️⃣ Start Development Server
 npm start
 
 - **⚠ Note: Use a CORS browser extension during local development to fetch API data without errors.**
 
-👨‍💻 Author
+### 👨‍💻 Author
 # Allan Sam
 
 ### GitHub: sam-0905
