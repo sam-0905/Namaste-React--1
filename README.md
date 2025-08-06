@@ -45,9 +45,10 @@ cd chef-in-the-hat
 ### 2️⃣ Install Dependencies
 ```bash
 npm install
+ ```
+---
 
---------
-3️⃣ Start Development Server
+### 3️⃣ Start Development Server
 npm start
 
 - **⚠ Note: Use a CORS browser extension during local development to fetch API data without errors.**
@@ -59,4 +60,4 @@ npm start
 
 ### LinkedIn: Allan Sam
 
-Live Project: [chefinthehat1.netlify.app]
+#### Live Project: [chefinthehat1.netlify.app]
