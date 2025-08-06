@@ -48,18 +48,11 @@ npm install
  ```
 ---
 
-<<<<<<< HEAD
 ### 3️⃣ Start Development Server
-=======
----
-
-### 3️⃣ Start Development Server
-
->>>>>>> 13456cd2b2855be798cb27b0a353daba0f5b49c3
+```
 npm start
-
+```
 - **⚠ Note: Use a CORS browser extension during local development to fetch API data without errors.**
-
 ---
 
 ### 👨‍💻 Author
@@ -69,8 +62,4 @@ npm start
 
 ### LinkedIn: Allan Sam
 
-<<<<<<< HEAD
 #### Live Project: [chefinthehat1.netlify.app]
-=======
-Live Project: [chefinthehat1.netlify.app]
->>>>>>> 13456cd2b2855be798cb27b0a353daba0f5b49c3
