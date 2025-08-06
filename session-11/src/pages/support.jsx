@@ -1,4 +1,4 @@
-import "./Support.css";
+import "./support.css";
 
  function Support() {
         const chef = new URL("../assets/chef.png", import.meta.url).href;
