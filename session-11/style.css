@@ -307,7 +307,7 @@ body {
 .foot-container {
   background: linear-gradient(145deg, #4e61ff, #6d90ff);
   color: white;
-  padding: 40px 20px;
+  padding: 30px 10px;
   margin-top: 1rem;
 }
 
@@ -335,6 +335,7 @@ body {
 .foot-links {
   display: flex;
   gap: 40px;
+  margin-right: 8rem;
 }
 
 .foot-col h4 {
@@ -382,8 +383,8 @@ body {
 }
 
 .foot-social li a img {
-  width: 55px;
-  height: 50px;
+  width: 40px;
+  height: auto;
   filter: brightness(1) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4)); /* Makes icons pop */
   transition: transform 0.3s;
 }
