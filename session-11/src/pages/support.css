@@ -29,14 +29,18 @@
 }
 
 .support-card img {
+  margin: auto;
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  margin-bottom: 1rem;
+  margin-bottom: 1rem;  
 }
 
 /* CTA */
 .support-cta {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   background: #eef2ff;
   text-align: center;
   padding: 3rem 1rem;
@@ -47,6 +51,17 @@
   display: flex;
   gap: 1rem;
   justify-content: center;
+}
+
+.support-pic {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  margin: 2rem auto 0;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .btn-primary {
@@ -96,6 +111,7 @@
 }
 
 .testimonial img {
+  margin: auto;
   width: 64px;
   height: 64px;
   border-radius: 50%;

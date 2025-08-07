@@ -4,12 +4,15 @@ import "./support.css";
         const chef = new URL("../assets/chef.png", import.meta.url).href;
         const farm = new URL("../assets/farm.jpg", import.meta.url).href;
         const community = new URL("../assets/community.jpg", import.meta.url).href;
+        const localChef = new URL("../assets/localChef.jpg", import.meta.url).href;
+        const organicFarmer = new URL("../assets/organicFarmer.jpg", import.meta.url).href;
+        const deliveryPic = new URL("../assets/deliveryPic.jpg", import.meta.url).href;
 
   return (
     <>
       {/* Support Reasons */}
       <section className="support-reasons">
-        <h2>How Your Support Helps</h2>
+        <h1>How Your Support Helps</h1>
         <p className="support-reasons-subtitle">
           Every contribution makes a difference in connecting food lovers with
           quality local producers.
@@ -52,26 +55,28 @@ import "./support.css";
           <button className="btn-primary">Donate Now</button>
           <button className="btn-outline">Become a Partner</button>
           <button className="btn-outline">Shop & Support</button>
-        </div>
+        </div>                 
+         <img  className="support-pic" src={deliveryPic} alt="" />
+
       </section>
 
       {/* Testimonials */}
       <section className="support-testimonials">
-        <h2>What Our Supporters Say</h2>
+        <h1>What Our Supporters Say</h1>
         <div className="testimonial-grid">
           <div className="testimonial">
-            <img src="/images/supporter1.jpg" alt="Sarah K" />
+            <img src={localChef} alt="local Chef" />
             <h4>Sarah K.</h4>
-            <p className="role">Restaurant Owner</p>
+            <p className="role">Local Chef</p>
             <p>
               "The support helped us keep our doors open during tough times."
             </p>
           </div>
 
           <div className="testimonial">
-            <img src="/images/supporter2.jpg" alt="Michael T" />
+            <img src={organicFarmer} alt="organic Farmer" />
             <h4>Michael T.</h4>
-            <p className="role">Farmer</p>
+            <p className="role">Organic Farmer</p>
             <p>
               "Selling here connected me to customers who value organic
               farming."
