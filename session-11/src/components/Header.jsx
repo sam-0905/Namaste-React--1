@@ -15,8 +15,7 @@ export const Title = () => (
       <img className="logo" src={logoUrl} alt="logo" />
     </Link>
   </div>
-);
-
+)
 // Functional Component
 
 const Header = function () {
@@ -44,11 +43,11 @@ const Header = function () {
               Contact
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link id="Nav-container" to="/Instamart" className="fa fa-bell">
               Instamart
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link id="Nav-container" className="fa fa-shopping-cart">
               Cart
