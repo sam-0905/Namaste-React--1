@@ -12,8 +12,8 @@
 /* Side-by-side: image left, text right */
 .Menu > div:first-child {
   display: flex;
-  flex-direction: row;      /* image first, then text */
-  align-items: flex-start;  /* align to top */
+  flex-direction: row;
+  align-items: flex-start;
   gap: 20px;
 }
 
@@ -26,7 +26,7 @@
 
 /* Left column - image */
 .res-left {
-  flex-shrink: 0; /* don't shrink image */
+  flex-shrink: 0;
 }
 
 .res-img {
@@ -49,7 +49,6 @@
   border-radius: 12px;
 }
 
-/* Details under cuisines */
 .rest-details {
   display: flex;
   flex-wrap: wrap;
@@ -63,7 +62,7 @@
   font-weight: 500;
 }
 
-.res-ratings{
+.res-ratings {
   background-color: darkgreen;
   margin: 10px;
   padding: 0px 8px;
@@ -71,12 +70,11 @@
 }
 
 .res-cuisines {
-  color: #a39f9f;     
+  color: #a39f9f;
   font-size: 0.95rem;
   font-weight: 500;
   margin: 4px 0;
 }
-
 
 .Menu h1 {
   font-size: 1.5rem;
@@ -86,7 +84,7 @@
   padding-bottom: 10px;
 }
 
-/* ✅ Wrap text and image in a row */
+/* ✅ Row layout for menu items */
 .menu-item-row {
   display: flex;
   justify-content: space-between;
@@ -133,9 +131,9 @@
   width: fit-content;
 }
 
-/* ✅ Image aligned properly */
+/* ✅ Image styling */
 .Menu-img img {
-  margin-top:1.5rem;
+  margin-top: 1.5rem;
   width: 150px;
   height: 120px;
   border-radius: 10px;
@@ -161,6 +159,7 @@
   text-overflow: ellipsis;
   font-size: 1rem;
 }
+
 .food-info {
   display: inline-flex;
   align-items: center;
@@ -171,9 +170,10 @@
   height: 16px;
   vertical-align: middle;
 }
+
 .food-ribbon {
   display: inline-block;
- background-color: #ff4d4f; /* red for NEW */
+  background-color: #ff4d4f;
   color: white;
   font-size: 0.75rem;
   font-weight: 600;
@@ -198,7 +198,7 @@
   margin-bottom: 10px;
 }
 
-/* ✅ Responsive layout for mobile */
+/* ✅ Responsive mobile */
 @media (max-width: 600px) {
   .menu-item-row {
     flex-direction: column;
@@ -208,5 +208,19 @@
   .Menu-img img {
     width: 120%;
     height: auto;
+  }
+}
+
+/* ✅ XXL screens (1400px+) */
+@media (min-width: 1400px) {
+  .Menu {
+    max-width: 1200px;
+  }
+  .Menu li {
+    padding: 24px;
+  }
+  .Menu-img img {
+    width: 180px;
+    height: 140px;
   }
 }

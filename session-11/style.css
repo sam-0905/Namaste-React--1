@@ -403,6 +403,86 @@ body {
   margin-top: 30px;
 }
 
+/* Default (mobile-first) styles are already in your CSS above */
+
+/* Small devices - ≥576px */
+@media (min-width: 576px) {
+  .header {
+    font-size: 1.1rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .Search-container {
+    width: 80%;
+  }
+
+  .card {
+    width: 220px;
+  }
+}
+
+/* Medium devices - ≥768px */
+@media (min-width: 768px) {
+  .header {
+    font-size: 1.25rem;
+    padding: 1rem 2rem;
+  }
+
+  .Search-container {
+    width: 60%;
+  }
+
+  .card {
+    width: 250px;
+  }
+
+  .foot {
+    justify-content: space-around;
+  }
+}
+
+/* Extra large devices - ≥1200px */
+@media (min-width: 1200px) {
+  .header {
+    font-size: 1.4rem;
+    padding: 1rem 3rem;
+  }
+
+  .Search-container {
+    width: 50%;
+  }
+
+  .card {
+    width: 280px;
+  }
+
+  .foot {
+    max-width: 1400px;
+    margin: 0 auto; /* centers footer */
+  }
+}
+
+@media (min-width: 1400px) {
+  .header {
+    font-size: 1.4rem;
+    padding: 1rem 3rem;
+  }
+
+  .Search-container {
+    width: 50%;
+  }
+
+  .card {
+    width: 280px;
+  }
+
+  .foot {
+    max-width: 1400px;
+    margin: 0 auto; /* centers footer and avoids empty space */
+  }
+}
+
+
 
 /*
 Tailwind CSS Framework
