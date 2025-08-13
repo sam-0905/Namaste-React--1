@@ -1,4 +1,4 @@
-# <img src="./public/logosmall.png" alt="Chef in the Hat Logo" width="20" height="20" /> Chef in the Hat — Food Ordering App
+# <img src="./public/Logo.png" alt="Chef in the Hat Logo" width="20" height="20" /> Chef in the Hat — Food Ordering App
 
 
 **Live Demo:** [chefinthehat1.netlify.app](https://chefinthehat1.netlify.app/)
