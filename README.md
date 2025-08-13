@@ -1,4 +1,4 @@
-# <img src="session-11/public/Logo.png" alt="Chef in the Hat Logo" width="30" height="30" /> Chef in the Hat — Food Ordering App
+# <img src="session-11/public/Logo.png" alt="Chef in the Hat Logo" width="62" height="62" /> Chef in the Hat — Food Ordering App
 
 
 
