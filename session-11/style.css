@@ -47,6 +47,12 @@ body {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
+.favicon {
+  width: 52px;
+  height: 52px;
+  background-size: contain;
+  display: inline-block;
+}
 
 .Nav-container>ul {
     list-style: none;
