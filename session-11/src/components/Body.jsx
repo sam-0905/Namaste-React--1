@@ -79,7 +79,7 @@ const Body = () => {
   };
 
   const isOnline = useOnline();
-  console.log(isOnline);
+  console.log("your network is ", isOnline);
 
   if (!isOnline) {
     return <h1>🥵Opps!looks like you are offline</h1>;
@@ -87,7 +87,7 @@ const Body = () => {
 
   if (!allRestaurants) return null;
 
-  return (
+  return ( 
     <>
       <div className="Search-container">
         <input
