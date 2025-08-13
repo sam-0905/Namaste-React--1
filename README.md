@@ -8,15 +8,18 @@
 It blends **clean UI** with **smooth navigation** for a hassle‑free food ordering experience.
 
 ---
-
 ## ✨ Features
-- 🛍 **Browse Menu** — View a variety of dishes with images and details.
-- 🔍 **Search & Filter** — Quickly find your favorite meals.
-- 🛒 **Add to Cart** — Select items to order with real-time cart updates.
-- 📞 **Contact Page** — Get in touch with the team.
-- 💳 **Responsive Design** — Works smoothly on mobile, tablet, and desktop.
-- ⚡ **Smooth Routing** — Powered by `react-router-dom`.
-- 🎨 **Interactive UI** — Simple animations and hover effects for a fresh feel.
+
+- 🛍 **Browse Menu** — View a variety of dishes with images and details.  
+- 🔍 **Search & Filter** — Quickly find your favorite meals.  
+- 🛒 **Add to Cart** — Select items to order with real-time cart updates.  
+- 📞 **Contact Page** — Get in touch with the team.  
+- 🆘 **Support Page** — Access help, FAQs, and customer support options.  
+- 💳 **Responsive Design** — Works smoothly on mobile, tablet, and desktop.  
+- ⚡ **Smooth Routing** — Powered by `react-router-dom`.  
+- 🎨 **Interactive UI** — Simple animations and hover effects for a fresh feel.  
+- ✨ **Shimmer Loading Effect** — Displays animated placeholders while content is loading for a smoother    experience.  
+- 📡 **Online/Offline Detection** — Alerts users when they’re offline and restores updates when they    reconnect.  
 
 ---
 
