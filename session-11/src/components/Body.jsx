@@ -21,6 +21,9 @@ const Body = () => {
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
   const [widget,setWidget] = useState([])
+
+  const offlineImg = new URL("../assets/offline.png", import.meta.url).href;
+
   useEffect(() => {
     //fetch (Make an API call)
     getRestaurants();
@@ -81,9 +84,16 @@ const Body = () => {
   const isOnline = useOnline();
   console.log("your network is ", isOnline);
 
-  if (!isOnline) {
-    return <h1>🥵Opps!looks like you are offline</h1>;
-  }
+ if (!isOnline) {
+  return (
+    <>
+      <div>
+        <h1>🥵 Oops! Looks like you are offline</h1>
+       <img src={offlineImg} alt="offline" />
+      </div>
+    </>
+  );
+}
 
   if (!allRestaurants) return null;
 
