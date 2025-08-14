@@ -1,0 +1,44 @@
+.offline-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #fff8f0;
+  text-align: center;
+  padding: 20px;
+}
+
+.offline-container h1 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.offline-image {
+  width: 500px;
+  height: auto;
+  max-width: 90%;
+  margin-bottom: 20px;
+}
+
+.offline-message {
+  font-size: 1rem;
+  color: #666;
+  max-width: 300px;
+}
+
+.offline-retry-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff7043;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.offline-retry-btn:hover {
+  background-color: #ff5722;
+}
