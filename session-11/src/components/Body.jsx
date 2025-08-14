@@ -6,6 +6,7 @@ import Shimmer from "./shimmer";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
 import {MAIN_API_URL } from "../constant";
+import useOffline from "../utils/useOffline";
 
 function filterData(searchText, restaurants) {
   console.log({ restaurants });
@@ -21,8 +22,6 @@ const Body = () => {
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
   const [widget,setWidget] = useState([])
-
-  const offlineImg = new URL("../assets/offline.png", import.meta.url).href;
 
   useEffect(() => {
     //fetch (Make an API call)
@@ -85,15 +84,8 @@ const Body = () => {
   console.log("your network is ", isOnline);
 
  if (!isOnline) {
-  return (
-    <>
-      <div>
-        <h1>🥵 Oops! Looks like you are offline</h1>
-       <img src={offlineImg} alt="offline" />
-      </div>
-    </>
-  );
-}
+  return <useOffline/>
+ }
 
   if (!allRestaurants) return null;
 
