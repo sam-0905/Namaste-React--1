@@ -5,7 +5,10 @@ import Shimmer from "./shimmer";
 import useRestaurant from "../utils/useRestaurant";
 import { REACT_MEDIA_URL } from '../constant';
 import { IMG_MENU_URL } from '../constant';
+import UserOffline from "./userOffline";
+import useOnline from "../utils/useOnline";
 import "./RestaurantMenu.css";
+
 
 const RestaurantMenu = () => {
   const { resId } = useParams(); // destructuring the id
@@ -13,6 +16,12 @@ const RestaurantMenu = () => {
   const CDN_URL = IMG_MENU_URL;
 
     console.log({ restaurantDetails, restaurantMenu });
+
+  const isOnline = useOnline();
+
+   if (!isOnline) {
+  return <UserOffline/>
+ }
 
   return !restaurantMenu ? (
     <Shimmer />

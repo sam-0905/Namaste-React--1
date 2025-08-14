@@ -6,7 +6,7 @@ import Shimmer from "./shimmer";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
 import {MAIN_API_URL } from "../constant";
-import useOffline from "../utils/useOffline";
+import UserOffline from "./userOffline";
 
 function filterData(searchText, restaurants) {
   console.log({ restaurants });
@@ -56,7 +56,6 @@ const Body = () => {
 
   useEffect(()=>{
     async function getWidget(){
-
       try{
       const data1 = await fetch(MAIN_API_URL)
       const jsonData = await data1.json();
@@ -81,10 +80,9 @@ const Body = () => {
   };
 
   const isOnline = useOnline();
-  console.log("your network is ", isOnline);
 
  if (!isOnline) {
-  return <useOffline/>
+  return <UserOffline/>
  }
 
   if (!allRestaurants) return null;

@@ -1,17 +1,22 @@
-import React from 'react'
+import React from "react";
+import OfflineImg from "../assets/offlinePic.png" ; // update the path if needed
 
-const UseOffline = () => {
-
-      const offlineImg = new URL("../assets/offlinePic.png", import.meta.url).href;
-
+function UserOffline() {
   return (
-    <>   
-      <div>
-        <h1>🥵 Oops! Looks like you are offline</h1>
-       <img src={offlineImg} alt="offline" />
-     </div>
-   </>
-  )
+    <div className="offline-container">
+      <h1>🥵 Oops! Looks like you are offline</h1>
+      <img className="offline-image" src={OfflineImg} alt="offline" />
+      <p className="offline-message">
+        Check your internet connection and try again. Your cravings are waiting!
+      </p>
+      <button
+        className="offline-retry-btn"
+        onClick={() => window.location.reload()}
+      >
+        Retry
+      </button>
+    </div>
+  );
 }
 
-export default UseOffline;
+export default UserOffline;
