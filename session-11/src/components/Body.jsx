@@ -79,7 +79,7 @@ const Body = () => {
     }
   };
 
-  const isOnline = useOnline();
+ const isOnline = useOnline();
 
  if (!isOnline) {
   return <UserOffline/>

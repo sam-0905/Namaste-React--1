@@ -17,7 +17,7 @@ const RestaurantMenu = () => {
 
     console.log({ restaurantDetails, restaurantMenu });
 
-  const isOnline = useOnline();
+const isOnline = useOnline();
 
    if (!isOnline) {
   return <UserOffline/>
