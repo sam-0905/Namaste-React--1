@@ -24,9 +24,9 @@ const Footer = () => {
           <div className="foot-col">
             <h4>Company</h4>
             <ul>
-              <li><a href="/about">About Us</a></li>
-              {/* <li><a href="/careers">Careers</a></li>
-              <li><a href="/team">Team</a></li> */}
+              <li>
+              <Link to="/about">About us</Link>
+              </li>
             </ul>
           </div>
 
@@ -34,8 +34,6 @@ const Footer = () => {
             <h4>Contact</h4>
             <ul>
               <li><Link to="/Support">Help & Support</Link></li>
-              {/* <li><a href="/partner">Partner with Us</a></li>
-              <li><a href="/ride">Ride with Us</a></li> */}
             </ul>
           </div>
 
