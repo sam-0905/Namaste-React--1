@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
-const Section = ({ title, description }) => {
-  const [isVisible, setIsVisible] = useState(false);
+const Section = ({ title, description, isVisible, setIsVisible }) => {
   return (
     <div className="border border-black p-2 m-2">
       <h3 className="text-2xl font-semibold p-0.5 m-0.5 text-green-500">
@@ -34,6 +33,7 @@ const Section = ({ title, description }) => {
   );
 };
 const Instamart = () => {
+  const [visibleSection, setIsVisibleSection] = useState("about");
   return (
     <div>
       <h1 className="text-4xl font-semibold p-2 m-2">Instamart</h1>
@@ -42,18 +42,24 @@ const Instamart = () => {
         description={
           "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti exercitationem at officia quaerat quis modi itaque minus iste consequatur, reiciendis quasi deserunt magni autem nisi obcaecati pariatur culpa asperiores ex!"
         }
+        isVisible={visibleSection === "about"}
+        setIsVisible={(show)=> show ? setIsVisibleSection("about") : setIsVisibleSection("")  }
       />
       <Section
         title={"TeamInstamart"}
         description={
           "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti exercitationem at officia quaerat quis modi itaque minus iste consequatur, reiciendis quasi deserunt magni autem nisi obcaecati pariatur culpa asperiores ex!"
         }
+        isVisible={visibleSection === "team"}
+        setIsVisible={(show)=>show ? setIsVisibleSection("team") : setIsVisibleSection("")}
       />
       <Section
         title={"CareersInstamart"}
         description={
           "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti exercitationem at officia quaerat quis modi itaque minus iste consequatur, reiciendis quasi deserunt magni autem nisi obcaecati pariatur culpa asperiores ex!"
         }
+        isVisible={visibleSection === "career"}
+        setIsVisible={(show)=> show ? setIsVisibleSection("career") : setIsVisibleSection("")}
       />
 
       {/*<AboutInstamart/>
