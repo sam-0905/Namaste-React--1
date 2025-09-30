@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
+import Instamart from "../pages/Instamart";
 
 // SPA - Single Page Routing
 // Client Side Routing
@@ -43,16 +44,19 @@ const Header = function () {
               Contact
             </Link>
           </li>
-          {/* <li>
-            <Link id="Nav-container" to="/Instamart" className="fa fa-bell">
-              Instamart
-            </Link>
-          </li> */}
+
           <li>
             <Link id="Nav-container" className="fa fa-shopping-cart">
               Cart
             </Link>
           </li>
+{/* 
+          <li>
+            <Link id="Nav-container" className="fa-arrow-right" to="/Instamart">
+              Instamart
+            </Link>
+          </li> */}
+
 
           {/* use conditional rendering for login and logout */}
           <h1 className="py-2.5">{isOnline ? "🟢" : "🔴"}</h1>
