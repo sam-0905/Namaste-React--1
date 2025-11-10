@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { FETCH_MENU_URL } from "../constant";
+// import { FETCH_MENU_URL } from "../constant";
+import mockData from "../../mockData.json"
 
 const useRestaurant = (resId) => {
   const [restaurantMenu, setRestaurantMenu] = useState([]);
@@ -13,14 +14,13 @@ const useRestaurant = (resId) => {
 
   async function getRestaurantInfo() {
     try {
-      const data = await fetch(FETCH_MENU_URL + resId);
-      const json = await data.json();
+      const response = await mockData;
+      console.log("get res info",response)
+    
+      console.log("From response",response.data.cards);
+      setRestaurantDetails(response?.data?.cards[2]?.card?.card?.info);
+      setRestaurantMenu(response?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards);
 
-      setRestaurantDetails(json?.data?.cards[2]?.card?.card?.info);
-      setRestaurantMenu(
-        json?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]
-          ?.card?.card?.itemCards
-      );
     } catch (err) {
       console.error("Failed to fetch restaurant data:", err);
     }
