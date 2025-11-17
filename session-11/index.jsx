@@ -14,6 +14,8 @@ import RestaurantMenu from "./src/components/RestaurantMenu";
 import Profile from "./src/components/ProfileFunction";
 import Shimmer from "./src/components/shimmer";
 import Support from "./src/pages/support";
+import { Provider } from "react-redux";
+import store from "./src/utils/Store";
 //import Instamart from "../components/Instamart";
 
 const Instamart = lazy(() => import("./src/pages/Instamart"));
@@ -29,9 +31,11 @@ const Instamart = lazy(() => import("./src/pages/Instamart"));
 const Applayout = () => {
   return (
     <React.Fragment>
+      <Provider store={store}>
       <Header />
       <Outlet />
       <Footer />
+      </Provider>
     </React.Fragment>
   );
 };
