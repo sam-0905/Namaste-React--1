@@ -25,7 +25,7 @@ const Header = function () {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const isOnline = useOnline();
   const cartItems = useSelector(store => store.cart.items);
-  
+  console.log(cartItems)
 
   return (
     <div className="header">
@@ -48,7 +48,7 @@ const Header = function () {
           </li>
 
           <li>
-            <Link id="Nav-container" className="fa fa-shopping-cart">
+            <Link to="/cart" id="Nav-container" className="fa fa-shopping-cart" >
               Cart {cartItems.length}
             </Link>
           </li>
