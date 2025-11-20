@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
 import Instamart from "../pages/Instamart";
+import {useSelector} from "react-redux";
 
 // SPA - Single Page Routing
 // Client Side Routing
@@ -23,7 +24,8 @@ const Header = function () {
   // Normal function
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const isOnline = useOnline();
-  //console.log(useState());
+  const cartItems = useSelector(store => store.cart.items);
+  
 
   return (
     <div className="header">
@@ -47,7 +49,7 @@ const Header = function () {
 
           <li>
             <Link id="Nav-container" className="fa fa-shopping-cart">
-              Cart
+              Cart {cartItems.length}
             </Link>
           </li>
 {/* 
