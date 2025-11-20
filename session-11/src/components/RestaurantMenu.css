@@ -191,6 +191,12 @@
   color: #374151;
 }
 
+.cart-btn{
+  display: inline-block;
+  background-color: lightgreen;
+  padding: 1rem;
+}
+
 .veg-icon {
   width: 20px;
   height: 20px;

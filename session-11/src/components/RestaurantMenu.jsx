@@ -8,12 +8,15 @@ import { IMG_MENU_URL } from '../constant';
 import UserOffline from "./userOffline";
 import useOnline from "../utils/useOnline";
 import "./RestaurantMenu.css";
+import { addItem } from "../utils/cartSlice";
+import { useDispatch } from "react-redux";
 
 
 const RestaurantMenu = () => {
   const { resId } = useParams(); // destructuring the id
   const { restaurantMenu, restaurantDetails } = useRestaurant(resId); 
   const CDN_URL = IMG_MENU_URL;
+  const dispatch = useDispatch();
 
     console.log({ restaurantDetails, restaurantMenu });
 
@@ -84,6 +87,11 @@ const isOnline = useOnline();
                    <i>({ratingCount})</i>
                      </p>
                   <p className="res-description">{description}</p>
+
+                  <button className="cart-btn" onClick={()=>{
+                    dispatch(addItem("Grapes"))
+                  }}>AddToCart</button>
+
                   </div>
 
                   <div className="Menu-img">
