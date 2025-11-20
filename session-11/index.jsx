@@ -19,7 +19,8 @@ import store from "./src/utils/Store";
 //import Instamart from "../components/Instamart";
 
 const Instamart = lazy(() => import("./src/pages/Instamart"));
-//upon On Demand Loading ->upon render -> suspend loading
+//upon On Demand Loading ->upimport cart from './src/pages/Cart';
+// on render -> suspend loading
 
 //Chunking
 //Code splitting
@@ -59,6 +60,10 @@ const appRouter = createBrowserRouter([
             element: <Profile />,
           },
         ],
+      },
+       {
+        path: "/cart",
+        element: <cart/>,
       },
       {
         path: "/restaurant/:resId",
