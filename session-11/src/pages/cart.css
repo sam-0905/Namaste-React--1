@@ -1,0 +1,210 @@
+/* ===========================
+   PREMIUM SWIGGY+ CART STYLE
+   =========================== */
+
+:root {
+  --swiggy-orange: #fc8019;
+  --swiggy-orange-dark: #d66815;
+  --bg-light: #f8f7f5;
+  --bg-card: rgba(255, 255, 255, 0.55);
+  --text-dark: #1b1b1b;
+  --text-muted: #5e5e5e;
+  --glass: rgba(255, 255, 255, 0.35);
+  --radius: 16px;
+  --shadow-soft: 0 6px 25px rgba(0,0,0,0.08);
+  --shadow-glow: 0 0 20px rgba(252,128,25,0.2);
+  --frost: blur(14px);
+}
+
+/* Page Background */
+.cart-container {
+  max-width: 1020px;
+  margin: 30px auto;
+  padding: 24px;
+  background: linear-gradient(135deg, #ffffff, #f9f4ef);
+  border-radius: 20px;
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(8px);
+}
+
+/* Header */
+.cart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.cart-header h1 {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text-dark);
+  background: linear-gradient(90deg, #fc8019, #ffad42);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cart-count {
+  font-size: 1rem;
+  color: var(--swiggy-orange);
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(252, 128, 25, 0.1);
+}
+
+/* Cart Items Layout */
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Item Card - Glassmorphism */
+.cart-item {
+  display: grid;
+  grid-template-columns: 90px 1fr auto;
+  gap: 18px;
+  padding: 18px;
+  background: var(--bg-card);
+  backdrop-filter: var(--frost);
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: var(--shadow-soft);
+  animation: fadeUp 0.35s ease;
+}
+
+/* Image container */
+.item-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 2px solid rgba(255,255,255,0.2);
+  background: linear-gradient(180deg, #fff, #f1f1f1);
+}
+
+.item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Info */
+.item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item-name {
+  font-weight: 800;
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  color: var(--text-dark);
+}
+
+.item-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.item-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.item-price {
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--swiggy-orange);
+}
+
+.item-rating {
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  background: rgba(0,0,0,0.05);
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+/* Buttons */
+.item-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.qty-btn {
+  font-size: 1.3rem;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 12px;
+  background: #ffffffaa;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0,0,0,0.05);
+  font-weight: 700;
+  color: var(--swiggy-orange);
+  cursor: pointer;
+  transition: 0.2s ease;
+  box-shadow: var(--shadow-soft);
+}
+
+.qty-btn:hover {
+  background: #fff;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+.clear-btn {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #fc8019, #ff9d36);
+  color: white;
+  font-weight: 700;
+  box-shadow: var(--shadow-glow);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.clear-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #e06f0f, #ff8c1f);
+}
+
+/* Empty State */
+.cart-list h3 {
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.1rem;
+}
+
+/* Fade Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+  .cart-item {
+    grid-template-columns: 80px 1fr;
+  }
+  .item-actions {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    margin-top: 8px;
+  }
+}
