@@ -120,7 +120,7 @@ const Body = () => {
                 key={restaurant?.info?.id}
                 style={{ textDecoration: "none" }}
               >
-                <RestaurantCard {...restaurant?.info} />
+                <RestaurantCard {...restaurant?.info}  key={restaurant?.info?.id}/>
               </Link>
             );
           })}
