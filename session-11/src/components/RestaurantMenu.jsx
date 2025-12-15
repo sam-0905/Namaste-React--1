@@ -88,16 +88,15 @@ const isOnline = useOnline();
                      </p>
                   <p className="res-description">{description}</p>
 
-                  <button className="cart-btn" onClick={()=>{
-                    dispatch(addItem("Grapes"))
-                  }}>AddToCart</button>
-
                   </div>
 
                   <div className="Menu-img">
                 {imageId && (
               <img src={REACT_MEDIA_URL + CDN_URL + imageId} alt={name} />
                 )}
+                 <button className="cart-btn" onClick={()=>{
+                    dispatch(addItem(item?.card?.info ))
+                  }}>AddToCart</button>
                 </div>
                  </div>
                
