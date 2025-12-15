@@ -39,10 +39,12 @@ const Cart = () => {
         </div>
 
         <div className="item-actions">
-          <button className="qty-btn" onClick={() => dispatch(removeItem(item.id))}>-</button>
+          <div className="qty-controller">
+         <button className="qty-btn" onClick={() => dispatch(removeItem(item.id))}>-</button>
           <button className="add-btn" onClick={()=> dispatch(addItem(item))}>+</button>
           <button className="clear-btn" onClick={() => dispatch(clearCart())}>Clear</button>
-          Qty: <span className="qty-text">{item.quantity}</span>
+          <h4> Qty: <span className="qty-text">{item.quantity}</span></h4>
+          </div>
         </div>
       </div>
     ))}
