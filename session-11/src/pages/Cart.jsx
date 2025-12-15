@@ -1,8 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
-import {removeItem ,clearCart} from "../utils/cartSlice";
+import {removeItem ,clearCart, addItem} from "../utils/cartSlice";
 import "./cart.css";
 import { REACT_MEDIA_URL } from "../constant";
 import { IMG_MENU_URL } from "../constant";
+import { selectTotalCartItem } from "../constant";
 
 const Cart = () => {
   
@@ -10,14 +11,14 @@ const Cart = () => {
   console.log(cartItems)
   const dispatch = useDispatch();
   const CDN_URL = IMG_MENU_URL;
-  
+  const totalCount = useSelector(selectTotalCartItem)
 
   return (
     <>
       <div className="cart-container">
   <header className="cart-header">
     <h1>This is a cart page</h1>
-    <div className="cart-count">Cart Items - <span>{cartItems.length}</span></div>
+    <div className="cart-count">Cart Items - <span>{totalCount}</span></div>
   </header>
 
   <div className="cart-list">
@@ -39,7 +40,9 @@ const Cart = () => {
 
         <div className="item-actions">
           <button className="qty-btn" onClick={() => dispatch(removeItem(item.id))}>-</button>
+          <button className="add-btn" onClick={()=> dispatch(addItem(item))}>+</button>
           <button className="clear-btn" onClick={() => dispatch(clearCart())}>Clear</button>
+          Qty: <span className="qty-text">{item.quantity}</span>
         </div>
       </div>
     ))}
