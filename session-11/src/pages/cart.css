@@ -1,10 +1,6 @@
-/* ===========================
-   PREMIUM SWIGGY+ CART STYLE
-   =========================== */
-
 :root {
-  --swiggy-orange: #fc8019;
-  --swiggy-orange-dark: #d66815;
+  --orange: #f48b34;
+  --orange-dark: #d66815;
   --bg-light: #f8f7f5;
   --bg-card: rgba(255, 255, 255, 0.55);
   --text-dark: #1b1b1b;
@@ -46,7 +42,7 @@
 
 .cart-count {
   font-size: 1rem;
-  color: var(--swiggy-orange);
+  color: var(--orange);
   font-weight: 700;
   padding: 6px 14px;
   border-radius: 999px;
@@ -119,7 +115,7 @@
 .item-price {
   font-weight: 800;
   font-size: 1.1rem;
-  color: var(--swiggy-orange);
+  color: var(--orange);
 }
 
 .item-rating {
@@ -133,9 +129,68 @@
 /* Buttons */
 .item-actions {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  gap: 10px;
+}
+
+.qty-controller {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.add-btn {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.06);
+
+  background: #ffffffaa;
+  backdrop-filter: blur(10px);
+
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--orange);
+
+  cursor: pointer;
+  transition: 0.2s ease;
+
+  box-shadow: var(--shadow-soft);
+}
+
+.add-btn:hover {
+  background: #fff;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+.add-btn:active {
+  transform: scale(0.95);
+}
+
+
+.qty-text {
+  min-width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #333;
+
+  padding: 6px 10px;
+  border-radius: 10px;
+
+  background: #ffffffaa;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0,0,0,0.06);
+
+  box-shadow: var(--shadow-soft);
+
 }
 
 .qty-btn {
@@ -148,7 +203,7 @@
   backdrop-filter: blur(10px);
   border: 1px solid rgba(0,0,0,0.05);
   font-weight: 700;
-  color: var(--swiggy-orange);
+  color: var(--orange);
   cursor: pointer;
   transition: 0.2s ease;
   box-shadow: var(--shadow-soft);
@@ -158,6 +213,12 @@
   background: #fff;
   transform: translateY(-2px);
   box-shadow: var(--shadow-glow);
+}
+.qty-btn,
+.add-btn {
+  width: 42px;
+  height: 42px;
+  font-size: 1.25rem;
 }
 
 .clear-btn {
