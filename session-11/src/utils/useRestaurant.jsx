@@ -14,7 +14,7 @@ const useRestaurant = (resId) => {
 
   async function getRestaurantInfo() {
     try {
-      const response = await mockData;
+      const response = mockData;
       console.log("get res info",response)
     
       console.log("From response",response.data.cards);
