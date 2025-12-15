@@ -1,5 +1,4 @@
 // These are Hardcoded data.So once we eport it import form anywhere.
-
 // Named import and import {} from"";
 export const REACT_MEDIA_URL = "https://media-assets.swiggy.com/swiggy/"
 
@@ -10,6 +9,8 @@ export const IMG_MENU_URL ="image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fi
 export const MAIN_API_URL = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.9581934&lng=72.8320729&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
 
 export const FETCH_MENU_URL =  "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.9690247&lng=72.8205292&restaurantId=";
+
+export const selectTotalCartItem = (store) => store.cart.items.reduce((sum,item) => sum + item.quantity,0) 
 
 // Named import
 export const restaurantList = [
