@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
 import Instamart from "../pages/Instamart";
 import {useSelector} from "react-redux";
+import { selectTotalCartItem } from "../constant";
 
 // SPA - Single Page Routing
 // Client Side Routing
@@ -25,6 +26,8 @@ const Header = function () {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const isOnline = useOnline();
   const cartItems = useSelector(store => store.cart.items);
+  const totalCount = useSelector(selectTotalCartItem)
+  
   console.log(cartItems)
 
   return (
@@ -49,7 +52,7 @@ const Header = function () {
 
           <li>
             <Link to="/cart" id="Nav-container" className="fa fa-shopping-cart" >
-              Cart {cartItems.length}
+              Cart {totalCount}
             </Link>
           </li>
 {/* 
