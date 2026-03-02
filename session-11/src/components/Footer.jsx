@@ -1,7 +1,6 @@
 // Named import
 import { Link } from "react-router-dom";
 import { Title } from "./Header";
-import Support from './../pages/support';
 
 
 const Footer = () => {
