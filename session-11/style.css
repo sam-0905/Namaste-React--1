@@ -27,16 +27,18 @@ body {
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
+
 #root {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
+
 .logo {
   width: 60px;
   height: 60px;
   aspect-ratio: 1;
-  object-fit:fill;
+  object-fit:contain;
   transition: transform 0.3s ease;
 }
 
@@ -92,6 +94,7 @@ body {
   font-size: 1rem;
   transition: all 0.2s ease-in-out;
 }
+
 .login-btn:hover,
 .logout-btn:hover {
   transform: scale(1.05);
@@ -437,7 +440,7 @@ body {
     width: 200px;
   }
   .profile-card{
-   width: 200px;
+   width: 300px;
    height: auto;
   }
   .foot {
@@ -449,7 +452,7 @@ body {
     margin-right: 0;     /* removes right white space */
     flex-wrap: wrap;
     gap: 10px;
-    width: 25px;
+    width: 20%;
   }
 }
 
@@ -475,6 +478,8 @@ body {
     justify-content: space-between;
   }
 }
+
+
 
 /* Extra large devices - ≥1200px */
 @media (min-width: 1200px) {
