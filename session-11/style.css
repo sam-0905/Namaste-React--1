@@ -17,17 +17,26 @@
     outline: none;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
-
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 .logo {
   width: 60px;
   height: 60px;
   aspect-ratio: 1;
-  object-fit: contain;
+  object-fit:fill;
   transition: transform 0.3s ease;
 }
 
@@ -74,7 +83,7 @@ body {
 .login-btn,
 .logout-btn {
   height: 2.5rem;
-  min-width: 90px;
+  min-width: 30px;
   background: linear-gradient(145deg, #ffde59, #ffcb3c);
   color: #1f3f9f;
   font-weight: 600;
@@ -315,6 +324,7 @@ body {
   color: white;
   padding: 30px 10px;
   margin-top: 1rem;
+  margin-top: auto;
 }
 
 .foot {
@@ -389,7 +399,7 @@ body {
 }
 
 .foot-social li a img {
-  width: 40px;
+  width: 35xpx;
   height: auto;
   filter: brightness(1) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4)); /* Makes icons pop */
   transition: transform 0.3s;
@@ -402,7 +412,7 @@ body {
 .foot-bottom {
   text-align: center;
   padding-top: 20px;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-family: fantasy;
   color: whitesmoke;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
@@ -414,8 +424,9 @@ body {
 /* Small devices - ≥576px */
 @media (min-width: 576px) {
   .header {
-    font-size: 1rem;
-    padding: 0.75rem 0.85rem;
+    font-size: 0.85rem;
+    padding: 0.65rem 0.75rem;
+    margin-right: 0;
   }
 
   .Search-container {
@@ -423,7 +434,22 @@ body {
   }
 
   .card {
-    width: 220px;
+    width: 200px;
+  }
+  .profile-card{
+   width: 200px;
+   height: auto;
+  }
+  .foot {
+    font-size: 0.75rem;
+    min-width: 300px;
+    justify-content: space-between;
+  }
+  .foot-links {
+    margin-right: 0;     /* removes right white space */
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 25px;
   }
 }
 
@@ -443,14 +469,17 @@ body {
   }
 
   .foot {
-    justify-content: space-around;
+    font-size: 1rem;
+    max-width: 700px;
+    height: auto;
+    justify-content: space-between;
   }
 }
 
 /* Extra large devices - ≥1200px */
 @media (min-width: 1200px) {
   .header {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     padding: 1rem 3rem;
   }
 
@@ -464,30 +493,11 @@ body {
 
   .foot {
     max-width: 1400px;
-    margin: 0 auto; /* centers footer */
+    margin: 0 auto;
+    position: relative;
+    position: sticky;
   }
 }
-
-@media (min-width: 1400px) {
-  .header {
-    font-size: 1.4rem;
-    padding: 1rem 3rem;
-  }
-
-  .Search-container {
-    width: 50%;
-  }
-
-  .card {
-    width: 280px;
-  }
-
-  .foot {
-    max-width: 1400px;
-    margin: 0 auto; /* centers footer and avoids empty space */
-  }
-}
-
 
 
 /*
